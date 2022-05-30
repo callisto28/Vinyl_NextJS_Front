@@ -1,0 +1,89 @@
+import { gql } from '@apollo/client';
+import client from '../../apollo-client';
+import styles from '../../styles/Home.module.css'
+
+export const getStaticPaths = async () => {
+    const { data } = await client.query({
+        query: gql`
+        query Article {
+                Article  {
+                    _id
+                    title
+                    description
+                    subtitle
+                    contentA
+                    contentB
+                    contentC
+                    createdAt
+                    author
+                }
+                }`,
+    });
+    const paths = data.Article.map((article: any) => {
+
+        return {
+            params: { id: article._id.toString() },
+        }
+
+    });
+    return {
+        paths,
+        fallback: false,
+    }
+}
+
+export const getStaticProps = async (context) => {
+    const id = context.params.id;
+    console.log(id, 'id');
+    const { data } = await client.query({
+        query: gql`
+    query Query($articleId: ID!) {
+                    article(id: $articleId) {
+                        _id
+                        title
+                        subtitle
+                        description
+                        contentA
+                        contentB
+                        contentC
+                        createdAt
+                        author
+                    }
+}`,
+        variables: {
+            articleId: id
+        }
+    });
+    console.log(data, 'data');
+    return {
+
+        props: {
+            article: data.article,
+        },
+    }
+}
+
+function strUcFirst(a) { return (a + '.').charAt(0).toUpperCase() + a.substr(1); }
+function strUcReturn(a) { return (a + '.').charAt(0).includes('\n') + a.substr(1); }
+
+
+const DetailArticle = ({ article }) => {
+    console.log(article, 'article');
+
+    return (
+        <div className={styles.container}>
+            <div className="flex flex-col w-4/6 h-auto border-2 border-red-400 rounded-lg bg-slate-300 text-center whitespace-pre-line p-2">
+                <h1 className="lg:text-2xl sm:text-xl text-center font-bold  border-2 border-yellow-500 rounded-lg">{article.title}</h1>
+                <p className="lg:text-xl sm:text-base justify-center pb-2">{strUcFirst(article.description)}</p>
+                <h2 className="lg:text-2xl sm:text-lg border-2 border-yellow-500 rounded-lg pb-2">{article.subtitle}</h2>
+                <p className="lg:text-xl sm:text-sm pb-4 pt-2">{article.contentA}</p>
+                <p className="lg:text-xl sm:text-sm pb-4">{(article.contentB)}</p>
+                <p className="lg:text-xl sm:text-sm pb-4">{article.contentC}</p>
+                <p className="lg:text-xl sm:text-sm">Propulsé par : <span className='text-orange-400'>{article.author}</span></p>
+                <p className="lg:text-xl sm:text-sm">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            </div>
+        </div>
+
+    );
+}
+export default DetailArticle;
