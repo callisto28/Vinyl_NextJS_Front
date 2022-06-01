@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Chelsea Market", cursive;
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/chelsea-market-v13-latin-regular.ttf") format("opentype");
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  /* background-image: url("../public/bg.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover; */
+  font-family: "Chelsea-Market", sans-serif;
   &:before {
     content: "";
     content: "";
@@ -24,6 +31,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text-shadow {
@@ -59,4 +68,55 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Chelsea Market", sans serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  opacity: 1;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  letter-spacing: -0.7px;
+  word-spacing: 0px;
+  text-transform: none;
+}
+
+h2 {
+  font-family: "Chelsea Market", sans serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  opacity: 1;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: -0.72px;
+  word-spacing: 0px;
+  text-transform: none;
+}
+
+h3 {
+  font-family: "Chelsea Market", sans serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 1;
+  margin-top: 30px;
+  margin-bottom: 11px;
+  letter-spacing: 0.02px;
+  word-spacing: 0px;
+  text-transform: none;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  opacity: 0.9;
+  margin-top: -8px;
+  margin-bottom: 11px;
+  letter-spacing: -0.36px;
+  word-spacing: -0.5px;
+  text-transform: none;
 }

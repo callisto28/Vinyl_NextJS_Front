@@ -9,13 +9,13 @@ export default function Navbar() {
     };
 
     return (
-        <>
-            <nav className='flex items-center flex-wrap bg-turquoise p-3 '>
+        <div className='font-chelsea'>
+            <nav className='flex items-center flex-wrap  p-2 '>
                 <Link href='/'>
                     <a className='inline-flex items-center p-2 mr-4 '>
                         <img src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' />
 
-                        <span className='text-3xl text-white font-bold uppercase tracking-wide px-2'>
+                        <span className='text-3xl text-white  font-bold uppercase tracking-wide px-2'>
                             VinylTouch
                         </span>
                     </a>
@@ -45,30 +45,30 @@ export default function Navbar() {
                         }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-                        <Link href='/'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-sable hover:text-black '>
+                        <Link href='/accueil'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300 '>
                                 Accueil
                             </a>
                         </Link>
                         <Link href='/articles'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-sable hover:text-black'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
                                 Articles
                             </a>
                         </Link>
                         <Link href='/bonplan'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-sable hover:text-black'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
                                 Bon Plan
                             </a>
                         </Link>
                         <Link href='/frenchTouch'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-sable hover:text-black'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
                                 FrenchTouch
                             </a>
                         </Link>
                     </div>
                 </div>
             </nav>
-        </>
+        </div>
     );
 };
 

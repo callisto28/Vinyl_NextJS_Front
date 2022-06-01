@@ -16,11 +16,14 @@ module.exports = {
       lg: '1024px',
       xl: '1281px'
     },
+
     fontFamily: {
       sans: ['Roboto', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
-      philosopher: ['philosopher', 'sans-serif']
+      philosopher: ['philosopher', 'sans-serif'],
+      chelsea: ['Chelsea Market', 'cursive'],
     },
+
     extend: {
       spacing: {
         '128': '32rem',
