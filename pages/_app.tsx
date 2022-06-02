@@ -9,17 +9,13 @@ import Layout from '../components/Layout'
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    <>
-      <ApolloProvider client={client}>
-        <div className='flex flex-col justify-between h-screen'>
-          <Navbar />
-          {/* <Layout> */}
+    <div className=' flex flex-col justify-between h-screen'>
+      <Layout>
+        <ApolloProvider client={client}>
           <Component {...pageProps} />
-          {/* </Layout> */}
-          <Footer />
-        </div>
-      </ApolloProvider>
-    </>
+        </ApolloProvider>
+      </Layout>
+    </div>
   )
 
 }
