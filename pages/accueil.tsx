@@ -1,26 +1,27 @@
+import { gql } from '@apollo/client'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import client from '../apollo-client'
 import Card from '../components/Card'
-import Footer from '../components/Footer'
-import styles from '../styles/Home.module.css'
+import Widget from '../components/Widget'
+import DetailArticle from './article/[id]'
 
-const Home: NextPage = () => {
+
+const Home: NextPage = ({ articles }: any) => {
     return (
         <div className="" >
             <Head>
-                <title>VinylTouch</title>
+                <title>VinylTouch | accueil</title>
                 <meta name="description" content="Toute l'actualité du vinyle" />
                 <link rel="icon" href="/callisto.png" />
             </Head>
-
-            <div className=" flex flex-1 lg:flex-col sm:flex-wrap lg:content-center sm:content-around">
-
-                <div className={styles.grid}>
-                    <Card link={"/articles"} texteCard={"Retrouvez toute l'actualité du moment."} titleCard={`De l'actu`} />
+            <div className="">
+                <div className="flex lg:flex-row lg:justify-evenly sm:flex-col sm:items-center sm:content-evenly">
+                    <Widget articles={articles} />
+                    {/* <Card link={"/articles"} texteCard={"Retrouvez toute l'actualité du moment."} titleCard={`De l'actu`} />
                     <Card link={"/bonplan"} texteCard={"Retrouvez les bons plans des disquaires!"} titleCard={`Des Bons plans`} />
                     <Card link={"/frenchTouch"} texteCard={"Retrouvez nos Youtubeurs Français."} titleCard={`La FrenchTouch`} />
-                    <Card link={"/"} texteCard={"Ce morceaux me dit quelque chose!"} titleCard={`Musique`} />
+                    <Card link={"/"} texteCard={"Ce morceaux me dit quelque chose!"} titleCard={`Musique`} /> */}
                 </div>
             </div>
         </div>
@@ -28,3 +29,27 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getStaticProps() {
+    const recentArticles = (await client.query({
+        query: gql`
+        query Article {
+                
+                Article  {
+                        _id                        
+                        title
+                        description
+                        image
+                        createdAt
+                    }
+                }
+            
+        `
+    })).data.Article
+
+    return {
+        props: {
+            articles: recentArticles
+        }
+    }
+}

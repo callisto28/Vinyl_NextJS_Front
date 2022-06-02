@@ -63,13 +63,13 @@ const DetailPost = ({ plan }) => {
     console.log(plan, 'post');
 
     return (
-        <div className={styles.container}>
-            <div className="flex flex-col w-4/6 h-auto border-2 border-red-400 rounded-lg bg-slate-300 text-center whitespace-pre-line p-2">
+        <div className="container">
+            <div className="flex flex-col w-auto h-auto border-2 border-red-400 rounded-lg bg-slate-300 text-center whitespace-pre-line p-2 items-center">
                 <h1>{plan.title}</h1>
                 <p>{plan.description}</p>
                 <img src={plan.image} alt="plan" width={150} height={150} />
-                <p>{plan.url}</p>
-                <p>{plan.createdAt}</p>
+                <a href={plan.url} target="_blank" rel="noreferrer" className="text-white bg-blue-700  font-medium rounded-full items-center px-3 py-1  w-auto m-1">Consulter</a>
+                <p>{new Date(parseInt(plan.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
                 <p>{plan.author}</p>
             </div>
         </div >

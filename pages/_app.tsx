@@ -7,13 +7,12 @@ import Layout from '../components/Layout'
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    <div className="back bg-background bg-cover bg-center bg-no-repeat opacity-0.2 flex flex-col justify-between h-screen">
-      <Layout>
-        <ApolloProvider client={client}>
-          <Component {...pageProps} />
-        </ApolloProvider>
-      </Layout>
-    </div>
+    <Layout>
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+    </Layout>
+
   )
 
 }

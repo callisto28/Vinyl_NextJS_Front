@@ -1,21 +1,21 @@
 import React from 'react';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
-import styles from '../styles/Home.module.css'
+import '../styles/Home.module.css'
 import Link from 'next/link';
 import CardArticle from '../components/CardArticle';
 
 
 const articles = ({ articles }) => {
-    const titleId = articles.map((article: any, index) => (
-        article.title.split(' ')
-    ));
-    console.log(titleId[1]);
+    // const titleId = articles.map((article: any, index) => (
+    //     article.title.split(' ')
+    // ));
+    // console.log(titleId[1]);
 
 
     return (
-        <div className="container mx-auto px-10 mb-8 flex flex-wrap justify-center">
-            <div className="flex flex-wrap">
+        <div className="" >
+            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center">
                 {
                     articles.map((article: any) => (
 

@@ -5,18 +5,19 @@ import Image from 'next/image';
 const Footer = () => {
     return (
 
-        <div className='flex justify-center'>
-            <footer className={styles.footer} >
+        <div className='flex flex-col items-center border-t-2 pt-2'>
+            <footer className=" flex flex-row items-top" >
                 <a
                     href="https://seb4dev.works/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className='text-white font-chelsea text-sm hover:text-yellow-300'
                 >
                     Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image src="/callisto.png" alt="Vercel Logo" width={80} height={50} />
-                    </span>
-                </a>
+
+                </a><span className="">
+                    <Image src="/callisto.png" alt="Vercel Logo" width={80} height={50} />
+                </span>
             </footer>
         </div >
 
