@@ -24,7 +24,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
     return (
-        <div className=' container mx-auto px-10 mb-8'>
+        <div className='container mx-auto px-10 mb-8'>
             <Head>
                 <title>FrenchTouch</title>
                 <meta name="description" content="Youtubeur français" />

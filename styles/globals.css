@@ -16,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Chelsea Market", cursive;
-  &:before {
+  /* &:before {
     content: "";
     content: "";
     width: 100%;
@@ -25,12 +25,12 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: -1;
-    background-image: url("../public/bg.jpg");
+    z-index: -1; */
+  /* background-image: url("../public/bg.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-  }
+    background-repeat: no-repeat; */
+  /* } */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

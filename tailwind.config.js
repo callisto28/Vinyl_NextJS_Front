@@ -25,6 +25,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        "background": "url('/bg.jpg')",
+      },
       spacing: {
         '128': '32rem',
         '144': '40rem',
@@ -44,13 +47,18 @@ module.exports = {
         'green': {
           'start': '##D3CCE3',
           'end': '#E9E4F0',
-        }
+        },
+        'frost': {
+          'start': '#000428',
+          'end': '#004e92',
+        },
       }
     },
 
     variants: {
       extend: {
         backgroundColor: ['active'],
+        backgroundImage: ['active'],
       },
     },
     plugins: [

@@ -14,7 +14,7 @@ const articles = ({ articles }) => {
 
 
     return (
-        <div className={styles.container}>
+        <div className="container mx-auto px-10 mb-8 flex flex-wrap justify-center">
             <div className="flex flex-wrap">
                 {
                     articles.map((article: any) => (
