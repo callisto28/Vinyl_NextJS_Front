@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ApolloProvider client={client}>
         <div className='flex flex-col justify-between h-screen'>
           <Navbar />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          {/* <Layout> */}
+          <Component {...pageProps} />
+          {/* </Layout> */}
           <Footer />
         </div>
       </ApolloProvider>

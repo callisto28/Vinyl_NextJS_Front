@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 
 const Card = ({ link, texteCard, titleCard }) => {
     return (
@@ -8,7 +8,7 @@ const Card = ({ link, texteCard, titleCard }) => {
             <div className="border border-red-400 rounded-lg">
                 <div className="rounded-lg shadow-lg bg-white ">
                     <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img className="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt="" />
+                        <img className="rounded-t-lg object-cover h-48 w-96" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt="" />
                     </a>
                     <div className="p-6">
                         <h5 className="text-gray-900 text-xl font-medium mb-2">{titleCard} &rarr;</h5>

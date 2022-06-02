@@ -5,14 +5,14 @@ import styles from '../../styles/Home.module.css'
 
 const admin = () => {
     return (
-        <div className="flex flex-row items-center px-12 h-screen w-screen ">
+        <div className="flex flex-row content-around items-center px-12 h-screen w-screen ">
 
-            <div className='flex flex-wrap text-center justify-around  w-3/6 h-2/4'>
+            <div className='flex text-center justify-around  w-3/6 h-2/4'>
                 <div className='bg-gray-200 shadow-md border border-red-400 rounded-lg w-auto dark:bg-gray-800 dark:border-gray-700 '>
                     <ArticleInput />
                 </div>
             </div>
-            <div className='flex flex-wrap text-center justify-around w-3/6 h-2/4'>
+            <div className='flex flex-row text-center justify-around w-3/6 h-2/4'>
                 <div className="bg-gray-200 shadow-md border border-red-400 rounded-lg w-auto dark:bg-gray-800 dark:border-gray-700 " >
                     <PlanInput />
                 </div>

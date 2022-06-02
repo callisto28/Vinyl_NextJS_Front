@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -13,7 +14,7 @@ export default function Navbar() {
             <nav className='flex items-center flex-wrap  p-2 '>
                 <Link href='/'>
                     <a className='inline-flex items-center p-2 mr-4 '>
-                        <img src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' />
+                        <Image src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' width={60} height={60} />
 
                         <span className='text-3xl text-white  font-bold uppercase tracking-wide px-2'>
                             VinylTouch

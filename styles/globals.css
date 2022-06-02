@@ -11,12 +11,12 @@
     src: url("/fonts/chelsea-market-v13-latin-regular.ttf") format("opentype");
   }
 }
-
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Chelsea-Market", sans-serif;
+
   &:before {
     content: "";
     content: "";
@@ -68,6 +68,7 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 h1 {

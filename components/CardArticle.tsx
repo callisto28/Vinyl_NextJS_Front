@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/Home.module.css'
@@ -14,14 +15,14 @@ type Props = {
 }
 
 
-const Card = ({ link, texteCard, titleCard, linkTitle, authorCard, dateCard, keyCard, imgCard }: Props) => {
+const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, dateCard, imgCard }: Props) => {
     return (
         <div className="max-w-lg">
             <div className="h-auto">
-                <div className="mx-1 rounded-lg shadow-lg bg-white border border-red-400 " key={keyCard}>
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                        <img className="rounded-t-lg" src={imgCard!} alt="" />
-                    </a>
+                <div className="mx-1 rounded-lg shadow-lg bg-white border border-red-400 flex flex-col items-center justify-around " key={keyCard}>
+                    {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light" > */}
+                    <img src={imgCard} alt="" className=" object-contain h-48 w-96 p-2" />
+                    {/* </a> */}
                     <div className="p-2 flex flex-col items-center justify-around">
                         <h1 className="text-gray-900 text-center">{titleCard} </h1>
                         <p className="text-gray-700 text-justify font-philosopher">
