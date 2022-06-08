@@ -5,6 +5,7 @@ const HEROKU_URL = "http://nestvinyl.herokuapp.com/graphql";
 
 const client = new ApolloClient({
   uri: HEROKU_URL,
+  // uri: GRAPHQL_URL,
   cache: new InMemoryCache(),
 });
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../styles/Home.module.css'
 import Image from 'next/image';
+import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -18,6 +20,14 @@ const Footer = () => {
                 </a><span className="">
                     <Image src="/callisto.png" alt="Vercel Logo" width={80} height={50} />
                 </span>
+                <Link href={'../admin/admin'}>
+                    <ChevronDownIcon
+                        className="
+                             h-10 w-10 text-violet-900 hover:text-violet-100"
+                        aria-hidden="true"
+                    />
+
+                </Link>
             </footer>
         </div >
 

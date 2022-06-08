@@ -7,11 +7,6 @@ import CardArticle from '../components/CardArticle';
 
 
 const articles = ({ articles }) => {
-    // const titleId = articles.map((article: any, index) => (
-    //     article.title.split(' ')
-    // ));
-    // console.log(titleId[1]);
-
 
     return (
         <div className="" >
@@ -23,21 +18,11 @@ const articles = ({ articles }) => {
                             <CardArticle keyCard={article._id}
                                 link={`/article/${article._id}`}
                                 linkTitle={`/article/${article._id}`}
-                                imgCard={(article.image != "https//:") ? (article.image) : ('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')}
+                                imgCard={(article.image != '') ? (article.image) : ('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')}
                                 texteCard={article.description}
                                 titleCard={article.title}
                                 authorCard={article.author}
                                 dateCard={article.createdAt} />
-                            {/* <h1 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{article.title}</h1>
-                            <p className="text-gray-600 font-bold text-base tracking-tight mb-2 dark:text-white">{article.description}</p>
-
-                            <p className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{article.author}</p>
-                            <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
-                            <div className="text-center py-4">
-                                <Link href={`/article/${article._id}`} as={`/article/${article._id}`} passHref>
-                                    <span className="transition duration-500 ease transform hover:-translate-xy-1 hover:-translate-x-2 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Voir plus</span>
-                                </Link>
-                            </div> */}
                         </div>
                     )
                     )

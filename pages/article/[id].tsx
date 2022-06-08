@@ -9,11 +9,16 @@ export const getStaticPaths = async () => {
                 Article  {
                     _id
                     title
+                    image
                     description
                     subtitle
                     contentA
                     contentB
                     contentC
+                    contentD
+                    contentE
+                    contentF
+                    url
                     createdAt
                     author
                 }
@@ -41,11 +46,16 @@ export const getStaticProps = async (context) => {
                     article(id: $articleId) {
                         _id
                         title
-                        subtitle
+                        image
                         description
+                        subtitle
                         contentA
                         contentB
                         contentC
+                        contentD
+                        contentE
+                        contentF
+                        url
                         createdAt
                         author
                     }
@@ -68,7 +78,7 @@ function strUcReturn(a) { return (a + '.').charAt(0).includes('\n') + a.substr(1
 
 
 const DetailArticle = ({ article }) => {
-    console.log(article, 'article');
+
 
     return (
         <div className={styles.container}>
@@ -79,6 +89,10 @@ const DetailArticle = ({ article }) => {
                 <p className="lg:text-xl sm:text-sm pb-4 pt-2">{article.contentA}</p>
                 <p className="lg:text-xl sm:text-sm pb-4">{(article.contentB)}</p>
                 <p className="lg:text-xl sm:text-sm pb-4">{article.contentC}</p>
+                <p className="lg:text-xl sm:text-sm pb-4">{article.contentD}</p>
+                <p className="lg:text-xl sm:text-sm pb-4">{article.contentE}</p>
+                <p className="lg:text-xl sm:text-sm pb-4">{article.contentF}</p>
+                <a href={article.url} className="lg:text-xl sm:text-sm pb-4" >Lien</a>
                 <p className="lg:text-xl sm:text-sm">Propulsé par : <span className='text-orange-400'>{article.author}</span></p>
                 <p className="lg:text-xl sm:text-sm">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
             </div>

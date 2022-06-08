@@ -1,8 +1,5 @@
-
 import { useMutation, gql } from "@apollo/client";
-import { title } from "process";
 import React, { useState } from 'react';
-import styles from '../styles/Home.module.css'
 
 
 
@@ -67,9 +64,9 @@ const ArticleInput = () => {
 
 
     return (
-        <div>
+        <div className="ontainer h-full mx-auto px-10 mb-8">
             <form
-                className="flex flex-row flex-wrap text-center justify-around w-min-content"
+                className="flex flex-row text-center justify-around p-2"
                 onSubmit={(e => {
                     console.log(e, 'event');
 
@@ -78,22 +75,22 @@ const ArticleInput = () => {
                 })}
             >
                 <div className="mb-4">
-                    <label className="text-gray-700 text-sm font-bold mb-2" htmlFor="image">Image</label>
+                    <label className=" block text-gray-700 text-sm font-bold mb-2" htmlFor="image">Image</label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border resize rounded-md  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="image"
                         type="text"
                         placeholder="Image"
                         value={formState.image}
                         onChange={(e) => setFormState({ ...formState, image: e.target.value })}
                     />
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
-                        Title
-                    </label>
-                    <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                </div>
+                <div className="mb-4">
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Titre</label>
+                    <textarea
+
+                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 resize rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         id="title"
-                        type="text"
                         placeholder="Title"
                         value={formState.title}
                         onChange={(e) => setFormState({ ...formState, title: e.target.value })}
@@ -103,10 +100,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
                         Description
                     </label>
-                    <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    <textarea
+                        className="shadow appearance-none border resize rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="description"
-                        type="textarea"
                         placeholder="Description"
                         value={formState.description}
                         onChange={(e) => setFormState({ ...formState, description: e.target.value })}
@@ -116,10 +112,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         subtitle
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="Content"
                         value={formState.subtitle}
                         onChange={(e) => setFormState({ ...formState, subtitle: e.target.value })}
@@ -129,10 +124,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentA
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentA"
                         value={formState.contentA}
                         onChange={(e) => setFormState({ ...formState, contentA: e.target.value })}
@@ -142,10 +136,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentB
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentB"
                         value={formState.contentB}
                         onChange={(e) => setFormState({ ...formState, contentB: e.target.value })}
@@ -155,10 +148,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentC
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentC"
                         value={formState.contentC}
                         onChange={(e) => setFormState({ ...formState, contentC: e.target.value })}
@@ -168,10 +160,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentD
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentD"
                         value={formState.contentD}
                         onChange={(e) => setFormState({ ...formState, contentD: e.target.value })}
@@ -181,10 +172,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentE
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentE"
                         value={formState.contentE}
                         onChange={(e) => setFormState({ ...formState, contentE: e.target.value })}
@@ -194,10 +184,9 @@ const ArticleInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="content">
                         ContentF
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="content"
-                        type="textarea"
                         placeholder="ContentF"
                         value={formState.contentF}
                         onChange={(e) => setFormState({ ...formState, contentF: e.target.value })}
@@ -231,7 +220,7 @@ const ArticleInput = () => {
                         onChange={(e) => setFormState({ ...formState, author: e.target.value })}
                     />
                 </div>
-                <div className="flex justify-center">
+                <div className="mb-4">
                     <button
                         className="transition duration-500 ease transform hover:-translate-xy-1 hover:-translate-x-2 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-1 cursor-pointer text-center py-2"
                         type="submit"
@@ -239,6 +228,7 @@ const ArticleInput = () => {
                         Create Article
                     </button>
                 </div>
+
             </form>
         </div>
 

@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import MyDropdown from './DropDown';
+
+
 
 export default function Navbar() {
     const [active, setActive] = useState(false);
@@ -47,22 +50,25 @@ export default function Navbar() {
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                         <Link href='/accueil'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300 '>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500 '>
                                 Accueil
                             </a>
                         </Link>
                         <Link href='/articles'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
                                 Articles
                             </a>
                         </Link>
+                        <div>
+                            {/* <DropDown /> */}
+                        </div>
                         <Link href='/bonplan'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
-                                Bon Plan
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
+                                <MyDropdown />
                             </a>
                         </Link>
                         <Link href='/frenchTouch'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-yellow-300'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
                                 FrenchTouch
                             </a>
                         </Link>

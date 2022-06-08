@@ -24,9 +24,9 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
                     <img src={imgCard} alt="" className=" object-contain h-48 w-96 p-2" />
                     {/* </a> */}
 
-                    <h1 className="text-gray-900 text-center">{titleCard} </h1>
+                    <h1 className="text-gray-900 text-center first-letter:text-3xl first-letter:font-bold">{titleCard} </h1>
                     <div className='text-ellipsis overflow-hidden ...'>
-                        <p className="text-gray-700 text-justify font-philosopher">
+                        <p className="text-gray-700 text-justify font-philosopher first-letter:text-xl first-letter:font-bold">
                             {texteCard}
                         </p>
                     </div>
