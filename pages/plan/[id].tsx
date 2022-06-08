@@ -6,51 +6,61 @@ import client from '../../apollo-client';
 export const getStaticPaths = async () => {
     const { data } = await client.query({
         query: gql`
-       query getPlan {
-  getVinylFeatured {
-    _id
-    author
-    createdAt
-    title
-    description
-    image
-    referral_url
-    price
-    seller
-    featured
-  }
-  getMaterialFeatured {
-    _id
-    author
-    createdAt
-    title
-    description
-    image
-    referral_url
-    price
-    seller
-    featured
-  }
-  getDeskFeatured {
-    _id
-    author
-    createdAt
-    title
-    description
-    image
-    referral_url
-    price
-    seller
-    featured
-  }
+          query Query {
+            Plans {
+                _id
+                title
+                description
+                image
+                url
+                createdAt
+                author
+            }
+#        query getPlan {
+#   getVinylFeatured {
+#     _id
+#     author
+#     createdAt
+#     title
+#     description
+#     image
+#     referral_url
+#     price
+#     seller
+#     featured
+#   }
+#   getMaterialFeatured {
+#     _id
+#     author
+#     createdAt
+#     title
+#     description
+#     image
+#     referral_url
+#     price
+#     seller
+#     featured
+#   }
+#   getDeskFeatured {
+#     _id
+#     author
+#     createdAt
+#     title
+#     description
+#     image
+#     referral_url
+#     price
+#     seller
+#     featured
+#   }
 }`,
     });
-    console.log(data, "solo data");
 
-    const data2 = data.getVinylFeatured.concat(data.getMaterialFeatured, data.getDeskFeatured);
-    console.log(data2, "data2");
 
-    const paths = data2.map((plan: any) => {
+    // const data2 = data.getVinylFeatured.concat(data.getMaterialFeatured, data.getDeskFeatured);
+    // console.log(data2, "data2");
+
+    const paths = data.Plans.map((plan: any) => {
         return {
             params: { id: plan._id.toString() },
         }
@@ -63,10 +73,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    const title = context.params.title;
-
     console.log(id, 'id');
-    console.log(title, 'title');
     const { data } = await client.query({
         query: gql`
         query Plan($planId: ID!) {
