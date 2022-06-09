@@ -64,9 +64,9 @@ const ArticleInput = () => {
 
 
     return (
-        <div className="ontainer h-full mx-auto px-10 mb-8">
+        <div className="container lg:text-center sm:text-center">
             <form
-                className="flex flex-row text-center justify-around p-2"
+                className="flex lg:flex-row lg:text-center lg:justify-around p-2 sm:flex-wrap sm:text-center sm:justify-around"
                 onSubmit={(e => {
                     console.log(e, 'event');
 

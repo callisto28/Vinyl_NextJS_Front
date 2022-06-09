@@ -4,11 +4,10 @@ import React from 'react';
 
 
 const WidgetArt = ({ articles }: any) => {
-    console.log({ articles }, 'articles');
 
     //request 2 last articles
     const lastArticles = articles.slice(0, 3);
-    console.log(lastArticles);
+
 
     return (
         <div className="bg-white shadow-lg rounded-lg p-6 pb-10 mb-8">

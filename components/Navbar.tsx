@@ -25,11 +25,11 @@ export default function Navbar() {
                     </a>
                 </Link>
                 <button
-                    className=' inline-flex p-3 hover:bg-turquoise rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+                    className=' inline-flex p-2 hover:bg-turquoise rounded lg:hidden text-white ml-auto hover:text-white outline-none'
                     onClick={handleClick}
                 >
                     <svg
-                        className='w-6 h-6'
+                        className='w-4 h-4'
                         fill='none'
                         stroke='currentColor'
                         viewBox='0 0 24 24'

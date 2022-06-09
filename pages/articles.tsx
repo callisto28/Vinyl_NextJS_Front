@@ -10,11 +10,11 @@ const articles = ({ articles }) => {
 
     return (
         <div className="" >
-            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center">
+            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center sm:mx-2">
                 {
                     articles.map((article: any) => (
 
-                        <div key={article._id} className="max-w-screen-xl">
+                        <div key={article._id} className="lg:max-w-screen-xl sm:max-w-lg sm:mb-2">
                             <CardArticle keyCard={article._id}
                                 link={`/article/${article._id}`}
                                 linkTitle={`/article/${article._id}`}

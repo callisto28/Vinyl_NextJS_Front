@@ -13,10 +13,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/callisto.png" />
       </Head>
 
-      <div className="">
+      <div className="flex lg:flex-row lg:justify-evenly sm:flex-col sm:items-center sm:content-evenly">
 
 
-        <Link href="/accueil"><h1><a className="text-white font-chelsea text-7xl hover:text-yellow-300"> Welcome to VinylTouch!</a></h1></Link>
+        <Link href="/accueil"><h1><a className="text-white font-chelsea lg:text-7xl sm:text-5xl hover:text-yellow-300"> Welcome to VinylTouch!</a></h1></Link>
 
       </div>
     </>

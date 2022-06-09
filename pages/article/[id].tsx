@@ -39,7 +39,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    console.log(id, 'id');
+
     const { data } = await client.query({
         query: gql`
     query Query($articleId: ID!) {
@@ -64,7 +64,7 @@ export const getStaticProps = async (context) => {
             articleId: id
         }
     });
-    console.log(data, 'data');
+
     return {
 
         props: {

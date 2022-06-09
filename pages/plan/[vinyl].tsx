@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
     });
 
     const data2 = data.getVinylFeatured;
-    console.log(data2, "data2");
+
 
     const paths = data2.map((plan: any) => {
         return {
@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 //  $materialId: String! , $deskId: String!
 export const getStaticProps = async (context) => {
     const id = context.params.vinyl;
-    console.log(id, 'id');
+
     const { data } = await client.query({
         query: gql`
         query getById($vinylId: String!){
@@ -53,7 +53,7 @@ export const getStaticProps = async (context) => {
 
         }
     });
-    console.log(data, 'data');
+
     return {
         props: {
             vinyl: data.vinyl,
@@ -63,7 +63,7 @@ export const getStaticProps = async (context) => {
     }
 }
 const DetailVinyl = ({ vinyl }) => {
-    console.log(vinyl, 'post');
+
 
     return (
         <div className="container">

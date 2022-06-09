@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
     });
 
     const data2 = data.getMaterialFeatured;
-    console.log(data2, "data2 material");
+
 
     const paths = data2.map((plan: any) => {
         return {
@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 //  $materialId: String! , $deskId: String!
 export const getStaticProps = async (context) => {
     const id = context.params.material;
-    console.log(id, 'id');
+
     const { data } = await client.query({
         query: gql`
         query getById($materialId: String!){
@@ -53,7 +53,7 @@ export const getStaticProps = async (context) => {
 
         }
     });
-    console.log(data, 'data');
+
     return {
         props: {
             material: data.material,
@@ -63,7 +63,7 @@ export const getStaticProps = async (context) => {
     }
 }
 const DetailMaterial = ({ material }) => {
-    console.log(material, 'post');
+
 
     return (
         <div className="container">

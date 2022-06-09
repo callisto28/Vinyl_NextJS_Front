@@ -4,20 +4,25 @@ import DeskInput from '../../components/DeskInput';
 import MaterialInput from '../../components/MaterialInput';
 import VinylInput from '../../components/VinylInput';
 
-import styles from '../../styles/Home.module.css'
+
 
 const admin = () => {
     return (
-        <div className="flex flex-col justify-around items-center px-12 h-screen w-screen ">
+        <div className="flex lg:flex-row lg:justify-evenly sm:flex-wrap sm:items-center sm:content-evenly w-full">
 
-            <div className='flex flex-col text-center justify-center'>
+            <div className='flex lg:flex-row lg:justify-evenly sm:flex-wrap sm:justify-center sm:content-evenly'>
                 <h1 className="text-2xl font-semibold text-gray-200 pb-2">Ajout d&apos;article</h1>
-                <div className='bg-gray-200 shadow-md border border-red-400 rounded-lg w-auto dark:bg-gray-800 dark:border-gray-700 '>
+                <div className='bg-gray-200 shadow-md border border-red-400 rounded-lg
+                w-auto
+                dark:bg-gray-800
+                dark:border-gray-700
+                dark:text-white
+                flex sm:justify-center '>
                     <ArticleInput />
                 </div>
             </div>
-            <div className='flex flex-row'>
 
+            <div className='flex lg:flex-row lg:justify-evenly sm:flex-wrap sm:justify-center sm:content-evenly'>
                 <div className='flex flex-col text-center justify-center'>
                     <h1 className="text-2xl font-semibold text-gray-200 pb-2">Ajout nouveau vinyl</h1>
                     <div className="bg-gray-200 shadow-md border border-red-400 rounded-lg w-auto dark:bg-gray-800 dark:border-gray-700 " >

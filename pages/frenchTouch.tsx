@@ -127,7 +127,7 @@ export async function getServerSideProps() {
     const playlist = await fetch(`${urlYoutube}playlistItems?part=contentDetails&part=snippet&maxResults=25&playlistId=PLUCBUMaWPhpKMbhmQcp_mIPA7H5ipOrbi&key=${apiYoutube}`)
     const data = await response.json()
     const data2 = await playlist.json()
-    console.log(data2, 'data2');
+
     return {
         props: {
             data, data2

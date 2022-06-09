@@ -10,9 +10,6 @@ import WidgetPost from '../components/WidgetPost'
 
 const Home: NextPage = ({ articles, plans, materials, desks }: any) => {
 
-    console.log(plans, "plans home");
-    console.log(materials, "materials home");
-    console.log(desks, "desks home");
 
     return (
         <div className="" >
@@ -115,15 +112,6 @@ export async function getStaticProps() {
             }
         `
     })).data.getDeskFeatured;
-
-    console.log(recentVinyl, "recentVinyl");
-    console.log(recentMaterial, "recentMateiral");
-    console.log(recentDesk, "recentDesk");
-
-
-
-
-
 
 
     return {
