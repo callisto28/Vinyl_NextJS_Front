@@ -18,7 +18,7 @@ const articles = ({ articles }) => {
                             <CardArticle keyCard={article._id}
                                 link={`/article/${article._id}`}
                                 linkTitle={`/article/${article._id}`}
-                                imgCard={(article.image != '') ? (article.image) : ('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')}
+                                imgCard={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')}
                                 texteCard={article.description}
                                 titleCard={article.title}
                                 authorCard={article.author}

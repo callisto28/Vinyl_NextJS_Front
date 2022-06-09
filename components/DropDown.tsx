@@ -36,11 +36,11 @@ export default function Example() {
                     enter="transition ease-out duration-100"
                     enterFrom="transform opacity-0 scale-95"
                     enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
+                    leave="transition ease-in duration-100"
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-sable shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 rounded-md bg-sable shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="px-1 py-1 ">
                             <Menu.Item>
                                 {({ active }) => (
@@ -59,7 +59,7 @@ export default function Example() {
                                                 aria-hidden="true"
                                             />
                                         )}
-                                        <MyLink href="../Vinyls" className={`${active} pr-2 pl-2 rounded-3xl`}>Vinyls</MyLink>
+                                        <MyLink href="../vinyls" className={`${active} pr-2 pl-2 rounded-3xl`}>Vinyls</MyLink>
                                     </button>
                                 )}
                             </Menu.Item>
@@ -80,12 +80,13 @@ export default function Example() {
                                                 aria-hidden="true"
                                             />
                                         )}
-                                        <MyLink href="../material" className={`${active} pr-2 pl-2 rounded-3xl`}>Hifi</MyLink>
+                                        <MyLink href="../hifi" className={`${active} pr-2 pl-2 rounded-3xl`}>Hifi</MyLink>
                                     </button>
                                 )}
                             </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
+
                                     <button
                                         className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -101,7 +102,7 @@ export default function Example() {
                                                 aria-hidden="true"
                                             />
                                         )}
-                                        <MyLink href="../desk" className={`${active}`}>Rangements</MyLink>
+                                        <MyLink href="../rangements" className={`${active} `}>Rangements</MyLink>
                                     </button>
                                 )}
                             </Menu.Item>
