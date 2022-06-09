@@ -48,7 +48,16 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
                         </p>
                     </div>
 
-                    <Link href={linkPL} as={linkTitlePL} passHref ><button className='rounded-full hover:text-white bg-red-500 text-center px-5 font-philosopher ' >&rarr; Voir plus</button></Link>
+                    <Link href={linkPL}
+                        as={linkTitlePL}
+                        passHref ><button className='rounded-full
+                                                    hover:text-white
+                                                    bg-red-500 text-center
+                                                    px-5 font-philosopher
+                                                    transition-color duration-700 delay-500 
+                                                    animate-bounce-in-left
+                                                    
+                                                    ' >&rarr; Voir plus</button></Link>
                 </div>
 
             </div>

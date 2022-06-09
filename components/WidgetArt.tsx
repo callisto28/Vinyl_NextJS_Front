@@ -16,12 +16,9 @@ const WidgetArt = ({ articles }: any) => {
             {lastArticles.map((article, index) => (
                 <div key={index}>
                     <a className="flex flex-col items-center cursor-pointer my-2">
-                        <div className="text-lg mb-1">{article.title}
-                        </div>
-
-
+                        <div className="text-lg mb-1">{article.title} </div>
                         <Link href={`/article/${article._id}`} key={article.slug} passHref>
-                            <img src={article.image} alt={article.title} className="w-24 h-24 rounded-full mb-2" />
+                            <img src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} alt={article.title} className="w-24 h-24 rounded-full mb-2" />
                         </Link>
                         <div className='text-sm mb-2'>{article.subtitle}</div>
 
