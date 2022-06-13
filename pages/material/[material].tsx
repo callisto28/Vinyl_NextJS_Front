@@ -67,9 +67,9 @@ const DetailMaterial = ({ material }) => {
 
     return (
         <div className="flex lg:flex-wrap lg:justify-center sm:flex-wrap sm:justify-center  pb-5">
-            <div className="flex flex-col h-full w-2/3 bg-white text-center items-center rounded-lg ">
+            <div className="flex flex-col h-full w-2/3 bg-white bg-opacity-50 text-center items-center rounded-lg shadow-[inset_0_-10px_20px_-10px_#B625E4] ">
                 <h1 className='text-4xl font-bold pb-3'>{material.title}</h1>
-                <img src={material.image} alt="plan" width={400} height={200} className='border-y border-gray-500' />
+                <img src={material.image} alt="plan" width={400} height={200} className='border-y border-gray-500 rounded-full' />
 
                 <p className='text-xl font-semibold py-3'>{material.description}</p>
                 <a href={material.referral_url} target="_blank" rel="noreferrer" className="text-white bg-purple-600  font-medium rounded-full items-center px-3 py-1  w-auto m-1">Consulter</a>

@@ -8,10 +8,14 @@ mutation Mutation($input: CreateVinylInput!) {
     createdAt
     updatedAt
     title
+    subtitle
     description
     image
     referral_url
-    price
+    priceEur
+    priceUSD
+    label
+    genre
     seller
     author
     featured
@@ -25,10 +29,14 @@ const VinylInput = () => {
 
     const [formState, setFormState] = useState({
         title: "",
+        subtitle: "",
         description: "",
         image: "",
         referral_url: "",
-        price: 0,
+        priceEur: 0,
+        priceUSD: 0,
+        label: "",
+        genre: "",
         seller: "",
         author: "",
         featured: true
@@ -38,10 +46,14 @@ const VinylInput = () => {
         variables: {
             input: {
                 title: formState.title,
+                subtitle: formState.subtitle,
                 description: formState.description,
                 image: formState.image,
                 referral_url: formState.referral_url,
-                price: formState.price,
+                priceEur: formState.priceEur,
+                priceUSD: formState.priceUSD,
+                label: formState.label,
+                genre: formState.genre,
                 seller: formState.seller,
                 author: formState.author,
                 featured: formState.featured
@@ -70,6 +82,16 @@ const VinylInput = () => {
                         type="textaera"
                         value={formState.title}
                         onChange={(e) => setFormState({ ...formState, title: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subtitle">
+                        Subtitle
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="subtitle"
+                        type="textaera"
+                        value={formState.subtitle}
+                        onChange={(e) => setFormState({ ...formState, subtitle: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
                         Description
@@ -101,16 +123,49 @@ const VinylInput = () => {
                         value={formState.referral_url}
                         onChange={(e) => setFormState({ ...formState, referral_url: e.target.value })}
                     />
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
-                        Price
+                    <div className="flex flex-wrap">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
+                            PriceEur €
+                        </label>
+                        <input
+                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="priceEur"
+                            type="number"
+
+                            value={formState.priceEur}
+                            onChange={(e) => setFormState({ ...formState, priceEur: parseInt(e.target.value) })}
+                        />
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
+                            PriceUSD $
+                        </label>
+                        <input
+                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="priceUSD"
+                            type="number"
+
+                            value={formState.priceUSD}
+                            onChange={(e) => setFormState({ ...formState, priceUSD: parseInt(e.target.value) })}
+                        />
+                    </div>
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
+                        label
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="price"
-                        type="number"
-                        min="5" max="6000"
-                        value={formState.price}
-                        onChange={(e) => setFormState({ ...formState, price: parseInt(e.target.value) })}
+                        id="label"
+                        type="text"
+                        value={formState.label}
+                        onChange={(e) => setFormState({ ...formState, label: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
+                        Genre
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="genre"
+                        type="text"
+                        value={formState.genre}
+                        onChange={(e) => setFormState({ ...formState, genre: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
                         Seller
@@ -133,14 +188,14 @@ const VinylInput = () => {
                         value={formState.author}
                         onChange={(e) => setFormState({ ...formState, author: e.target.value })}
                     />
-                    <label htmlFor="accept"> Visible </label>
+                    {/* <label htmlFor="accept"> Visible </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="visible"
                         type="checkbox"
                         checked={formState.featured}
                         onChange={(e) => setFormState({ ...formState, featured: e.target.checked })}
-                    />
+                    /> */}
 
                 </div>
                 <div className="mb-4">

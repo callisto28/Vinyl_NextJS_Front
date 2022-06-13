@@ -12,12 +12,8 @@ const Home: NextPage = () => {
         <meta name="description" content="Toute l'actualité du vinyle" />
         <link rel="icon" href="/callisto.png" />
       </Head>
-
-      <div className="flex lg:flex-row lg:justify-evenly sm:flex-col sm:items-center sm:content-evenly">
-
-
-        <Link href="/accueil"><h1><a className="text-white font-chelsea lg:text-7xl sm:text-5xl hover:text-yellow-300 transition-color duration-500 delay-200 "> Welcome to VinylTouch!</a></h1></Link>
-
+      <div className="flex justify-center">
+        <Link href="/accueil"><h1 className='[text-shadow:0_4px_1px_#B625E4]'><a className="text-white cursor-pointer font-chelsea lg:text-7xl sm:text-5xl hover:text-purple-600 hover:[text-shadow:0_4px_2px_#FFFFFF] transition-color duration-500 delay-200 "> Bienvenue sur VinylTouch!</a></h1></Link>
       </div>
     </>
   )

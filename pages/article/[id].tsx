@@ -81,8 +81,8 @@ const DetailArticle = ({ article }) => {
 
 
     return (
-        <div className={styles.container}>
-            <div className="flex flex-col w-4/6 h-auto border-2 border-red-400 rounded-lg bg-slate-300 text-center whitespace-pre-line p-2">
+        <div className="flex justify-center ">
+            <div className="flex flex-col w-4/6 h-autotext-white bg-white bg-opacity-50 rounded-lg p-6 pb-10 mb-8 shadow-[inset_-0_-15px_30px_-5px_#FEF08A]">
                 <h1 className="lg:text-2xl sm:text-xl text-center font-bold  border-2 border-yellow-500 rounded-lg">{article.title}</h1>
                 <p className="lg:text-xl sm:text-base justify-center pb-2">{strUcFirst(article.description)}</p>
                 <h2 className="lg:text-2xl sm:text-lg border-2 border-yellow-500 rounded-lg pb-2">{article.subtitle}</h2>

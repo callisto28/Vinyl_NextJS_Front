@@ -4,11 +4,12 @@ import Head from 'next/head'
 import client from '../apollo-client'
 import WidgetArt from '../components/WidgetArt'
 import WidgetPostVinyl, { WidgetPostDesk, WidgetPostMaterial } from '../components/WidgetPost'
-import WidgetPost from '../components/WidgetPost'
+
 
 
 
 const Home: NextPage = ({ articles, plans, materials, desks }: any) => {
+
 
 
     return (
@@ -18,15 +19,23 @@ const Home: NextPage = ({ articles, plans, materials, desks }: any) => {
                 <meta name="description" content="Toute l'actualité du vinyle" />
                 <link rel="icon" href="/callisto.png" />
             </Head>
-            <div className="">
-                <div className="flex lg:flex-row lg:justify-evenly sm:flex-col sm:items-center sm:content-evenly">
+            <div className="lg:w-auto sm-w-auto sm:mx-4 lg:grid lg:grid-cols-2 lg:gap-2 lg:items-center lg:justify-items-center sm:flex sm:flex-col">
+                <div className="lg:w-2/3 sm:w-full h-auto ">
                     <WidgetArt articles={articles} />
-                    <div className='grid grid-row-2'>
+                </div>
+                <div className='lg:w-1/3 sm:w-full w-1/2 lg:grid overflow-hidden lg:grid-lines lg:grid-cols-2 lg:grid-rows-7 min-w-full min-h-full sm:grid-cols-7 gap-2'>
+                    <div className='w-auto'>
                         <WidgetPostVinyl plans={plans} />
-                        <WidgetPostMaterial material={materials} />
-                        <WidgetPostDesk desk={desks} />
-                    </div>
 
+                    </div>
+                    <div>
+                        <WidgetPostMaterial material={materials} />
+
+                    </div>
+                    <div>
+                        <WidgetPostDesk desk={desks} />
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,7 +71,7 @@ export async function getStaticProps() {
                 description
                 image
                 referral_url
-                price
+                priceEur
                 seller
                 featured
             }

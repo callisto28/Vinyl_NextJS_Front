@@ -25,7 +25,7 @@ export default function Navbar() {
                     </a>
                 </Link>
                 <button
-                    className=' inline-flex p-2 hover:bg-turquoise rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+                    className=' inline-flex p-3 hover:bg-black rounded lg:hidden text-white ml-auto hover:text-white outline-none'
                     onClick={handleClick}
                 >
                     <svg
@@ -50,25 +50,25 @@ export default function Navbar() {
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                         <Link href='/accueil'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500 '>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center text-white tracking-wider [text-shadow:1px_0px_1px_#000] hover:border-b-2 hover:border-purple-500  '>
                                 Accueil
                             </a>
                         </Link>
                         <Link href='/articles'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center text-white tracking-wider [text-shadow:1px_0px_1px_#000] hover:border-b-2 hover:border-purple-500 '>
                                 Articles
                             </a>
                         </Link>
-                        <div>
-                            {/* <DropDown /> */}
-                        </div>
+
+
+
                         <Link href='/bonplan'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
-                                <MyDropdown />
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center text-white tracking-wider [text-shadow:1px_0px_1px_#000] hover:border-b-2 hover:border-purple-500'>
+                                <div> <MyDropdown />  </div>
                             </a>
                         </Link>
                         <Link href='/frenchTouch'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-violet-500'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center text-white tracking-wider [text-shadow:1px_0px_1px_#000] hover:border-b-2 hover:border-purple-500 '>
                                 FrenchTouch
                             </a>
                         </Link>

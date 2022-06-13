@@ -7,6 +7,7 @@ module.exports = {
   content: [
     './pages/**/*.{html,js,ts,tsx}',
     './components/**/*.{html,js,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
 
   theme: {
@@ -63,6 +64,7 @@ module.exports = {
     },
     plugins: [
       require('@tailwindcss/forms'),
+      require('flowbite/plugin'),
 
       plugin(function ({ addBase, theme }) {
         addBase({
