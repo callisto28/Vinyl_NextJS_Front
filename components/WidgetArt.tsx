@@ -40,7 +40,7 @@ const WidgetArt = ({ articles }: any) => {
                     },
                     mobile: {
                         breakpoint: {
-                            max: 320,
+                            max: 460,
                             min: 0
                         },
                         items: 1,

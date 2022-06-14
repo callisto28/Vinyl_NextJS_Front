@@ -35,7 +35,7 @@ export const WidgetPostVinyl = ({ plans }: any) => {
                     },
                     mobile: {
                         breakpoint: {
-                            max: 320,
+                            max: 460,
                             min: 0
                         },
                         items: 1,
@@ -112,7 +112,7 @@ export const WidgetPostMaterial = ({ material }: any) => {
                     },
                     mobile: {
                         breakpoint: {
-                            max: 320,
+                            max: 460,
                             min: 0
                         },
                         items: 1,
@@ -188,11 +188,11 @@ export const WidgetPostDesk = ({ desk }: any) => {
                     },
                     mobile: {
                         breakpoint: {
-                            max: 320,
+                            max: 460,
                             min: 0
                         },
                         items: 1,
-                        partialVisibilityGutter: 30
+                        partialVisibilityGutter: 80
                     },
 
                     tablette: {
