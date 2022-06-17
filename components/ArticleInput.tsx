@@ -5,8 +5,7 @@ import React, { useState } from 'react';
 
 const CREATE_ARTICLE = gql`
 mutation Mutation($createArticleInput: CreateArticleInput!) {
-  createArticle(createArticleInput: $createArticleInput) {
-                
+    createArticle(createArticleInput: $createArticleInput) {
     _id
     image
     title

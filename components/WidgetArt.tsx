@@ -6,29 +6,29 @@ import "react-multi-carousel/lib/styles.css";
 
 
 
-const WidgetArt = ({ articles }: any) => {
+const WidgetArt = ({ articles1 }: any) => {
 
     //request 2 last articles
-    const lastArticles = articles.slice(0, 3);
+    // const lastArticles = articles1.slice(0, 3);
 
 
     return (
-        <div className="rounded-lg p-1 pb-5 mb-4 shadow-[inset_-0_-15px_30px_-5px_#FEF08A]">
-            <h3 className="text-xl text-yellow-400 mb-8 font-semibold border-b border-yellow-400 pb-4">{'Articles récents'}</h3>
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+            <h3 className="text-center text-black pb-4">{'Articles récents'}</h3>
             < Carousel
                 containerClass='carousel-container'
-                additionalTransfrom={1}
+                additionalTransfrom={2}
                 arrows
                 autoPlaySpeed={3500}
                 centerMode={false}
                 dotListClass="custom-dot-list-style"
-                draggable={false}
-                focusOnSelect={true}
+                draggable={true}
+                focusOnSelect={false}
                 infinite
                 keyBoardControl
                 minimumTouchDrag={80}
                 renderButtonGroupOutside={false}
-                renderDotsOutside={false}
+                renderDotsOutside={true}
                 responsive={{
                     desktop: {
                         breakpoint: {
@@ -62,17 +62,18 @@ const WidgetArt = ({ articles }: any) => {
                 swipeable={false}
 
             >
-                {lastArticles.map((article, index) => (
-                    <div key={index} className=" cursor-pointer text-center rounded-full">
-                        <a className="flex lg:flex-col lg:items-center sm:flex-col sm:items-center">
-                            <div className=" text-white">{article.title} </div>
+                {articles1.map((article, index) => (
+                    <div key={index} className="flex flex-col items-center cursor-pointer">
+                        <a className=" flex flex-col items-center">
+                            <div className=" text-center text-black text-base">{article.title.split(1, 5)} </div>
                             <Link href={`/article/${article._id}`} key={article.slug} passHref>
-                                <img src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x300.jpg')} alt={article.title} className="w-auto h-60  hover:translate-x-2 py-8" />
+                                <Image src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x300.jpg')} layout="intrinsic" width={100} height={100} alt={article.title} />
                             </Link>
                             {/* <div className='text-sm mb-2 py-4'>{article.subtitle}</div> */}
 
-                            <div className="text-xs text-gray-200 ">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-center text-black ">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
+
 
                         </a>
 
@@ -80,7 +81,7 @@ const WidgetArt = ({ articles }: any) => {
 
                 ))}
             </Carousel>
-            <div className='text-xl mb-8 font-semibold pb-4 border-b border-yellow-400'>{''}</div>
+
         </div >
     )
 }

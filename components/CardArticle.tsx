@@ -19,12 +19,12 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
     return (
         <div className="">
             <div className="flex flex-col items-center py-2 ">
-                <div className="mx-1 border-2 bg-white bg-opacity-40 border-yellow-200 rounded-lg max-w-sm  h-128 flex flex-col justify-around items-center px-3 shadow-[inset_0_-20px_20px_-10px_#FEF08A] " key={keyCard}>
+                <div className="mx-1 border-2  border-blueCC rounded-4xl max-w-sm  h-128 flex flex-col justify-around items-center px-3" key={keyCard}>
                     {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light" > */}
                     <img src={imgCard} alt="" className=" object-contain h-48 w-96 p-2 rounded-4xl " />
                     {/* </a> */}
 
-                    <h1 className="text-yellow-200  text-center first-letter:text-3xl first-letter:font-bold">{titleCard} </h1>
+                    <h1 className="text-black  text-center first-letter:text-3xl first-letter:font-bold">{titleCard} </h1>
                     <div className='text-ellipsis overflow-hidden ...'>
                         <p className="text-black  text-justify font-philosopher first-letter:text-xl first-letter:font-bold">
                             {texteCard}
@@ -40,7 +40,7 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
                     </h3>
 
 
-                    <Link href={link} as={linkTitle} passHref ><button className='rounded-full hover:text-white bg-yellow-200 text-center px-5 font-philosopher sm:mb-2 ' >&rarr; Voir plus</button></Link>
+                    <Link href={link} as={linkTitle} passHref ><button className='rounded-full hover:text-white text-black hover:bg-red-400 bg-white text-center px-5 font-philosopher sm:mb-2 ' >&rarr; Voir plus</button></Link>
                 </div>
 
             </div>

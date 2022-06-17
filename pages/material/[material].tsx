@@ -81,7 +81,7 @@ const DetailMaterial = ({ material }) => {
                     </div>
                     <div className='flex flex-col'>
                         <span>Prix de vente : </span>
-                        <p className='text-xl font-semibold pb-3'>{material.price} €</p>
+                        <p className='text-xl font-semibold pb-3'>{material.price + " €"} </p>
                     </div>
                     <div className='flex flex-col'>
                         <span>Publié le : </span>

@@ -7,13 +7,13 @@ import Link from 'next/link';
 const Footer = () => {
     return (
 
-        <div className='flex flex-col items-center border-t-2 pt-2'>
+        <div className='flex flex-col items-center border-t-2  border-blueCC'>
             <footer className=" flex flex-row items-top" >
                 <a
                     href="https://seb4dev.works/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='text-white font-chelsea text-sm hover:text-yellow-300'
+                    className='text-black font-chelsea text-sm hover:text-yellow-300'
                 >
                     Powered by{' '}
 
@@ -23,7 +23,7 @@ const Footer = () => {
                 <Link href={'../admin/admin'}>
                     <ChevronDownIcon
                         className="
-                             h-10 w-10 text-violet-900 hover:text-violet-100"
+                             h-5 w-5 text-violet-900 hover:text-violet-100"
                         aria-hidden="true"
                     />
 

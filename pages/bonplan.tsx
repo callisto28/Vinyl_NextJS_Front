@@ -6,8 +6,8 @@ import CardPlan from '../components/CardPlan';
 const bonplans = ({ vinyls, materials, desks }) => {
 
     return (
-        <div className="container mx-auto px-10 mb-8 flex flex-wrap justify-center">
-            <div className="flex flex-wrap">
+        <div className="">
+            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center sm:mx-2">
 
                 {
                     vinyls.map((plan: any) => (

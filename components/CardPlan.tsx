@@ -22,7 +22,7 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
     return (
         <div className="">
             <div className="">
-                <div className="mx-1 border-2 bg-white bg-opacity-40 border-purple-500 rounded-lg max-w-sm  h-128 flex flex-col justify-around items-center px-3 shadow-[inset_0_-20px_20px_-10px_#B625E4] " key={keyCardPl}>
+                <div className="mx-1 border-2 border-blueCC rounded-4xl max-w-sm  h-128 flex flex-col justify-around items-center px-3  " key={keyCardPl}>
                     {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light" > */}
                     <p className="text-black text-center ">Publié le : <span className='text-purple-800'>{new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 

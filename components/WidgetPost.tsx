@@ -4,12 +4,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 
-export const WidgetPostVinyl = ({ plans }: any) => {
+export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-white rounded-lg p-5 pb-8 mb-8 shadow-[inset_0_-20px_20px_-10px_#9333EA]">
+        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC">
 
-            <h3 className="text-xl mb-8 font-semibold border-b border-purple-600 pb-4">{'Sortie Vinyle'}</h3>
+            <h3 className="text-center text-black pb-4">{'Sortie Vinyle'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -57,18 +57,18 @@ export const WidgetPostVinyl = ({ plans }: any) => {
                 swipeable={false}
 
             >
-                {plans.map((vinyl, index) => (
+                {vinyls.map((vinyl, index) => (
                     <div key={index}>
 
-                        <a className="flex flex-col items-center cursor-pointer">
-                            <div className="text-center text-lg">{vinyl.title}</div>
-                            <Link href={`/plan/${vinyl._id}`} key={plans.slug} passHref>
-                                <img src={vinyl.image} alt={vinyl.title} className="w-auto h-28 hover:translate-x-2 hover:shadow-purple-600  my-1" />
+                        <a className=" flex flex-col items-center cursor-pointer">
+                            <div className="text-center text-black text-base">{vinyl.title}</div>
+                            <Link href={`/plan/${vinyl._id}`} key={vinyl.slug} passHref>
+                                <img src={vinyl.image} alt={vinyl.title} className="w-auto h-28" />
                             </Link>
-                            <div className="text-xs text-white">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-center text-black">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
 
                             </div>
-                            <span className=" mb-2 text-transparent border-b border-purple-600 pb-4">{'------------------------------'}</span>
+                            {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
                         </a>
 
                     </div>
@@ -82,11 +82,11 @@ export const WidgetPostVinyl = ({ plans }: any) => {
 
 
 
-export const WidgetPostMaterial = ({ material }: any) => {
+export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white rounded-lg p-5 pb-8 mb-8 shadow-[inset_0_-20px_20px_-10px_#9333EA]">
-            <h3 className="text-xl mb-8 font-semibold border-b border-purple-600 pb-4">{'Dernier hifi'}</h3>
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+            <h3 className="text-center text-black pb-4">{'Dernier hifi'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -134,21 +134,21 @@ export const WidgetPostMaterial = ({ material }: any) => {
                 swipeable={false}
 
             >
-                {material.map((material, index) => (
+                {material1.map((material, index) => (
                     <div key={index}>
 
-                        <a className="flex flex-col items-center cursor-pointer">
+                        <a className=" flex flex-col items-center cursor-pointer">
 
 
-                            <div className="text-center text-lg">{material.title}</div>
+                            <div className="text-center text-base text-black">{material.title}</div>
 
                             <Link href={`/material/${material._id}`} key={material.slug} passHref>
-                                <img src={material.image} alt={material.title} className="w-auto h-28 rounded-full my-1" />
+                                <img src={material.image} alt={material.title} className="w-auto h-28" />
                             </Link>
 
-                            <div className="text-xs text-white">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-black">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
-                            <span className=" mb-2 text-transparent border-b border-purple-600 pb-4">{'------------------------------'}</span>
+                            {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
                         </a>
                     </div>
                 ))}
@@ -157,11 +157,11 @@ export const WidgetPostMaterial = ({ material }: any) => {
     )
 };
 
-export const WidgetPostDesk = ({ desk }: any) => {
+export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="rounded-lg p-5 pb-8 mb-8 shadow-[inset_0_-20px_20px_-10px_#9333EA]">
-            <h3 className="text-xl text-white mb-8 font-semibold border-b border-purple-600 pb-4">{'Dernier meuble'}</h3>
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+            <h3 className="text-center text-black pb-4">{'Dernier meuble'}</h3>
 
             < Carousel
                 containerClass='carousel-container'
@@ -210,20 +210,20 @@ export const WidgetPostDesk = ({ desk }: any) => {
                 swipeable={false}
 
             >
-                {desk.map((desk, index) => (
+                {desk1.map((desk, index) => (
                     <div key={index}>
 
-                        <a className="flex flex-col text-center items-center cursor-pointer">
+                        <a className="flex flex-col items-center cursor-pointer">
 
-                            <div className="text-center pb-3 text-white text-lg">{desk.title}</div>
+                            <div className="text-center text-black">{desk.title}</div>
 
                             <Link href={`/desk/${desk._id}`} key={desk.slug} passHref>
                                 <img src={desk.image} alt={desk.title} className="w-auto h-28 rounded-full  my-1" />
                             </Link>
 
-                            <div className="text-xs pt-2 text-white">{new Date(parseInt(desk.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs  text-black">{new Date(parseInt(desk.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
-                            <span className=" mb-2 text-transparent border-b border-purple-600 pb-4">{'------------------------------'}</span>
+                            {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
                         </a>
 
                     </div>

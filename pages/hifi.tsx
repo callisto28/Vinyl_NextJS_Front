@@ -21,7 +21,7 @@ const hifi = ({ hifi }) => {
                                 linkTitlePL={`/material/${plan._id}`}
                                 imgCardPL={(plan.image != "") ? (plan.image) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                                 texteCardPL={plan.description}
-                                priceCardPLEUR={plan.price}
+                                priceCardPLEUR={plan.price + " €"}
                                 titleCardPL={plan.title}
                                 authorCardPL={plan.author}
                                 dateCardPL={plan.createdAt} />

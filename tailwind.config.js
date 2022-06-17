@@ -27,7 +27,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "background": "url('/bg.jpg')",
+        "background": "#fff",
       },
       spacing: {
         '128': '32rem',
@@ -39,7 +39,7 @@ module.exports = {
       colors: {
         'sable': '#E1CDA1',
         'turquoise': '#3ADCDC',
-        'blueCC': '#5dc4ef',
+        'blueCC': '#46A3E7',
         'blueNav': '#242650',
         'frost': {
           'start': '#000428',
