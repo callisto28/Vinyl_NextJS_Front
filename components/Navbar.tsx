@@ -25,7 +25,7 @@ export default function Navbar() {
                     </a>
                 </Link>
                 <button
-                    className=' inline-flex p-3 hover:bg-black rounded lg:hidden text-white ml-auto hover:text-blue-400 outline-none'
+                    className=' inline-flex p-3 bg-black hover:bg-blueCC rounded lg:hidden text-white ml-auto hover:text-blue-400 outline-none'
                     onClick={handleClick}
                 >
                     <svg

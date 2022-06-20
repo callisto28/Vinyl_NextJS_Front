@@ -14,7 +14,7 @@ const articles = ({ articles }) => {
                 {
                     articles.map((article: any) => (
 
-                        <div key={article._id} className="lg:max-w-screen-xl sm:max-w-lg sm:mb-2">
+                        <div key={article._id} className="lg:max-w-screen-xl sm:max-w-lg sm:mb-2 ">
                             <CardArticle keyCard={article._id}
                                 link={`/article/${article._id}`}
                                 linkTitle={`/article/${article._id}`}

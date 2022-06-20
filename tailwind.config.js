@@ -38,7 +38,7 @@ module.exports = {
       },
       colors: {
         'sable': '#E1CDA1',
-        'turquoise': '#3ADCDC',
+        'rougeCC': '#B86549',
         'blueCC': '#46A3E7',
         'blueNav': '#242650',
         'frost': {

@@ -24,7 +24,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
     return (
-        <div className='container mx-auto px-10 mb-8'>
+        <div className="flex flex-col items-center py-2 ">
             <Head>
                 <title>FrenchTouch</title>
                 <meta name="description" content="Youtubeur français" />
@@ -33,10 +33,10 @@ const bonplan = ({ data, data2 }: any) => {
 
             {/* Chaine Youtube mis à l'honneur */}
             <div className="">
-                <h2 className='font-bold text-2xl text-white'> News de la French Touch Youtube</h2>
+                <h2 className='font-bold text-2xl text-blueCC'> News de la French Touch Youtube</h2>
             </div>
             <div className='grid grid-flow-row gap-12 m-14'>
-                <h3 className='font-bold text-l text-white'>Chaque semaine Retrouvez une chaîne mise à l&apos;honneur  avec ses 3 dernières vidéos</h3>
+                <h3 className='font-bold text-l text-blueCC'>Chaque semaine Retrouvez une chaîne mise à l&apos;honneur  avec ses 3 dernières vidéos</h3>
                 <ul className="grid lg:grid-cols-3 sm:grid-rows-1 lg:gap-x-8 sm:gap-y-2 text-center mx-auto">
                     {data.items.map((item: { id: any; snippet?: {} | undefined | any; }, index: React.Key | null | undefined) => {
                         const { id, snippet = {} } = item;
@@ -46,7 +46,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index} className="bg-gray-200 shadow-md border border-red-400 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid lg:content-evenly sm:content-around">
+                            <div key={index} className="bg-white shadow-md border border-blueCC rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid lg:content-evenly sm:content-around">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{channelTitle}</h5>
                                 </a>
@@ -78,7 +78,7 @@ const bonplan = ({ data, data2 }: any) => {
                 <h2 className='font-bold text-2xl text-white'> La French Touch</h2>
             </div>
             <div className='grid grid-flow-row gap-12 m-14'>
-                <h3 className='font-bold text-l text-white'>Voici une liste des Youtubeurs Français parlant de vinyls</h3>
+                <h3 className='font-bold text-l text-blueCC'>Voici une liste des Youtubeurs Français parlant de vinyls</h3>
                 <ul className="grid lg:grid-cols-3 sm:grid-rows-1 gap-8 text-center mx-auto">
                     {data2.items.map((item2: { contentDetails?: any; id?: any; snippet?: any; }, index2: React.Key | null | undefined) => {
                         const { id, snippet = {} } = item2;
@@ -87,7 +87,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index2} className="bg-white shadow-md border border-red-400 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid content-evenly">
+                            <div key={index2} className="bg-white shadow-md border border-blueCC rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid content-evenly">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{videoOwnerChannelTitle}</h5>
                                 </a>

@@ -13,7 +13,7 @@ const rangements = ({ desk }) => {
                         <div key={plan._id}>
                             <div className='flex flex-row justify-center items-center m-2'>
                                 <h1 className='text-2xl font-bold px-4 text-purple-500 bg-black bg-opacity-50 rounded-md'>{new Date(parseInt(plan.updatedAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</h1>
-                                <img src="./headphone-front-color.png" width={50} height={50} />
+                                <img src="./bag-front-premium.png" width={50} height={50} />
                             </div>
 
                             <CardPlan keyCardPl={plan._id}

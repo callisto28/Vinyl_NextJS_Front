@@ -20,17 +20,17 @@ type Props = {
 
 const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, imgCardPL, priceCardPLEUR }: Props) => {
     return (
+
         <div className="">
             <div className="">
                 <div className="mx-1 border-2 border-blueCC rounded-4xl max-w-sm  h-128 flex flex-col justify-around items-center px-3  " key={keyCardPl}>
-                    {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light" > */}
-                    <p className="text-black text-center ">Publié le : <span className='text-purple-800'>{new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                    <p className="text-black text-center ">Publié le : <span className='text-rougeCC'>{new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
                     </p>
                     <img src={imgCardPL} alt="" className=" object-contain h-48 w-96 p-2 border-y-2" />
-                    {/* </a> */}
 
-                    <h1 className="text-purple-600 text-xl text-center font-philosopher">{titleCardPL} </h1>
+
+                    <h1 className="text-blueCC text-xl text-center font-philosopher">{titleCardPL} </h1>
                     <div className='text-ellipsis overflow-hidden ...'>
                         <p className="text-black text-justify text-base font-philosopher">
                             {texteCardPL}
@@ -53,10 +53,10 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
                         as={linkTitlePL}
                         passHref ><button className='rounded-full
                                                     hover:text-white
-                                                    bg-purple-500 text-center
+                                                    bg-blueCC text-center
                                                     px-5 font-philosopher
                                                     font-bold
-                                                    transition-color duration-700 delay-500 
+                                                    transition-color duration-700 delay-200 
                                                     animate-bounce-in-left
                                                     mb-5
                                                     
@@ -65,6 +65,7 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
 
             </div>
         </div>
+
     );
 };
 

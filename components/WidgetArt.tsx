@@ -13,7 +13,7 @@ const WidgetArt = ({ articles1 }: any) => {
 
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+        <div className="text-black  rounded-4xl border-2 h-64 w-64 border-blueCC hover:bg-gray-100">
             <h3 className="text-center text-black pb-4">{'Articles récents'}</h3>
             < Carousel
                 containerClass='carousel-container'
@@ -63,7 +63,7 @@ const WidgetArt = ({ articles1 }: any) => {
 
             >
                 {articles1.map((article, index) => (
-                    <div key={index} className="flex flex-col items-center cursor-pointer">
+                    <div key={index} className="flex flex-col items-center cursor-pointer ">
                         <a className=" flex flex-col items-center">
                             <div className=" text-center text-black text-base">{article.title.split(1, 5)} </div>
                             <Link href={`/article/${article._id}`} key={article.slug} passHref>

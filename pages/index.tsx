@@ -31,19 +31,20 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
       </Head>
 
       {/* <Layout pages="Acceuil Vinyl"> */}
-      <div className="grid overflow-hidden grid-cols-2 grid-rows-3 lg:gap-2">
-        <div className="box row-start-1 row-span-5 col-start-1 col-span-1 mt-48 mx-48 ">
-          <h1 className=' mx-28 text-left text-3xl font-extrabold font-philosopher text-black'>Toute l’actualité du vinyle, en quelques clics, des articles,
+      <div className="lg:grid overflow-hidden lg:grid-cols-2 lg:grid-rows-3 lg:gap-2 sm:grid sm:grid-col-1">
+        <div className="box lg:row-start-1 lg:row-span-5 lg:col-start-1 col-span-1 sm:flex sm:flex-col mt-48 mx-48 ">
+          <h1 className=' mx-28 text-left text-3xl font-extrabold font-philosopher z-10 text-black  sm:text-rigth sm:mx-2'>Toute l’actualité du vinyle, en quelques clics, des articles,
             <span> les sorties vinyles et bien plus encore...</span>
+
+            <h2 className='mt-2 mx-36 text-left text-3xl font-extrabold font-philosopher z-10 text-black'>
+              Sans oublier notre section spécialement destinée à nos youtubeurs Français.
+            </h2>
           </h1>
-          <h2 className='mt-2 mx-36 text-left text-3xl font-extrabold font-philosopher text-black'>
-            Sans oublier notre section spécialement destinée à nos youtubeurs Français.
-          </h2>
         </div>
 
 
-        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 z-10 mb-48 '>
-          <div className='flex flex-row justify-evenly'>
+        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-10 mb-48 '>
+          <div className='lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col'>
             <div className='w-auto'>
               <WidgetArt articles1={lastArticles} />
             </div>
@@ -60,7 +61,7 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
         </div>
 
 
-        <div className='box  ml-128'>
+        <div className='box lg:ml-128 sm:ml-24'>
           <Image src="/background.png" alt="vinyle" width={750} height={750} className="" />
         </div>
 

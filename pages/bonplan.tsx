@@ -12,8 +12,8 @@ const bonplans = ({ vinyls, materials, desks }) => {
                 {
                     vinyls.map((plan: any) => (
                         <div key={plan._id}>
-                            <div className='flex flex-row justify-center items-center m-2'>
-                                <h1 className='text-2xl font-bold px-4 text-purple-500 [text-shadow:2px_0px_1px_#fff]  rounded-md'>Sortie Vinyl</h1>
+                            <div className='flex bg justify-center  items-center m-2'>
+                                <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Sortie Vinyl</h1>
                                 <img src="./headphone-front-color.png" width={50} height={50} />
                             </div>
 
@@ -36,7 +36,7 @@ const bonplans = ({ vinyls, materials, desks }) => {
 
                         <div key={material._id}>
                             <div className='flex flex-row justify-center items-center m-2 '>
-                                <h1 className='text-2xl font-semibold px-4 text-purple-500  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Materiel Hifi</h1>
+                                <h1 className='text-2xl font-semibold px-4 text-rougeCC  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Materiel Hifi</h1>
                                 <img src="./mic-front-premium.png" width={50} height={50} />
                             </div>
 
@@ -57,7 +57,7 @@ const bonplans = ({ vinyls, materials, desks }) => {
                     desks.map((desk: any) => (
                         <div key={desk._id}>
                             <div className='flex flex-row justify-center items-center m-2'>
-                                <h1 className='text-2xl font-bold px-4 text-purple-500  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Rangement</h1>
+                                <h1 className='text-2xl font-bold px-4 text-rougeCC  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Rangement</h1>
                                 <img src="./bag-front-premium.png" width={50} height={50} />
                             </div>
                             <CardPlan keyCardPl={desk._id}
