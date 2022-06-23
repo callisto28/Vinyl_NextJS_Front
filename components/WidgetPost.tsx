@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC">
+        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC hover:bg-gray-100">
 
             <h3 className="text-center text-black pb-4">{'Sortie Vinyle'}</h3>
             < Carousel
@@ -85,7 +85,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC hover:bg-gray-100">
             <h3 className="text-center text-black pb-4">{'Dernier hifi'}</h3>
             < Carousel
                 containerClass='carousel-container'
@@ -142,9 +142,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 
                             <div className="text-center text-base text-black">{material.title}</div>
 
-                            <Link href={`/material/${material._id}`} key={material.slug} passHref>
-                                <img src={material.image} alt={material.title} className="w-auto h-28" />
-                            </Link>
+                            <Link href={`/material/${material._id}`} key={material.slug} passHref><img src={material.image} alt={material.title} className="w-auto h-28" /></Link>
 
                             <div className="text-xs text-black">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
@@ -160,7 +158,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC">
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC hover:bg-gray-100">
             <h3 className="text-center text-black pb-4">{'Dernier meuble'}</h3>
 
             < Carousel
@@ -217,9 +215,7 @@ export const WidgetPostDesk = ({ desk1 }: any) => {
 
                             <div className="text-center text-black">{desk.title}</div>
 
-                            <Link href={`/desk/${desk._id}`} key={desk.slug} passHref>
-                                <img src={desk.image} alt={desk.title} className="w-auto h-28 rounded-full  my-1" />
-                            </Link>
+                            <Link href={`/desk/${desk._id}`} key={desk.slug} passHref><img src={desk.image} alt={desk.title} className="w-auto h-28 rounded-full  my-1" /></Link>
 
                             <div className="text-xs  text-black">{new Date(parseInt(desk.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>

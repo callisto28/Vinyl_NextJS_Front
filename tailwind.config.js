@@ -66,6 +66,8 @@ module.exports = {
       require('@tailwindcss/forms'),
       require('flowbite/plugin'),
 
+
+
       plugin(function ({ addBase, theme }) {
         addBase({
           'h1': { fontSize: theme('text-blue') },

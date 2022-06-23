@@ -1,14 +1,8 @@
 import { gql } from '@apollo/client'
-import { Lexer } from 'graphql'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
 import Image from 'next/image'
-import Link from 'next/link'
 import client from '../apollo-client'
-import Footer from '../components/Footer'
-import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
 import WidgetArt from '../components/WidgetArt'
 import { WidgetPostVinyl, WidgetPostDesk, WidgetPostMaterial } from '../components/WidgetPost'
 
@@ -17,7 +11,7 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
 
   const lastArticles = articleRec.slice(0, 3);
   const lastPlan = plansRec.slice(0, 3);
-  console.log(lastPlan, 'lastPlan');
+
   const lastMaterial = materialsRec.slice(0, 3);
   const lastDesk = desksRec.slice(0, 3);
   return (
@@ -32,36 +26,36 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
 
       {/* <Layout pages="Acceuil Vinyl"> */}
       <div className="lg:grid overflow-hidden lg:grid-cols-2 lg:grid-rows-3 lg:gap-2 sm:grid sm:grid-col-1">
-        <div className="box lg:row-start-1 lg:row-span-5 lg:col-start-1 col-span-1 sm:flex sm:flex-col mt-48 mx-48 ">
-          <h1 className=' mx-28 text-left text-3xl font-extrabold font-philosopher z-10 text-black  sm:text-rigth sm:mx-2'>Toute l’actualité du vinyle, en quelques clics, des articles,
+        <div className="box lg:row-start-1 lg:row-span-5 lg:col-start-1 col-span-1 sm:flex sm:flex-col lg:mt-48 lg:mx-48 sm:mt-5 sm:text-center ">
+          <h1 className='lg:mt-2 lg:mx-36 lg:text-left lg:text-3xl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>Toute l’actualité du vinyle, en quelques clics, des articles,
             <span> les sorties vinyles et bien plus encore...</span>
 
-            <h2 className='mt-2 mx-36 text-left text-3xl font-extrabold font-philosopher z-10 text-black'>
-              Sans oublier notre section spécialement destinée à nos youtubeurs Français.
-            </h2>
-          </h1>
+
+          </h1>   <h2 className='lg:mt-2 lg:mx-36 lg:text-left lg:text-3xl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>
+            Sans oublier notre section spécialement destinée à nos youtubeurs Français.
+          </h2>
         </div>
 
 
-        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-10 mb-48 '>
-          <div className='lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col'>
-            <div className='w-auto'>
+        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-10 mb-48 lg:h-20 sm:h-auto '>
+          <div className='lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col sm:items-center sm:justify-around'>
+            <div className='w-auto sm:my-1'>
               <WidgetArt articles1={lastArticles} />
             </div>
-            <div>
+            <div className='w-auto sm:my-1'>
               <WidgetPostVinyl vinyls={lastPlan} />
             </div>
-            <div>
+            <div className='w-auto sm:my-1'>
               <WidgetPostMaterial material1={lastMaterial} />
             </div>
-            <div>
+            <div className='w-auto sm:my-1'>
               <WidgetPostDesk desk1={lastDesk} />
             </div>
           </div>
         </div>
 
 
-        <div className='box lg:ml-128 sm:ml-24'>
+        <div className='box lg:ml-128 lg:relative sm:fixed sm:flex sm:items-center  sm:ml-2'>
           <Image src="/background.png" alt="vinyle" width={750} height={750} className="" />
         </div>
 
@@ -70,7 +64,7 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
 
 
       </div>
-      {/* </Layout> */}
+
 
     </div>
   )

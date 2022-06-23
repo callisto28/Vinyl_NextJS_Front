@@ -4,15 +4,23 @@ import client from "../apollo-client";
 import '../styles/Home.module.css'
 import Link from 'next/link';
 import CardArticle from '../components/CardArticle';
+import Head from 'next/head';
 
 
 const articles = ({ articles }) => {
 
     return (
-        <div className="" >
-            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center sm:mx-2">
-                {
-                    articles.map((article: any) => (
+
+        <>
+            <Head>
+                <title>Les Articles</title>
+                <meta name="description" content="Tous les articles" />
+
+                <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+            </Head>
+            <div className="">
+                <div className="flex flex-wrap justify-center content-between my-4">
+                    {articles.map((article: any) => (
 
                         <div key={article._id} className="lg:max-w-screen-xl sm:max-w-lg sm:mb-2 ">
                             <CardArticle keyCard={article._id}
@@ -25,10 +33,9 @@ const articles = ({ articles }) => {
                                 dateCard={article.createdAt} />
                         </div>
                     )
-                    )
-                }
-            </div>
-        </div >
+                    )}
+                </div>
+            </div></>
     );
 }
 

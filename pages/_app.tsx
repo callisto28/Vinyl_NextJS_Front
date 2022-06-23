@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
+import { AuthProvider } from '../context/authContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -20,7 +21,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Navbar />
 
         <ApolloProvider client={client}>
-          <Component {...pageProps} />
+          <AuthProvider>
+            <Component {...pageProps} />
+          </AuthProvider>
         </ApolloProvider>
         <Footer />
       </Layout>

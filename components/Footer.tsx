@@ -13,14 +13,15 @@ const Footer = () => {
                     href="https://seb4dev.works/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='text-black font-chelsea text-sm hover:text-yellow-300'
+                    className='text-black flex items-start font-chelsea text-sm hover:text-yellow-300 mr-4'
                 >
                     Powered by{' '}
 
-                </a><span className="">
+                </a>
+                <span className=" flex items-start">
                     <Image src="/callisto.png" alt="Vercel Logo" width={80} height={50} />
                 </span>
-                <Link href={'../admin/admin'}>
+                <Link href={'../admin/login'}>
                     <ChevronDownIcon
                         className="
                              h-5 w-5 text-violet-900 hover:text-violet-100"

@@ -2,19 +2,26 @@ import React from 'react';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import CardPlan from '../components/CardPlan';
+import Head from 'next/head';
 
 const bonplans = ({ vinyls, materials, desks }) => {
 
     return (
-        <div className="">
-            <div className="flex lg:flex-row lg:justify-center sm:flex-col sm:content-center sm:mx-2">
+        <>
+            <Head>
+                <title>Les bons plans</title>
+                <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
 
-                {
-                    vinyls.map((plan: any) => (
+                <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+            </Head>
+            <div className="">
+                <div className="flex flex-wrap justify-center content-between my-4">
+
+                    {vinyls.map((plan: any) => (
                         <div key={plan._id}>
                             <div className='flex bg justify-center  items-center m-2'>
                                 <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Sortie Vinyl</h1>
-                                <img src="./headphone-front-color.png" width={50} height={50} />
+                                <img src="./headphone-front-color.png" width={20} height={20} />
                             </div>
 
                             <CardPlan keyCardPl={plan._id}
@@ -29,15 +36,13 @@ const bonplans = ({ vinyls, materials, desks }) => {
                                 dateCardPL={plan.createdAt} />
                         </div>
                     )
-                    )
-                }
-                {
-                    materials.map((material: any) => (
+                    )}
+                    {materials.map((material: any) => (
 
                         <div key={material._id}>
                             <div className='flex flex-row justify-center items-center m-2 '>
-                                <h1 className='text-2xl font-semibold px-4 text-rougeCC  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Materiel Hifi</h1>
-                                <img src="./mic-front-premium.png" width={50} height={50} />
+                                <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Materiel Hifi</h1>
+                                <img src="./mic-front-premium.png" width={20} height={20} />
                             </div>
 
                             <CardPlan keyCardPl={material._id}
@@ -51,14 +56,12 @@ const bonplans = ({ vinyls, materials, desks }) => {
                                 dateCardPL={material.createdAt} />
                         </div>
                     )
-                    )
-                }
-                {
-                    desks.map((desk: any) => (
+                    )}
+                    {desks.map((desk: any) => (
                         <div key={desk._id}>
                             <div className='flex flex-row justify-center items-center m-2'>
-                                <h1 className='text-2xl font-bold px-4 text-rougeCC  [text-shadow:1.5px_0px_1px_#fff] rounded-md'>Rangement</h1>
-                                <img src="./bag-front-premium.png" width={50} height={50} />
+                                <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Rangement</h1>
+                                <img src="./bag-front-premium.png" width={20} height={20} />
                             </div>
                             <CardPlan keyCardPl={desk._id}
                                 linkPL={`/desk/${desk._id}`}
@@ -71,12 +74,11 @@ const bonplans = ({ vinyls, materials, desks }) => {
                                 dateCardPL={desk.createdAt} />
                         </div>
                     )
-                    )
-                }
-                <div className="text-center py-4">
+                    )}
+                    <div className="text-center py-4">
+                    </div>
                 </div>
-            </div >
-        </div>
+            </div></>
     );
 }
 
