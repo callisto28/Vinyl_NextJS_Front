@@ -8,6 +8,9 @@ import Footer from '../components/Footer'
 import Head from 'next/head'
 import { AuthProvider } from '../context/authContext'
 
+
+
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
@@ -17,16 +20,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Toute l'actualité du vinyle" />
         <link rel="icon" href="/callisto.png" />
       </Head>
-      <Layout>
-        <Navbar />
+      <AuthProvider>
+        <Layout>
+          <div className='lg:z-50 sm:z-50'>
+            <Navbar />
+          </div>
 
-        <ApolloProvider client={client}>
-          <AuthProvider>
+          <ApolloProvider client={client}>
+
             <Component {...pageProps} />
-          </AuthProvider>
-        </ApolloProvider>
-        <Footer />
-      </Layout>
+
+          </ApolloProvider>
+          <Footer />
+        </Layout>
+      </AuthProvider>
     </div>
 
 

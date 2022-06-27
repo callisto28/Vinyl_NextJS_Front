@@ -27,20 +27,20 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
       {/* <Layout pages="Acceuil Vinyl"> */}
       <div className="lg:grid overflow-hidden lg:grid-cols-2 lg:grid-rows-3 lg:gap-2 sm:grid sm:grid-col-1">
         <div className="box lg:row-start-1 lg:row-span-5 lg:col-start-1 col-span-1 sm:flex sm:flex-col lg:mt-48 lg:mx-48 sm:mt-5 sm:text-center ">
-          <h1 className='lg:mt-2 lg:mx-36 lg:text-left lg:text-3xl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>Toute l’actualité du vinyle, en quelques clics, des articles,
+          <h1 className='lg:mt-2 lg:mx-36 lg:text-left lg:text-xxxl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>Toute l’actualité du vinyle, en quelques clics, des articles,
             <span> les sorties vinyles et bien plus encore...</span>
 
 
-          </h1>   <h2 className='lg:mt-2 lg:mx-36 lg:text-left lg:text-3xl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>
+          </h1>   <h2 className='lg:mt-2 lg:ml-44 lg:text-left lg:text-xxxl sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-extrabold font-philosopher z-10 text-black'>
             Sans oublier notre section spécialement destinée à nos youtubeurs Français.
           </h2>
         </div>
 
 
-        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-10 mb-48 lg:h-20 sm:h-auto '>
+        <div className='boxb lg:row-start-3 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-50 mb-48 lg:h-20 sm:h-auto '>
           <div className='lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col sm:items-center sm:justify-around'>
             <div className='w-auto sm:my-1'>
-              <WidgetArt articles1={lastArticles} />
+              <WidgetArt articles1={lastArticles} className="z-10" />
             </div>
             <div className='w-auto sm:my-1'>
               <WidgetPostVinyl vinyls={lastPlan} />
@@ -55,8 +55,8 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
         </div>
 
 
-        <div className='box lg:ml-128 lg:relative sm:fixed sm:flex sm:items-center  sm:ml-2'>
-          <Image src="/background.png" alt="vinyle" width={750} height={750} className="" />
+        <div className='box lg:ml-128 lg:relative sm:fixed sm:flex sm:items-baseline sm:ml-2'>
+          <Image src="/background.png" alt="vinyle" width={650} height={650} className="" />
         </div>
 
 

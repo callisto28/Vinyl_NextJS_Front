@@ -40,12 +40,12 @@ export default function Example() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-300 rounded-md bg-blueCC shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="px-1 py-1 ">
                             <Menu.Item>
                                 {({ active }) => (
                                     <button
-                                        className={`${active ? 'bg-blueCC text-white' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -66,7 +66,7 @@ export default function Example() {
                             <Menu.Item>
                                 {({ active }) => (
                                     <button
-                                        className={`${active ? 'bg-blueCC text-white' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -88,7 +88,7 @@ export default function Example() {
                                 {({ active }) => (
 
                                     <button
-                                        className={`${active ? 'bg-blueCC text-white' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -129,7 +129,7 @@ function EditInactiveIcon(props) {
                 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3
                 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"
                 fill="#EDE9FE"
-                stroke="#A78BFA"
+                stroke="#46A3E7"
                 strokeWidth="2"
             />
         </svg>
@@ -149,8 +149,8 @@ function EditActiveIcon(props) {
                 d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3
                  .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3
                  .895-3 2s1.343 2 3 2 3-.895 3-2V3z"
-                fill="#8B5CF6"
-                stroke="#C4B5FD"
+                fill="#f1f1f1"
+                stroke="#004e92"
                 strokeWidth="2"
             />
         </svg>

@@ -17,6 +17,19 @@ module.exports = {
       lg: '1024px',
       xl: '1281px'
     },
+    fontSize: {
+      xxxs: '0.5rem',
+      xxs: '0.625rem',
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      xxl: '1.5rem',
+      xxxl: '1.875rem',
+      xxxxl: '2.25rem',
+    },
+
 
     fontFamily: {
       sans: ['Roboto', 'sans-serif'],
@@ -28,6 +41,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "background": "#fff",
+        "bg": "url('/bg.jpg')",
       },
       spacing: {
         '128': '32rem',

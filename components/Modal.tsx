@@ -1,27 +1,25 @@
+
 import React from 'react';
 
-const Modal = ({ setModalOn, setChoice, contentA, contentB, contentC, contentD, contentE, contentF, url }) => {
+const Modal = ({ setShowModal, setChoice, contentA, contentB, contentC, contentD, contentE, contentF, url }) => {
 
-    const handleOKClick = () => {
-        setChoice(true)
-        setModalOn(false)
-    }
+
     const handleCancelClick = () => {
         setChoice(false)
-        setModalOn(false)
+        setShowModal(false)
     }
 
     return (
 
-        <div className="   bg-zinc-200 opacity-100 fixed inset-0 z-50   ">
+        <div className=" fixed opacity-100 inset-0 z-50   ">
 
-            <div className="flex h-screen justify-center items-center ">
+            <div className="flex lg:h-screen  lg:justify-center lg:items-center sm:h-auto sm:justify-center sm:items-center sm:text-xs ">
 
-                <div className="flex-col justify-center  bg-white py-8 px-8 border-4 border-sky-500 rounded-xl ">
+                <div className="flex-col justify-center  bg-white py-8 px-8 border-4 border-blueCC rounded-xl ">
 
 
-                    <div className="flex">
-                        <div className="p-12  flex flex-col items-center">
+                    <div className="">
+                        <div className="">
                             <span className="inline-block py-1 px-2 rounded bg-blue-50 text-blue-500 text-xs font-medium tracking-widest">Dans le détail</span>
                             <p className="leading-relaxed mb-8">{contentA}.</p>
                             <p className="leading-relaxed mb-8">{contentC}.</p>
@@ -34,6 +32,7 @@ const Modal = ({ setModalOn, setChoice, contentA, contentB, contentC, contentD, 
                                     target="_blank" rel="noreferrer"
                                 >
                                     Consulter</a>
+
                             </button>
 
                             <button onClick={handleCancelClick} className=" rounded px-4 py-2 my-2 text-white  bg-green-400 ">Close</button>

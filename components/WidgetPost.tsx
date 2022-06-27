@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC hover:bg-gray-100">
+        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC bg-white">
 
             <h3 className="text-center text-black pb-4">{'Sortie Vinyle'}</h3>
             < Carousel
@@ -68,7 +68,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
                             <div className="text-xs text-center text-black">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
 
                             </div>
-                            {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
+
                         </a>
 
                     </div>
@@ -85,7 +85,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC hover:bg-gray-100">
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC bg-white">
             <h3 className="text-center text-black pb-4">{'Dernier hifi'}</h3>
             < Carousel
                 containerClass='carousel-container'
@@ -146,7 +146,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 
                             <div className="text-xs text-black">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
-                            {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
+
                         </a>
                     </div>
                 ))}
@@ -158,7 +158,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC hover:bg-gray-100">
+        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC bg-white">
             <h3 className="text-center text-black pb-4">{'Dernier meuble'}</h3>
 
             < Carousel
