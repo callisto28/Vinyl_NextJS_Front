@@ -16,26 +16,27 @@ const articles = ({ articles }) => {
                 <title>Les Articles</title>
                 <meta name="description" content="Tous les articles" />
 
-                <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+                {/* <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> */}
             </Head>
-            <div className="">
-                <div className="flex flex-wrap justify-center content-between my-4">
-                    {articles.map((article: any) => (
 
-                        <div key={article._id} className="lg:max-w-screen-xl sm:max-w-lg sm:mb-2 ">
-                            <CardArticle keyCard={article._id}
-                                link={`/article/${article._id}`}
-                                linkTitle={`/article/${article._id}`}
-                                imgCard={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')}
-                                texteCard={article.description}
-                                titleCard={article.title}
-                                authorCard={article.author}
-                                dateCard={article.createdAt} />
-                        </div>
-                    )
-                    )}
-                </div>
-            </div></>
+            <div className="flex flex-wrap justify-center content-between">
+                {articles.map((article: any) => (
+
+                    <div key={article._id}>
+
+                        <CardArticle keyCard={article._id}
+                            link={`/article/${article._id}`}
+                            linkTitle={`/article/${article._id}`}
+                            imgCard={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')}
+                            texteCard={article.description}
+                            titleCard={article.title}
+                            authorCard={article.author}
+                            dateCard={article.createdAt} />
+                    </div>
+                )
+                )}
+            </div>
+        </>
     );
 }
 

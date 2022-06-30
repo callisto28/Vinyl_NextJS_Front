@@ -2,6 +2,7 @@ import React from 'react';
 import CardPlan from '../components/CardPlan';
 import { gql } from '@apollo/client';
 import client from '../apollo-client';
+import Image from 'next/image';
 
 const hifi = ({ hifi }) => {
     return (
@@ -13,7 +14,7 @@ const hifi = ({ hifi }) => {
                         <div key={plan._id}>
                             <div className='flex flex-row justify-center items-center m-2'>
                                 <h1 className='text-2xl font-bold px-4 text-black font-chelsea'>{new Date(parseInt(plan.updatedAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</h1>
-                                <img src="./mic-front-premium.png" width={30} height={30} />
+                                <Image src="/mic-front-premium.png" width={30} height={30} alt="logo mic" />
                             </div>
 
                             <CardPlan keyCardPl={plan._id}

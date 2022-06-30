@@ -45,7 +45,7 @@ export default function Example() {
                             <Menu.Item>
                                 {({ active }) => (
                                     <button
-                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-white' : 'text-blueCC'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -66,7 +66,7 @@ export default function Example() {
                             <Menu.Item>
                                 {({ active }) => (
                                     <button
-                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-white' : 'text-blueCC'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -88,7 +88,7 @@ export default function Example() {
                                 {({ active }) => (
 
                                     <button
-                                        className={`${active ? 'bg-black text-blueCC' : 'text-gray-900'
+                                        className={`${active ? 'bg-black text-white' : 'text-blueCC'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -149,9 +149,9 @@ function EditActiveIcon(props) {
                 d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3
                  .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3
                  .895-3 2s1.343 2 3 2 3-.895 3-2V3z"
-                fill="#f1f1f1"
-                stroke="#004e92"
-                strokeWidth="2"
+                fill="#46A3E7"
+                stroke="#fff"
+                strokeWidth="1"
             />
         </svg>
     )
@@ -168,13 +168,13 @@ function DuplicateInactiveIcon(props) {
             <path
                 d="M4 4H12V12H4V4Z"
                 fill="#EDE9FE"
-                stroke="#A78BFA"
+                stroke="#46A3E7"
                 strokeWidth="2"
             />
             <path
                 d="M8 8H16V16H8V8Z"
-                fill="#EDE9FE"
-                stroke="#A78BFA"
+                fill="#46A3E7"
+                stroke="#fff"
                 strokeWidth="2"
             />
         </svg>
@@ -191,14 +191,14 @@ function DuplicateActiveIcon(props) {
         >
             <path
                 d="M4 4H12V12H4V4Z"
-                fill="#8B5CF6"
-                stroke="#C4B5FD"
+                fill="#EDE9FE"
+                stroke="#46A3E7"
                 strokeWidth="2"
             />
             <path
                 d="M8 8H16V16H8V8Z"
-                fill="#8B5CF6"
-                stroke="#C4B5FD"
+                fill="#46A3E7"
+                stroke="#fff"
                 strokeWidth="2"
             />
         </svg>
@@ -219,7 +219,7 @@ function ArchiveInactiveIcon(props) {
                 width="10"
                 height="8"
                 fill="#EDE9FE"
-                stroke="#A78BFA"
+                stroke="#46A3E7"
                 strokeWidth="2"
             />
             <rect
@@ -227,8 +227,8 @@ function ArchiveInactiveIcon(props) {
                 y="4"
                 width="12"
                 height="4"
-                fill="#EDE9FE"
-                stroke="#A78BFA"
+                fill="#46A3E7"
+                stroke="#fff"
                 strokeWidth="2"
             />
             <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
@@ -249,17 +249,17 @@ function ArchiveActiveIcon(props) {
                 y="8"
                 width="10"
                 height="8"
-                fill="#8B5CF6"
-                stroke="#C4B5FD"
+                fill="#EDE9FE"
+                stroke="#46A3E7"
                 strokeWidth="2"
             />
             <rect
                 x="4"
                 y="4"
                 width="12"
-                height="4"
-                fill="#8B5CF6"
-                stroke="#C4B5FD"
+                height="8"
+                fill="#46A3E7"
+                stroke="#fff"
                 strokeWidth="2"
             />
             <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />

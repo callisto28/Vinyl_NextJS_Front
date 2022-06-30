@@ -4,21 +4,23 @@ import React, { useState } from 'react';
 const CREATE_PLAN = gql`
 mutation Mutation($input: CreateVinylInput!) {
   createVinyl(input: $input) {
-    _id
-    createdAt
-    updatedAt
-    title
-    subtitle
-    description
-    image
-    referral_url
-    priceEur
-    priceUSD
-    label
-    genre
-    seller
-    author
-    featured
+                     _id
+                    createdAt
+                    updatedAt
+                    title
+                    subtitle
+                    description
+                    image
+                    imageB
+                    referral_url
+                    priceEur
+                    priceUSD
+                    label
+                    genre
+                    seller
+                    author
+                    featured
+                    slug
   }
 }
 
@@ -32,6 +34,7 @@ const VinylInput = () => {
         subtitle: "",
         description: "",
         image: "",
+        imageB: "",
         referral_url: "",
         priceEur: 0,
         priceUSD: 0,
@@ -39,7 +42,8 @@ const VinylInput = () => {
         genre: "",
         seller: "",
         author: "",
-        featured: true
+        featured: true,
+        slug: "vinyl"
     });
 
     const [createPlanInput] = useMutation(CREATE_PLAN, {
@@ -49,6 +53,7 @@ const VinylInput = () => {
                 subtitle: formState.subtitle,
                 description: formState.description,
                 image: formState.image,
+                imageB: formState.imageB,
                 referral_url: formState.referral_url,
                 priceEur: formState.priceEur,
                 priceUSD: formState.priceUSD,
@@ -96,10 +101,10 @@ const VinylInput = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
                         Description
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="description"
-                        type="textarea"
+
                         value={formState.description}
                         onChange={(e) => setFormState({ ...formState, description: e.target.value })}
                     />
@@ -112,6 +117,16 @@ const VinylInput = () => {
                         type="url"
                         value={formState.image}
                         onChange={(e) => setFormState({ ...formState, image: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image">
+                        Image2
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="image"
+                        type="url"
+                        value={formState.imageB}
+                        onChange={(e) => setFormState({ ...formState, imageB: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
                         Url vendeur

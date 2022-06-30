@@ -9,6 +9,13 @@ import { WidgetPostVinyl, WidgetPostDesk, WidgetPostMaterial } from '../componen
 
 const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) => {
 
+
+  const imgRandom = [
+    'IMG_bg1.jpg',
+    'IMG_bg2.jpg',
+
+  ]
+
   const lastArticles = articleRec.slice(0, 3);
   const lastPlan = plansRec.slice(0, 3);
 
@@ -55,8 +62,8 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
         </div>
 
 
-        <div className='box lg:ml-128 lg:relative sm:fixed sm:flex sm:items-baseline sm:ml-2'>
-          <Image src="/background.png" alt="vinyle" width={650} height={650} className="" />
+        <div className='box lg:ml-128 lg:relative lg:items-baseline sm:fixed sm:flex sm:items-end sm:ml-2'>
+          <Image src={`/IMG_bg${Math.round((Math.random() * 1) + 1)}.png`} alt="vinyle" width={650} height={650} className="" />
         </div>
 
 

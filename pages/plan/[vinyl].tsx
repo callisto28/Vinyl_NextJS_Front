@@ -39,6 +39,7 @@ export const getStaticProps = async (context) => {
                     subtitle
                     description
                     image
+                    imageB
                     referral_url
                     priceEur
                     priceUSD
@@ -47,6 +48,7 @@ export const getStaticProps = async (context) => {
                     seller
                     author
                     featured
+                    slug
                 }
             
                 }`,
@@ -101,7 +103,7 @@ const DetailVinyl = ({ vinyl }) => {
                                 <span className="ml-auto text-gray-900">{vinyl.label}</span>
                             </div>
                             <div className="flex">
-                                <span className="title-font font-medium text-2xl text-gray-900">{(vinyl.priceEur === 0) ? (vinyl.priceUSD + " $") : (vinyl.priceEur + " €")}</span>
+                                <span className="title-font font-medium text-2xl text-gray-900">{(vinyl.priceUSD === 0) ? (vinyl.priceEUR + "  €") : (vinyl.priceUSD + " $")}</span>
                                 <button className="flex ml-auto text-white bg-blueCC border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
                                     <a href={vinyl.referral_url}
                                         target="_blank" rel="noreferrer"
@@ -112,7 +114,8 @@ const DetailVinyl = ({ vinyl }) => {
                             </div>
                         </div>
                         <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded" src={vinyl.image} />
-                    </div>
+
+                    </div> <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto h-36 object-contain rounded" src={vinyl.imageB} />
                 </div>
             </section></>
     );
