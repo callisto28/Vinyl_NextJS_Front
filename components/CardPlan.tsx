@@ -45,31 +45,36 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
         <div className="">
             <div className="flex flex-col m-2">
                 <div className="flex flex-row px-3 border-b-2 border-blueCC my-2 p-4  " key={keyCardPl}>
-                    <div className='lg:w-1/3 flex justify-center'>
+                    <div className='w-1/3 flex justify-center'>
                         <Link href={linkPL} as={linkTitlePL} passHref ><div
-                            className="flex items-center flex-shrink-0 mr-6 cursor-pointer"
+
                             onMouseEnter={onMouseEnter}
                             onMouseLeave={onMouseLeave}
                         >
                             {isHovering ? (
-                                <img src={img2CardPL} alt="" className=" object-contain h-48 w-96 flex items-center justify-center" />
+                                <img src={img2CardPL} alt="" className=" cursor-pointer object-contain h-48 w-96 p-2" />
                             ) : (
-                                <img src={imgCardPL} alt="" className=" object-contain h-48 w-96 flex items-center justify-center" />
+                                <img src={imgCardPL} alt="" className=" cursor-pointer object-contain h-48 w-96 p-2" />
                             )}</div></Link>
                     </div>
-                    <div className='lg:w-2/3 flex flex-col sm:w-1/2'>
-                        <p className="text-black text-xs lg:flex lg:items-start ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
-                        <Link href={linkPL} as={linkTitlePL} passHref ><h1 className="cursor-pointer text-blueCC hover:text-blue-500 text-xl first-letter:font-bold text-center font-philosopher">{titleCardPL} </h1></Link>
-                        <h2>{artistCardPL}</h2>
-                        <div className='text-ellipsis overflow-hidden... w-full text-black text-base font-philosopher lg:text-base sm:text-sm first-letter:font-bold'>
+                    <div className='w-2/3 flex flex-col justify-between'>
+                        <p className="text-black flex items-start text-xs ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
+                        <Link href={linkPL} as={linkTitlePL} passHref >
+                            <h1 className="cursor-pointer 
+                            text-blueCC 
+                            hover:text-blue-500 
+                            text-xl first-letter:font-bold 
+                            text-center font-philosopher">{titleCardPL} </h1></Link>
+                        <h2 className='text-lg first-letter:font-semibold text-center font-philosopher'>{artistCardPL}</h2>
+                        <div className='text-ellipsis overflow-hidden... w-full text-black text-base font-philosopher first-letter:font-bold'>
                             <p className="first-letter:text-xl first-letter:font-bold">{texteCardPL}</p>
                         </div>
-                        <div className='flex items-center flex-col  my-2'>
+                        <div className='flex items-center flex-col my-2'>
                             <p className="text-blue-600 text-justify border-y-2 border-red-500 font-philosopher lg:text-base sm:text-sm mb-2">
                                 Prix de vente : <span className='text-xl text-black'> {priceCardPLEUR}</span>
                             </p>
                             <Link href={linkPL} as={linkTitlePL} passHref >
-                                <button className='rounded-2xl hover:text-white bg-blueCC hover:bg-blue-500 text-center px-3 h-8 font-philosopher lg:text-base sm:text-sm text-center  ' >
+                                <button className='rounded-2xl hover:text-white bg-blueCC hover:bg-blue-500 text-center px-3 h-8 font-philosopher lg:text-base sm:text-sm  ' >
                                     &rarr; Voir plus</button></Link>
 
                         </div>
@@ -98,11 +103,16 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
             <div className="flex flex-col m-2">
                 <div className="flex flex-row px-3 border-b-2 border-blueCC my-2 p-4  " key={keyCardPl}>
                     <div className='w-1/3 flex justify-center'>
-                        <Link href={linkPL} as={linkTitlePL} passHref ><img src={imgCardPL} alt="" className=" cursor-pointer object-contain h-48 w-96 p-2" /></Link>
+                        <Link href={linkPL} as={linkTitlePL} passHref ><img src={imgCardPL} alt={titleCardPL} className=" cursor-pointer object-contain h-48 w-96 p-2" /></Link>
                     </div>
-                    <div className='w-2/3 flex flex-col justify-evenly'>
+                    <div className='w-2/3 flex flex-col justify-between'>
                         <p className="text-black flex items-start text-xs ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
-                        <Link href={linkPL} as={linkTitlePL} passHref ><h1 className="cursor-pointer text-blueCC hover:text-blue-500 text-xl text-center font-philosopher">{titleCardPL} </h1></Link>
+                        <Link href={linkPL} as={linkTitlePL} passHref >
+                            <h1 className="cursor-pointer 
+                            text-blueCC 
+                            hover:text-blue-500 
+                            text-xl first-letter:font-bold 
+                            text-center font-philosopher">{titleCardPL} </h1></Link>
                         <div className='text-ellipsis overflow-hidden... w-full text-black text-base font-philosopher first-letter:font-bold'>
                             <p className="first-letter:text-xl first-letter:font-bold">{texteCardPL}</p>
                         </div>

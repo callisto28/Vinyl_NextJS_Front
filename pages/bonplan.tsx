@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import Head from 'next/head';
@@ -9,6 +9,21 @@ import Image from 'next/image';
 
 const Bonplans = ({ vinyls, materials, desks, all }) => {
 
+    const [filter, setFilter] = useState([]);
+    const [searchFilter, setSearchFilter] = useState('');
+    console.log(searchFilter, 'search');
+
+
+    useEffect(() => {
+        setFilter(all);
+    }
+        , [all]);
+    console.log(filter);
+
+    const handleSubmit = (e) => {
+        let value = e.target.value;
+        value.length > 2 && setSearchFilter(value);
+    }
 
 
     return (
@@ -24,31 +39,27 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                 <meta property="og:site_name" content="vinylTouch" />
                 <meta property="og:locale" content="fr_FR" />
                 <meta property="og:locale:alternate" content="en_US" />
-
-
-
             </Head>
+
             <div className="flex lg:flex-row sm:flex-col">
-                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 sm:border-b-2'>
-                    <h4>Rechercher par titre d&apos;album, artiste, genre</h4>
-
-                    {/* <input type="text"
+                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2'>
+                    <h4>Rechercher par theme (vinyle, hifi ou desk) </h4>
+                    <input type="text"
                         name='searchBar'
-                        className=" w-full px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        placeholder="Rechercher par titre d&apos;album, artiste ou genre"
+                        className="w-96 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none"
+                        placeholder="Rechercher..."
                         onChange={handleSubmit}
-                    /> */}
-
+                    />
                 </div>
 
-
                 < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3" >
+                    {vinyls.filter((plan) => {
+                        return plan.slug.toLowerCase().includes(searchFilter.toLowerCase())
+                    })
 
-
-                    {
-                        vinyls.map((plan: any) => (
+                        .map((plan: any) => (
                             <div key={plan._id}>
-                                <div className='flex bg justify-center  items-center m-2'>
+                                <div className='flex flex-row justify-center  items-center m-2'>
                                     <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Sortie Vinyl</h1>
                                     <Image src="/headphone-front-color.png" width={20} height={20} alt="logo headphone" />
                                 </div>
@@ -113,6 +124,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                     < div className="text-center py-4" >
                     </div>
                 </div>
+
             </div >
         </>
     );
