@@ -45,6 +45,7 @@ const Filter = ({ dataFilter }) => {
                         <CardVinyl keyCardPl={plan._id}
                             linkPL={`/plan/${plan._id}`}
                             linkTitlePL={`/plan/${plan._id}`}
+                            artistCardPL={plan.artist}
                             imgCardPL={(plan.image != "") ? (plan.image) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                             img2CardPL={(plan.imageB != "") ? (plan.imageB) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                             texteCardPL={plan.subtitle}
@@ -65,6 +66,7 @@ const Filter = ({ dataFilter }) => {
                             <CardVinyl keyCardPl={plan._id}
                                 linkPL={`/plan/${plan._id}`}
                                 linkTitlePL={`/plan/${plan._id}`}
+                                artistCardPL={plan.artist}
                                 imgCardPL={(plan.image != "") ? (plan.image) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                                 img2CardPL={(plan.imageB != "") ? (plan.imageB) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                                 texteCardPL={plan.subtitle}

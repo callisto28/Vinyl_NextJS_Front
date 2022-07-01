@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import client from '../../apollo-client';
-import Modal from '../../components/Modal';
+
 
 
 export const getStaticPaths = async () => {
@@ -83,14 +83,6 @@ function strUcReturn(a) { return (a + '.').charAt(0).includes('\n') + a.substr(1
 
 const DetailArticle = ({ article }) => {
 
-    const [showModal, setShowModal] = useState(false);
-
-    const [modalOn, setModalOn] = useState(false);
-    const [choice, setChoice] = useState(false)
-
-    const clicked = () => {
-        setShowModal(true)
-    }
 
     return (
         <>

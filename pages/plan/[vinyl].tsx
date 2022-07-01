@@ -36,6 +36,7 @@ export const getStaticProps = async (context) => {
                     createdAt
                     updatedAt
                     title
+                    artiste
                     subtitle
                     description
                     image
@@ -80,6 +81,7 @@ const DetailVinyl = ({ vinyl }) => {
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                             <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">{vinyl.title}</h1>
+                            <h3>{vinyl.artiste}</h3>
                             <h2 className="text-sm title-font text-gray-500 tracking-widest">{vinyl.subtitle}</h2>
                             <div className="flex mb-4">
                                 <a className="flex-grow text-blueCC border-b-2 border-blueCC py-2 text-lg px-1">Description</a>

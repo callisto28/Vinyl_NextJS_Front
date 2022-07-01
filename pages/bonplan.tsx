@@ -16,13 +16,33 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
             <Head>
                 <title>promotiom | news | sortie</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+                <meta property="og:title" content="promotiom | news | sortie" />
+                <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+                <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
+                <meta property="og:url" content="https://vinyl-next-js-front.vercel.app/bonplan" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="vinylTouch" />
+                <meta property="og:locale" content="fr_FR" />
+                <meta property="og:locale:alternate" content="en_US" />
 
-                {/* <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> */}
+
+
             </Head>
-            <div className="">
+            <div className="flex lg:flex-row sm:flex-col">
+                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 sm:border-b-2'>
+                    <h4>Rechercher par titre d&apos;album, artiste, genre</h4>
+
+                    {/* <input type="text"
+                        name='searchBar'
+                        className=" w-full px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none"
+                        placeholder="Rechercher par titre d&apos;album, artiste ou genre"
+                        onChange={handleSubmit}
+                    /> */}
+
+                </div>
 
 
-                < div className="flex flex-wrap justify-center content-between my-4" >
+                < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3" >
 
 
                     {
@@ -36,6 +56,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                                 <CardVinyl keyCardPl={plan._id}
                                     linkPL={`/plan/${plan._id}`}
                                     linkTitlePL={`/plan/${plan._id}`}
+                                    artistCardPL={plan.artiste}
                                     imgCardPL={(plan.image != "") ? (plan.image) : ('https://st2.depositphotos.com/1177973/5403/i/600/depositphotos_54030941-stock-photo-vinyl-records-and-paper-covers.jpg')}
                                     texteCardPL={plan.subtitle}
                                     priceCardPLEUR={(plan.priceUSD === 0) ? (`${plan.priceEur}  €`) : (plan.priceUSD + '  $')}
@@ -92,7 +113,8 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                     < div className="text-center py-4" >
                     </div>
                 </div>
-            </div ></>
+            </div >
+        </>
     );
 }
 
@@ -109,6 +131,7 @@ export async function getStaticProps() {
             createdAt
             updatedAt
             title
+            artiste
             subtitle
             description
             image

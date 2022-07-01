@@ -27,8 +27,17 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
 
       <Head>
         <title>VinylTouch</title>
-        <meta name="description" content="Toute l'actualité du vinyle" />
+        <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/callisto.png" />
+        <meta property="og:title" content="promotiom | news | sortie" />
+        <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+        <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
+        <meta property="og:url" content="https://vinyl-next-js-front.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="vinylTouch" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:locale:alternate" content="en_US" />
       </Head>
 
       {/* <Layout pages="Acceuil Vinyl"> */}
