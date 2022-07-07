@@ -19,18 +19,25 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>VinylTouch</title>
         <meta name="description" content="Toute l'actualité du vinyle" />
         <link rel="icon" href="/callisto.png" />
+        <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
+        <meta property="og:url" content="https://vinyl-next-js-front.vercel.app/bonplan" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="vinylTouch" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:locale:alternate" content="en_US" />
       </Head>
       <AuthProvider>
         <Layout>
-          <div className='lg:z-50 sm:z-50'>
-            <Navbar />
-          </div>
+          {/* <div className='lg:z-50 sm:z-50 text-center'> */}
+          <Navbar />
+          {/* </div> */}
 
           <ApolloProvider client={client}>
 
             <Component {...pageProps} />
 
           </ApolloProvider>
+
           <Footer />
         </Layout>
       </AuthProvider>

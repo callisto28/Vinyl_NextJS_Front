@@ -3,6 +3,7 @@ import { CardVinyl } from '../components/CardPlan';
 import { gql } from '@apollo/client';
 import client from '../apollo-client';
 import Head from 'next/head';
+import Checkbox from '../components/Checkbox';
 
 
 const Vinyls = ({ vinyls }) => {
@@ -17,7 +18,11 @@ const Vinyls = ({ vinyls }) => {
 
     const handleSubmit = (e) => {
         let value = e.target.value;
-        value.length > 2 && setSearchFilter(value);
+        if (value.length > 2) {
+            setSearchFilter(value);
+        } else {
+            setSearchFilter('');
+        }
     }
 
     return (
@@ -28,19 +33,21 @@ const Vinyls = ({ vinyls }) => {
 
             </Head>
             <div className='flex lg:flex-row sm:flex-col '>
-                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 lg:border-b-0 sm:border-b-2 sm:m-2 sm:pb-2'>
-                    <h4>Rechercher par titre d&apos;album, artiste ou genre.</h4>
+                <div className=' lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 lg:border-b-0 sm:border-b-2 sm:m-2 sm:pb-2'>
+                    <div className='lg:fixed sm:relative'>
+                        <div className='text-center'>
+                            <h4 className='lg:text-base sm:text-sm'>Afficher par theme (vinyle, hifi ou desk) :  <Checkbox label={undefined} id={undefined} /> </h4>
 
-                    <input type="text"
-                        name='searchBar'
-                        className=" w-96 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        placeholder="Rechercher..."
-                        onChange={handleSubmit}
-                    />
-
+                        </div>
+                        <input type="text"
+                            name='searchBar'
+                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs "
+                            placeholder="Rechercher par titre, vendeur, genre..."
+                            onChange={handleSubmit}
+                        ></input>
+                    </div>
                 </div>
-                <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3">
-
+                <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 sm:mt-2">
                     {vinyls.filter((val) => {
                         return val.title.toLowerCase().includes(searchFilter.toLowerCase()) || val.genre.toLowerCase().includes(searchFilter.toLowerCase() || val.artist.toLowerCase().includes(searchFilter.toLowerCase()))
                     }).map((val: any) => (

@@ -4,8 +4,9 @@ import client from "../apollo-client";
 import Head from 'next/head';
 import Card, { CardVinyl } from '../components/CardPlan';
 import Checkbox from '../components/Checkbox';
-import Filter from '../components/Filter';
+
 import Image from 'next/image';
+
 
 const Bonplans = ({ vinyls, materials, desks, all }) => {
 
@@ -15,14 +16,19 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
 
 
     useEffect(() => {
-        setFilter(all);
+        setFilter(vinyls || materials || desks);
     }
-        , [all]);
+        , [vinyls || materials || desks]);
     console.log(filter);
 
     const handleSubmit = (e) => {
         let value = e.target.value;
-        value.length > 2 && setSearchFilter(value);
+        if (value.length > 2) {
+            setSearchFilter(value);
+        } else {
+            setSearchFilter('');
+        }
+        // value.length > 2 && setSearchFilter(value);
     }
 
 
@@ -40,21 +46,28 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                 <meta property="og:locale" content="fr_FR" />
                 <meta property="og:locale:alternate" content="en_US" />
             </Head>
-
             <div className="flex lg:flex-row sm:flex-col">
-                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2'>
-                    <h4>Rechercher par theme (vinyle, hifi ou desk) </h4>
-                    <input type="text"
-                        name='searchBar'
-                        className="w-96 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        placeholder="Rechercher..."
-                        onChange={handleSubmit}
-                    />
+                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 '>
+
+                    <div className='lg:fixed sm:relative lg:flex-none'>
+                        <div className='text-center'>
+                            <h4 className='lg:text-base sm:text-sm'>Afficher par theme (vinyle, hifi ou desk) :  <Checkbox label={undefined} id={undefined} /> </h4>
+
+                        </div>
+
+
+                        <input type="text"
+                            name='searchBar'
+                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs "
+                            placeholder="Rechercher..."
+                            onChange={handleSubmit}
+                        ></input>
+                    </div>
                 </div>
 
                 < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3" >
                     {vinyls.filter((plan) => {
-                        return plan.slug.toLowerCase().includes(searchFilter.toLowerCase())
+                        return plan.title.toLowerCase().includes(searchFilter.toLowerCase()) || plan.genre.toLowerCase().includes(searchFilter.toLowerCase() || plan.artist.toLowerCase().includes(searchFilter.toLowerCase()))
                     })
 
                         .map((plan: any) => (
@@ -79,8 +92,11 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                         )
                         )
                     }
-                    {
-                        materials.map((material: any) => (
+                    {materials.filter((material) => {
+                        return material.title.toLowerCase().includes(searchFilter.toLowerCase()) || material.description.toLowerCase().includes(searchFilter.toLowerCase())
+                    })
+
+                        .map((material: any) => (
 
                             <div key={material._id}>
                                 <div className='flex flex-row justify-center items-center m-2 '>
@@ -101,8 +117,10 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                         )
                         )
                     }
-                    {
-                        desks.map((desk: any) => (
+                    {desks.filter((desk) => {
+                        return desk.title.toLowerCase().includes(searchFilter.toLowerCase()) || desk.description.toLowerCase().includes(searchFilter.toLowerCase())
+                    })
+                        .map((desk: any) => (
                             <div key={desk._id}>
                                 <div className='flex flex-row justify-center items-center m-2'>
                                     <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Rangement</h1>
@@ -140,23 +158,23 @@ export async function getStaticProps() {
        query getPlan {
             getVinylFeatured {
                 _id
-            createdAt
-            updatedAt
-            title
-            artiste
-            subtitle
-            description
-            image
-            imageB
-            referral_url
-            priceEur
-            priceUSD
-            label
-            genre
-            seller
-            author
-            featured
-            slug
+                createdAt
+                updatedAt
+                title
+                artiste
+                subtitle
+                description
+                image
+                imageB
+                referral_url
+                priceEur
+                priceUSD
+                label
+                genre
+                seller
+                author
+                featured
+                slug
             }
             getMaterialFeatured {
                 _id
