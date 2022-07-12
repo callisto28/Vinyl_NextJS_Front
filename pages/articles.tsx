@@ -44,7 +44,7 @@ const articles = ({ articles }) => {
 
 export default articles;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const { data } = await client.query({
         query: gql`
         query Article {
