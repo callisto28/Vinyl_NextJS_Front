@@ -33,10 +33,10 @@ const Vinyls = ({ vinyls }) => {
 
             </Head>
             <div className='flex lg:flex-row sm:flex-col '>
-                <div className=' lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 lg:border-b-0 sm:border-b-2 sm:m-2 sm:pb-2'>
-                    <div className='lg:fixed sm:relative'>
+                <div className=' lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4 lg:border-r-2'>
+                    <div className='lg:fixed sm:relative lg:flex-none mx-5'>
                         <div className='text-center'>
-                            <h4 className='lg:text-base sm:text-sm'>Afficher par theme (vinyle, hifi ou desk) :  <Checkbox label={undefined} id={undefined} /> </h4>
+                            <h4 className='lg:text-base sm:text-sm'>  <Checkbox label={undefined} id={undefined} /> </h4>
 
                         </div>
                         <input type="text"

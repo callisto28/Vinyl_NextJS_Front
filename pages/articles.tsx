@@ -22,13 +22,13 @@ const articles = ({ articles }) => {
             <div className="flex flex-wrap justify-center content-between">
                 {articles.map((article: any) => (
 
-                    <div key={article._id}>
+                    <div key={article._id} className='mx-10'>
 
                         <CardArticle keyCard={article._id}
                             link={`/article/${article._id}`}
                             linkTitle={`/article/${article._id}`}
                             imgCard={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')}
-                            texteCard={article.description}
+                            texteCard={article.subtitle}
                             titleCard={article.title}
                             authorCard={article.author}
                             dateCard={article.createdAt} />

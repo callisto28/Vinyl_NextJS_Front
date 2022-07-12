@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import client from '../../apollo-client';
+import Button from '../../components/Button';
 
 
 
@@ -109,7 +110,7 @@ const DetailArticle = ({ article }) => {
                                 <div className="flex border-t border-gray-200 py-2">
                                     <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{article.contentA}</p>
                                 </div>
-                                <div className="flex border-t border-b mb-6 border-gray-200 py-2">
+                                {/* <div className="flex border-t border-b mb-6 border-gray-200 py-2">
                                     <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{strUcFirst(article.contentB)}</p>
                                 </div>
                                 <div className="flex border-t border-gray-200 py-2">
@@ -123,7 +124,7 @@ const DetailArticle = ({ article }) => {
                                 </div>
                                 <div className="flex border-t border-gray-200 py-2">
                                     <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black ">{article.contentF}</p>
-                                </div>
+                                </div> */}
                                 <div className="flex border-t border-gray-200 py-2">
                                     <span className="text-gray-500">Publié le :</span>
                                     <span className="ml-auto text-gray-900">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
@@ -132,12 +133,13 @@ const DetailArticle = ({ article }) => {
                                     <span className="text-gray-500">auteur de l&apos;article :</span>
                                     <span className="ml-auto text-gray-900">{article.author}</span>
                                 </div>
-                                <button className="flex ml-40 text-white bg-blueCC border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
+                                <Button textButton=" &rarr; La source" link={article.url} linkPl={undefined} />
+                                {/* <button className="flex ml-40 text-white focus:outline-none rounded-full hover:text-black bg-blueCC text-center px-4 py-1 font-philosophe font-bold transition-color duration-700 delay-200 animate-bounce-in-left mb-5 ">
                                     <a href={article.url}
                                         target="_blank" rel="noreferrer"
                                     >
                                         Consulter</a>
-                                </button>
+                                </button> */}
                             </div>
 
                         </div>

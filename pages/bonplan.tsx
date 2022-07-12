@@ -18,7 +18,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
     useEffect(() => {
         setFilter(vinyls || materials || desks);
     }
-        , [vinyls || materials || desks]);
+        , [desks, materials, vinyls]);
     console.log(filter);
 
     const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
         } else {
             setSearchFilter('');
         }
-        // value.length > 2 && setSearchFilter(value);
+
     }
 
 
@@ -47,22 +47,22 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                 <meta property="og:locale:alternate" content="en_US" />
             </Head>
             <div className="flex lg:flex-row sm:flex-col">
-                <div className='lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 '>
-
-                    <div className='lg:fixed sm:relative lg:flex-none'>
+                <div className='lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4 lg:border-r-2 '>
+                    <div className='lg:fixed sm:relative lg:flex-none mx-5'>
                         <div className='text-center'>
-                            <h4 className='lg:text-base sm:text-sm'>Afficher par theme (vinyle, hifi ou desk) :  <Checkbox label={undefined} id={undefined} /> </h4>
+                            <h4 className='lg:text-base sm:text-sm'>  <Checkbox label={undefined} id={undefined} /> </h4>
 
                         </div>
-
-
                         <input type="text"
                             name='searchBar'
                             className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs "
                             placeholder="Rechercher..."
                             onChange={handleSubmit}
                         ></input>
+                        <p>Un partage de tous les derniers bon plans que l&apos;on peut retrouver sur la toile tous ces on plan seront essentiellement tourner autour du sillon. De lámeublement du materiel hifi et bien plus encore...</p>
+
                     </div>
+
                 </div>
 
                 < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3" >

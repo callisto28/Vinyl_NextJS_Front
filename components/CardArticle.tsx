@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Button from './Button';
 
 
 type Props = {
@@ -20,7 +21,7 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
     return (
         <div className="">
             <div className="my-3">
-                <div className="mx-1 border-2 border-blueCC rounded-4xl max-w-sm  h-full flex flex-col justify-around items-center px-3" key={keyCard}>
+                <div className="lg:mx-1 shadow-lg rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3" key={keyCard}>
                     <p className="text-black text-center ">Publié le : <span className='text-rougeCC'>{new Date(parseInt(dateCard)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
                     </p>
@@ -30,16 +31,18 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
                     </div>
 
 
-                    <h1 className="text-blueCC text-xl text-center font-philosopher h-7">{titleCard} </h1>
+                    <h1 className="text-blueCC text-xl text-center font-philosopher h-9">{titleCard} </h1>
                     <div className='text-ellipsis overflow-hidden... text-black text-justify flex items-center text-base font-philosopher h-48'>
                         <p className="first-letter:text-xl first-letter:font-bold font-philosopher">
                             {texteCard}
                         </p>
                     </div>
                     <div className='flex flex-col mb-2'>
-                        <h4 className="text-gray-500 text-center text-xs font-chelsea"> auteur de l&apos;article : {authorCard.toUpperCase()}</h4>
+                        <h4 className="text-gray-500 text-center text-xs font-chelsea h-9"> auteur de l&apos;article : {authorCard.toUpperCase()}</h4>
                     </div>
-                    <Link href={link} as={linkTitle} passHref ><button className='rounded-full hover:text-white bg-blueCC text-center px-5 font-philosophe font-bol transition-color duration-700 delay-200 animate-bounce-in-left mb-5 ' >&rarr; Voir plus</button></Link>
+                    {/* <Link href={link} as={linkTitle} passHref > */}
+                    <Button textButton=" &rarr; Aller voir" link={link} linkPl={linkTitle} />
+                    {/* </Link> */}
                 </div>
             </div>
         </div>

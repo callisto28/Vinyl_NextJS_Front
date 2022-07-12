@@ -46,7 +46,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index} className="bg-white shadow-md border border-blueCC rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid lg:content-evenly sm:content-around">
+                            <div key={index} className="bg-white shadow-lg rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid lg:content-evenly sm:content-around">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{channelTitle}</h5>
                                 </a>
@@ -87,7 +87,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index2} className="bg-white shadow-md border border-blueCC rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid content-evenly">
+                            <div key={index2} className="bg-white shadow-lg  rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid content-evenly">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{videoOwnerChannelTitle}</h5>
                                 </a>

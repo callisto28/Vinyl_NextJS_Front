@@ -34,10 +34,10 @@ const Hifi = ({ hifi }) => {
                 <meta property="og:locale:alternate" content="en_US" />
             </Head>
             <div className='flex lg:flex-row sm:flex-col '>
-                <div className=' lg:w-1/3 flex lg:flex-col sm:flex-col lg:items-start lg:content-between sm:items-center lg:m-4 lg:border-r-2 lg:border-b-0 sm:border-b-2 sm:m-2 sm:pb-2'>
+                <div className=' lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4 lg:border-r-2'>
                     <div className='lg:fixed sm:relative lg:flex-none'>
                         <div className='text-center'>
-                            <h4 className='lg:text-base sm:text-sm'>Afficher par theme (vinyle, hifi ou desk) :  <Checkbox label={undefined} id={undefined} /> </h4>
+                            <h4 className='lg:text-base sm:text-sm'>  <Checkbox label={undefined} id={undefined} /> </h4>
 
                         </div>
                         <input type="text"
@@ -48,7 +48,7 @@ const Hifi = ({ hifi }) => {
                         ></input>
                     </div>
                 </div>
-                <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3">
+                <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 sm:mt-2">
 
                     {hifi.filter((plan) => {
                         return plan.title.toLowerCase().includes(searchFilter.toLowerCase()) || plan.seller.toLowerCase().includes(searchFilter.toLowerCase())

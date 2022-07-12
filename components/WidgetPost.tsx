@@ -7,9 +7,9 @@ import "react-multi-carousel/lib/styles.css";
 export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-white rounded-4xl border-2  h-64 w-64 border-blueCC bg-white">
+        <div className=" text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
 
-            <h3 className="text-center text-black pb-4">{'Sortie Vinyle'}</h3>
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Sortie Vinyle'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -60,7 +60,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
                 {vinyls.map((vinyl, index) => (
                     <div key={index}>
 
-                        <a className=" flex flex-col items-center cursor-pointer">
+                        <a className=" flex flex-col items-center cursor-pointer pt-4">
                             <div className="text-center text-black text-base">{vinyl.title}</div>
                             <Link href={`/plan/${vinyl._id}`} key={vinyl.slug} passHref>
                                 <img src={vinyl.image} alt={vinyl.title} className="w-auto h-28" />
@@ -85,8 +85,8 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC bg-white">
-            <h3 className="text-center text-black pb-4">{'Dernier hifi'}</h3>
+        <div className="text-white h-64 w-64 shadow-lg rounded-xl  bg-white">
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Dernier hifi'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -137,7 +137,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
                 {material1.map((material, index) => (
                     <div key={index}>
 
-                        <a className=" flex flex-col items-center cursor-pointer">
+                        <a className=" flex flex-col items-center cursor-pointer pt-4">
 
 
                             <div className="text-center text-base text-black">{material.title}</div>
@@ -158,8 +158,8 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="text-white rounded-4xl border-2 h-64 w-64 border-blueCC bg-white">
-            <h3 className="text-center text-black pb-4">{'Dernier meuble'}</h3>
+        <div className="text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Dernier meuble'}</h3>
 
             < Carousel
                 containerClass='carousel-container'
@@ -211,7 +211,7 @@ export const WidgetPostDesk = ({ desk1 }: any) => {
                 {desk1.map((desk, index) => (
                     <div key={index}>
 
-                        <a className="flex flex-col items-center cursor-pointer">
+                        <a className="flex flex-col items-center cursor-pointer pt-4">
 
                             <div className="text-center text-black">{desk.title}</div>
 
