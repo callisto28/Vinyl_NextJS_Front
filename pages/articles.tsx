@@ -7,22 +7,25 @@ import CardArticle from '../components/CardArticle';
 import Head from 'next/head';
 
 
-const articles = ({ articles }) => {
+const articles = ({ articles }) => {      
+     
+
 
     return (
 
         <>
             <Head>
-                <title>Les Articles</title>
+                <title>Les Articles | news | actu </title>
                 <meta name="description" content="Tous les articles" />
 
                 {/* <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> */}
             </Head>
 
-            <div className="flex flex-wrap justify-center content-between">
+            <div className="flex lg:flex-shrink-0 sm:flex-wrap justify-center content-between ">
                 {articles.map((article: any) => (
 
-                    <div key={article._id} className='mx-10'>
+
+                    <div key={article._id} className='mx-10 '>
 
                         <CardArticle keyCard={article._id}
                             link={`/article/${article._id}`}

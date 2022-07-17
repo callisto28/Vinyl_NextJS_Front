@@ -94,10 +94,10 @@ const DetailArticle = ({ article }) => {
                 <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container px-5 py-1 mx-auto">
                     <div className="lg:flex">
 
-                        <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto sm:h-64 object-contain rounded -z-10" src={article.image} />
+                        <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto sm:h-64 object-contain rounded -z-10" src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} />
                         <div className="lg:w-3/4 mx-auto flex flex-wrap  ">
 
                             <div className=" w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 lg:ml-8 font-philosopher ">

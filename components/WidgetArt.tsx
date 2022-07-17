@@ -9,7 +9,8 @@ import "react-multi-carousel/lib/styles.css";
 const WidgetArt = ({ articles1 }: any) => {
 
     //request 2 last articles
-    // const lastArticles = articles1.slice(0, 3);
+    const lastArticles = articles1.slice(1, 4);
+   
 
 
     return (

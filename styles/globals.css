@@ -11,21 +11,21 @@
     src: url("/fonts/chelsea-market-v13-latin-regular.ttf") format("opentype");
   }
 }
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
-
+  
   &:before {
     content: "";
-    width: 100%;
+    width:  100%;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
   }
-}
+} */
 
 .box {
   @apply text-gray-100

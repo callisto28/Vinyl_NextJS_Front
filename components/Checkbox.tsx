@@ -17,7 +17,7 @@ export function MyLink(props) {
 
 const Checkbox = ({ label, id }) => {
     const [selected, setSelected] = useState(false);
-    console.log(selected, 'selected');
+    
 
 
 

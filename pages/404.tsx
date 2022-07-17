@@ -13,8 +13,10 @@ const NotFound = () => {
 
 
     return (
-        <div className='bg-bg bg-cover bg-center h-144 flex flex-col justify-around'>
-            <h1 className='text-white text-7xl font-chelsea'>404 - Not Found</h1>
+        <div className='bg-bg bg-cover bg-center h-144 flex flex-col items-center justify-around'>
+            <h1 className='text-black text-7xl font-chelsea'>404 - Désolé la page demandée n&lsquo;existe pas</h1>
+            <img src="https://images.pexels.com/photos/145707/pexels-photo-145707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image 404" width={550} height={550} />
+            <p>Veuillez patienter vous allez être redirigé vers la page d&lsquo;accueil</p>
         </div>
     );
 }

@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/admin/auth.tsx.test"  ],
+, "pages/admin/auth.tsx.test", "next-sitemap.config.js"  ],
   "exclude": [
     "node_modules"
   ]

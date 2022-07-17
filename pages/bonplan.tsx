@@ -38,34 +38,36 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                 <title>promotiom | news | sortie</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
                 <meta property="og:title" content="promotiom | news | sortie" />
+                <link rel="icon" href="/logo_seb.png" />
                 <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
-                <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
-                <meta property="og:url" content="https://vinyl-next-js-front.vercel.app/bonplan" />
+                <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+                <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
+                <meta property="og:url" content="https://vinyltouch.fr/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="vinylTouch" />
                 <meta property="og:locale" content="fr_FR" />
                 <meta property="og:locale:alternate" content="en_US" />
             </Head>
             <div className="flex lg:flex-row sm:flex-col">
-                <div className='lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4 lg:border-r-2 '>
+                <div className='lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4  '>
                     <div className='lg:fixed sm:relative lg:flex-none mx-5'>
                         <div className='text-center'>
-                            <h4 className='lg:text-base sm:text-sm'>  <Checkbox label={undefined} id={undefined} /> </h4>
+                            <h4 className='lg:text-base sm:text-sm flex justify-center'>  <Checkbox label={undefined} id={undefined} /> </h4>
 
                         </div>
                         <input type="text"
                             name='searchBar'
-                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs "
+                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs text-justify "
                             placeholder="Rechercher..."
                             onChange={handleSubmit}
                         ></input>
-                        <p>Un partage de tous les derniers bon plans que l&apos;on peut retrouver sur la toile tous ces on plan seront essentiellement tourner autour du sillon. De lámeublement du materiel hifi et bien plus encore...</p>
+                        <p className='text-justify text-sm px-2'>Un partage de tous les derniers bon plans que l&apos;on peut retrouver sur la toile tous ces on plan seront essentiellement tourner autour du sillon. De lámeublement du materiel hifi et bien plus encore...</p>
 
                     </div>
 
                 </div>
 
-                < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3" >
+                < div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2" >
                     {vinyls.filter((plan) => {
                         return plan.title.toLowerCase().includes(searchFilter.toLowerCase()) || plan.genre.toLowerCase().includes(searchFilter.toLowerCase() || plan.artist.toLowerCase().includes(searchFilter.toLowerCase()))
                     })
@@ -73,7 +75,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                         .map((plan: any) => (
                             <div key={plan._id}>
                                 <div className='flex flex-row justify-center  items-center m-2'>
-                                    <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Sortie Vinyl</h1>
+                                    <h1 className='text-2xl font-semibold px-3 text-black rounded-md'>Sortie Vinyl</h1>
                                     <Image src="/headphone-front-color.png" width={20} height={20} alt="logo headphone" />
                                 </div>
 
@@ -152,7 +154,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
 
 export default Bonplans;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const { data } = await client.query({
         query: gql`
        query getPlan {
