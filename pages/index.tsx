@@ -29,7 +29,10 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
         <title>VinylTouch</title>
         <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/logo_seb.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
         <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
         <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
@@ -68,7 +71,9 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
               <WidgetPostDesk desk1={lastDesk} />
             </div>
           </div>
+          
         </div>
+        
 
 
         <div className='fixed right-5 lg:grid lg:row-start-1 lg:row-span-1 lg: sm:flex sm:items-center sm:ml-2'>

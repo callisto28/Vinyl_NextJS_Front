@@ -28,6 +28,7 @@ const Rangements = ({ desk }) => {
         <>
             <Head>
                 <title>meubles, rangements | promotiom | prix</title>
+                
                 <meta name="description" content="Du mobilier, du rangements des accessoires aux meilleurs prix du marché" />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />

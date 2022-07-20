@@ -1,4 +1,5 @@
 module.exports = {
-  siteUrl: 'https://localhost:3000',
+  siteUrl: 'https://www.vinyltouch.fr',
   generateRobotsTxt: true, // (optional)
+  outDir: 'public', // (optional)
 }

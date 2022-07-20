@@ -18,7 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>VinylTouch</title>
         <meta name="description" content="Toute l'actualité du vinyle" />
-        <link rel="icon" href="/callisto.png" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
         <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
         <meta property="og:url" content="https://vinyl-next-js-front.vercel.app/bonplan" />
         <meta property="og:type" content="website" />
@@ -27,17 +31,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale:alternate" content="en_US" />
       </Head>
       <AuthProvider>
-        <Layout>
-          {/* <div className='lg:z-50 sm:z-50 text-center'> */}
+        <Layout>         
           <Navbar />
-          {/* </div> */}
-
           <ApolloProvider client={client}>
-
             <Component {...pageProps} />
-
           </ApolloProvider>
-
+           {/* eslint-disable-next-line react/no-unescaped-entities */}
+          <span className='text-base lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2'>"La vie sans musique est tout simplement une erreur, une fatigue, un exil."<span className='text-xxs'>Friedrich Nietzsche</span></span> 
           <Footer />
         </Layout>
       </AuthProvider>

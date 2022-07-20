@@ -40,7 +40,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "background": "#fff",
+        "background": "#FBFCF8",
         "bg": "url('/bg.jpg')",
       },
       spacing: {

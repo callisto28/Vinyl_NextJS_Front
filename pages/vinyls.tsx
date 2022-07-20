@@ -29,6 +29,7 @@ const Vinyls = ({ vinyls }) => {
         <>
             <Head>
                 <title>Les Vinyles | promotiom | prix</title>
+                
                 <meta name="description" content="Liste des derniers vinyles mise en vente sur diffèrentes plateformes, les promotions, petit prix" />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />

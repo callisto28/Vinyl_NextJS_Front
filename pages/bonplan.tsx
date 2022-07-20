@@ -6,6 +6,7 @@ import Card, { CardVinyl } from '../components/CardPlan';
 import Checkbox from '../components/Checkbox';
 
 import Image from 'next/image';
+import { title } from 'process';
 
 
 const Bonplans = ({ vinyls, materials, desks, all }) => {
@@ -38,7 +39,11 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                 <title>promotiom | news | sortie</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
                 <meta property="og:title" content="promotiom | news | sortie" />
-                <link rel="icon" href="/logo_seb.png" />
+                
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+                <link rel="manifest" href="/site.webmanifest"/>
                 <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
                 <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
@@ -73,7 +78,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                     })
 
                         .map((plan: any) => (
-                            <div key={plan._id}>
+                            <div key={plan._id} className=" lg:px-none sm:px-2">
                                 <div className='flex flex-row justify-center  items-center m-2'>
                                     <h1 className='text-2xl font-semibold px-3 text-black rounded-md'>Sortie Vinyl</h1>
                                     <Image src="/headphone-front-color.png" width={20} height={20} alt="logo headphone" />

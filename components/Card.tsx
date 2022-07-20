@@ -6,7 +6,7 @@ const Card = ({ link, texteCard, titleCard }) => {
     return (
         <div className="max-w-xs">
             <div className="border border-red-400 rounded-lg">
-                <div className="rounded-lg shadow-lg bg-white ">
+                <div className="rounded-lg shadow-xl bg-slate-300 ">
                     <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
                         <img className="rounded-t-lg object-cover h-48 w-96" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt="" />
                     </a>

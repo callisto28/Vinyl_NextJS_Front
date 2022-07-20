@@ -1,7 +1,5 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
-import Link from 'next/link';
-import { useState } from 'react';
 import client from '../../apollo-client';
 import Button from '../../components/Button';
 
@@ -106,14 +104,14 @@ const DetailArticle = ({ article }) => {
                                 <div className="flex mb-4">
                                     <a className="flex-grow text-blueCC border-b-2 border-blueCC py-2 text-lg px-1">Description</a>
                                 </div>
-                                <p className="leading-relaxed lg:text-lg mb-4 first-letter:text-xl  first-letter:font-bold first-letter:text-black">{(article.description)}.</p>
-                                <div className="flex border-t border-gray-200 py-2">
-                                    <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{article.contentA}</p>
+                                <p className="leading-relaxed lg:text-lg mb-4 first-letter:text-xl text-justify first-letter:font-bold first-letter:text-black">{(article.description)}.</p>
+                                <div className="flex  py-2">
+                                    <p className="leading-relaxed mb-8 lg:text-lg sm:text-base text-justify  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{article.contentA}</p>
                                 </div>
-                                {/* <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-                                    <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{strUcFirst(article.contentB)}</p>
+                                <div className="flex  mb-6  py-2">
+                                    <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-justify  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{strUcFirst(article.contentB)}</p>
                                 </div>
-                                <div className="flex border-t border-gray-200 py-2">
+                                {/* <div className="flex border-t border-gray-200 py-2">
                                     <p className="leading-relaxed mb-8 lg:text-lg sm:text-xs text-left  first-letter:text-xl  first-letter:font-bold first-letter:text-black font-philosopher ">{article.contentC}</p>
                                 </div>
                                 <div className="flex border-t border-gray-200 py-2">
@@ -133,7 +131,7 @@ const DetailArticle = ({ article }) => {
                                     <span className="text-gray-500">auteur de l&apos;article :</span>
                                     <span className="ml-auto text-gray-900">{article.author}</span>
                                 </div>
-                                <Button textButton=" &rarr; La source" link={article.url} linkPl={undefined} />
+                                <Button textButton=" &rarr; Source" link={article.url} linkPl={undefined} />
                                 {/* <button className="flex ml-40 text-white focus:outline-none rounded-full hover:text-black bg-blueCC text-center px-4 py-1 font-philosophe font-bold transition-color duration-700 delay-200 animate-bounce-in-left mb-5 ">
                                     <a href={article.url}
                                         target="_blank" rel="noreferrer"

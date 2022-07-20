@@ -19,10 +19,11 @@ export default function Navbar() {
                     <a className='inline-flex lg:items-center sm:items-center h-14 p-2 lg:ml-20 sm:ml-6 '>
                         <Image src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' width={80} height={80} />
         <div className='flex flex-col'>
-<span className='text-xxxl text-black  font-bold uppercase tracking-wide px-2'>
+<h1 className='text-xxxl text-black  font-bold uppercase tracking-wide px-2'>
                             VinylTouch 
-                        </span><span className='text-sm lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold'>Ayez une touche d&apos;actualité dans votre journée!!</span>
-
+                        </h1>
+                        <span className='text-sm lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold'>Ayez une touche d&apos;actualité dans votre journée!!</span>
+                       
         </div>
                         
                     </a>

@@ -63,10 +63,10 @@ const WidgetArt = ({ articles1 }: any) => {
                 swipeable={false}
 
             >
-                {articles1.map((article, index) => (
+                {lastArticles.map((article, index) => (
                     <div key={index} className="flex flex-col items-center cursor-pointer pt-6 ">
                         <a className=" flex flex-col items-center">
-                            <div className=" text-center text-black text-base">{article.title.split(1, 5)} </div>
+                            <div className=" text-center text-sm text-black text-base">{article.title.split(1, 5)} </div>
                             <Link href={`/article/${article._id}`} key={article.slug} passHref>
                                 <Image src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x300.jpg')} layout="intrinsic" width={100} height={100} alt={article.title} />
                             </Link>
