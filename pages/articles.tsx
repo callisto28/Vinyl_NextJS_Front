@@ -5,21 +5,20 @@ import '../styles/Home.module.css'
 import Link from 'next/link';
 import CardArticle from '../components/CardArticle';
 import Head from 'next/head';
+import { GetServerSideProps } from 'next';
 
 
-const articles = ({ articles }) => {      
-     
+const articles = ({ articles }) => {       
 
 
-    return (
 
+    return (       
         <>
             <Head>
                 <title>Les Articles | news | actu </title>
-                <meta name="description" content="Tous les articles" />
-
-                {/* <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> */}
+                <meta name="description" content="Tous les articles" />              
             </Head>
+
 
             <div className="flex lg:flex-shrink-0 sm:flex-wrap justify-center content-between ">
                 {articles.map((article: any) => (
@@ -47,7 +46,7 @@ const articles = ({ articles }) => {
 
 export default articles;
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async ()  => {
     const { data } = await client.query({
         query: gql`
         query Article {
@@ -75,5 +74,6 @@ export async function getServerSideProps() {
         props: {
             articles: data.Article,
         },
+        
     };
 }

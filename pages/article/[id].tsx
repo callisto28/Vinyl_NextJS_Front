@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 
 
 
-export const getStaticPaths: GetStaticPaths = async ()=> {
+export const getStaticPaths: GetStaticPaths = async () => {
     const { data } = await client.query({
         query: gql`
         query Article {
