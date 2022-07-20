@@ -19,7 +19,7 @@ export default function Example() {
             <Menu as="div" className="relative inline-block text-left">
                 <div className='inline-flex w-full justify-center items-center'>Bon plan
                     <Menu.Button className="
-                     rounded-md bg-white bg-opacity-30 px-1 py-2 text-white font-bold
+                     rounded-md bg-white bg-opacity-30 px-1 py-1 text-white font-bold
                        hover:bg-opacity-5 focus:outline-none focus-visible:ring-2 hover:text-blueCC
                        focus-visible:ring-white focus-visible:ring-opacity-75">
 
@@ -46,7 +46,7 @@ export default function Example() {
                                 {({ active }) => (
                                     <button
                                         className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                                     >
                                         {active ? (
                                             <EditActiveIcon
@@ -67,7 +67,7 @@ export default function Example() {
                                 {({ active }) => (
                                     <button
                                         className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                                     >
                                         {active ? (
                                             <DuplicateActiveIcon
@@ -89,7 +89,7 @@ export default function Example() {
 
                                     <button
                                         className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                                     >
                                         {active ? (
                                             <ArchiveActiveIcon
@@ -102,7 +102,7 @@ export default function Example() {
                                                 aria-hidden="true"
                                             />
                                         )}
-                                        <MyLink href="../rangements" className={`${active} `}>Rangements</MyLink>
+                                        <MyLink href="../rangements" className={`${active} `}>Rangements et accessoire</MyLink>
                                     </button>
                                 )}
                             </Menu.Item>

@@ -9,7 +9,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
     return (
         <div className=" text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
 
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Sortie Vinyle'}</h3>
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Vinyle'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -86,7 +86,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
         <div className="text-white h-64 w-64 shadow-lg rounded-xl  bg-white">
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Dernier hifi'}</h3>
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'hifi & sono'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -159,7 +159,7 @@ export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
         <div className="text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Dernier meuble'}</h3>
+            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'mobilier & accessoire'}</h3>
 
             < Carousel
                 containerClass='carousel-container'

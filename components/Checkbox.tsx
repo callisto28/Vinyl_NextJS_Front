@@ -35,7 +35,7 @@ const Checkbox = ({ label, id }) => {
 
                             <button
                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                    } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                             >
                                 {active ? (
                                     <MoveInactiveIcon
@@ -48,7 +48,7 @@ const Checkbox = ({ label, id }) => {
                                         aria-hidden="true"
                                     />
                                 )}
-                                <MyLink href="../bonplan" className={`${active} text-base underline underline-offset-2`}>Tous</MyLink>
+                                <MyLink href="../bonplan" className={`${active} text-sm underline underline-offset-2`}>Tous</MyLink>
                             </button>
                         )}
 
@@ -57,20 +57,20 @@ const Checkbox = ({ label, id }) => {
                         {({ active }) => (
                             <button
                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                    }  group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                    }  group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                             >
                                 {active ? (
                                     <EditActiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-2 h-4 w-4"
                                         aria-hidden="true"
                                     />
                                 ) : (
                                     <EditInactiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-2 h-4 w-4"
                                         aria-hidden="true"
                                     />
                                 )}
-                                <MyLink href="../vinyls" className={`${active}  pl-2 `}>Vinyle</MyLink>
+                                <MyLink href="../vinyls" className={`${active} text-sm underline underline-offset-2 pl-1 `}>Vinyle</MyLink>
                             </button>
                         )}
                     </RadioGroup.Option>
@@ -78,20 +78,20 @@ const Checkbox = ({ label, id }) => {
                         {({ active }) => (
                             <button
                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                    } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                             >
                                 {active ? (
                                     <DuplicateActiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-1 h-5 w-5"
                                         aria-hidden="true"
                                     />
                                 ) : (
                                     <DuplicateInactiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-1 h-5 w-5"
                                         aria-hidden="true"
                                     />
                                 )}
-                                <MyLink href="../hifi" className={`${active}  pl-2 `}>Hifi</MyLink>
+                                <MyLink href="../hifi" className={`${active} text-sm underline underline-offset-2 pl-1   `}>Hifi</MyLink>
                             </button>
                         )}
                     </RadioGroup.Option>
@@ -100,20 +100,20 @@ const Checkbox = ({ label, id }) => {
 
                             <button
                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                    } group flex w-full items-center rounded-md px-1 py-1 text-sm`}
                             >
                                 {active ? (
                                     <ArchiveActiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-1 h-5 w-5"
                                         aria-hidden="true"
                                     />
                                 ) : (
                                     <ArchiveInactiveIcon
-                                        className="mr-2 h-5 w-5"
+                                        className="mr-1 h-5 w-5"
                                         aria-hidden="true"
                                     />
                                 )}
-                                <MyLink href="../rangements" className={`${active} pl-2`}>Rangements</MyLink>
+                                <MyLink href="../rangements" className={`${active} text-sm underline underline-offset-2 pl-1 `}>Rangements et accessoires</MyLink>
                             </button>
                         )}
 
@@ -123,104 +123,7 @@ const Checkbox = ({ label, id }) => {
             </RadioGroup>
 
         </>
-        // <div className="mx-2 text-center">
-        //     <Menu as="div" className="relative inline-block text-left">
-        //         <div className='inline-flex w-full justify-center items-center'>
-
-        //             <Menu.Button className="
-        //              rounded-md bg-white bg-opacity-30 px-1 py-2 text-white font-bold
-        //                hover:bg-opacity-5 focus:outline-none focus-visible:ring-2 hover:text-blueCC
-        //                focus-visible:ring-white focus-visible:ring-opacity-75">
-
-        //                 <ChevronDownIcon
-        //                     className="
-        //                      h-5 w-5 text-black hover:text-blueCC border-2 border-black hover:border-blueCC"
-        //                     aria-hidden="true"
-        //                 />
-        //             </Menu.Button>
-
-        //         </div>
-        //         <Transition
-        //             as={Fragment}
-        //             enter="transition ease-out duration-100"
-        //             enterFrom="transform opacity-0 scale-95"
-        //             enterTo="transform opacity-100 scale-100"
-        //             leave="transition ease-in duration-100"
-        //             leaveFrom="transform opacity-100 scale-100"
-        //             leaveTo="transform opacity-0 scale-95"
-        //         >
-        //             <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-        //                 <div className="px-1 py-1 ">
-        //                     <Menu.Item>
-        //                         {({ active }) => (
-        //                             <button
-        //                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-        //                                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-        //                             >
-        //                                 {active ? (
-        //                                     <EditActiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 ) : (
-        //                                     <EditInactiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 )}
-        //                                 <MyLink href="../vinyls" className={`${active} pr-2 pl-2 rounded-3xl`}>Vinyls</MyLink>
-        //                             </button>
-        //                         )}
-        //                     </Menu.Item>
-        //                     <Menu.Item>
-        //                         {({ active }) => (
-        //                             <button
-        //                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-        //                                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-        //                             >
-        //                                 {active ? (
-        //                                     <DuplicateActiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 ) : (
-        //                                     <DuplicateInactiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 )}
-        //                                 <MyLink href="../hifi" className={`${active} pr-2 pl-2 rounded-3xl`}>Hifi</MyLink>
-        //                             </button>
-        //                         )}
-        //                     </Menu.Item>
-        //                     <Menu.Item>
-        //                         {({ active }) => (
-
-        //                             <button
-        //                                 className={`${active ? 'bg-black text-white' : 'text-blueCC'
-        //                                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-        //                             >
-        //                                 {active ? (
-        //                                     <ArchiveActiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 ) : (
-        //                                     <ArchiveInactiveIcon
-        //                                         className="mr-2 h-5 w-5"
-        //                                         aria-hidden="true"
-        //                                     />
-        //                                 )}
-        //                                 <MyLink href="../rangements" className={`${active} `}>Rangements</MyLink>
-        //                             </button>
-        //                         )}
-        //                     </Menu.Item>
-        //                 </div>
-
-        //             </Menu.Items>
-        //         </Transition>
-        //     </Menu>
-        // </div >
+   
     );
 };
 

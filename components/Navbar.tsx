@@ -13,18 +13,18 @@ export default function Navbar() {
     };
 
     return (
-        <div className='font-chelsea border-b-2 border-blueCC z-50 lg:z-50 sm:z-50 text-center'>
-            <nav className='flex lg:flex-row items-center sm:flex-wrap p-2 '>
+        <div className='font-chelsea border-b-2 border-blueCC z-50 lg:z-50 sm:z-50 text-center absolue'>
+            <nav className='flex lg:flex-row items-center  sm:flex-wrap p-2 '>
                 <Link href='/'>
                     <a className='inline-flex lg:items-center sm:items-center h-14 p-2 lg:ml-20 sm:ml-6 '>
                         <Image src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' width={80} height={80} />
-        <div className='flex flex-col'>
-<h1 className='text-xxxl text-black  font-bold uppercase tracking-wide px-2'>
+                        <div className='flex flex-col'>
+                            <h1 className='lg:text-xxxl sm:text-xl text-black  font-bold uppercase tracking-wide px-2'>
                             VinylTouch 
-                        </h1>
-                        <span className='text-sm lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold'>Ayez une touche d&apos;actualité dans votre journée!!</span>
+                            </h1>
+                            <span className='text-sm lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold'>Ayez une touche d&apos;actualité dans votre journée!!</span>
                        
-        </div>
+                        </div>
                         
                     </a>
                 </Link>

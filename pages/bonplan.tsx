@@ -37,15 +37,15 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
         <>
             <Head>
                 <title>promotiom | news | sortie</title>
-                <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+                <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound" />
                 <meta property="og:title" content="promotiom | news | sortie" />
                 
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
                 <link rel="manifest" href="/site.webmanifest"/>
-                <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
-                <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
+                <meta property="og:description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound" />
+                <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound" />
                 <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
                 <meta property="og:url" content="https://vinyltouch.fr/" />
                 <meta property="og:type" content="website" />
@@ -130,7 +130,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                         .map((desk: any) => (
                             <div key={desk._id}>
                                 <div className='flex flex-row justify-center items-center m-2'>
-                                    <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Rangement</h1>
+                                    <h1 className='text-2xl font-semibold px-4 text-black rounded-md'>Rangement et accesoires</h1>
                                     <Image src="/bag-front-premium.png" width={20} height={20} alt="logo mic" />
                                 </div>
                                 <Card keyCardPl={desk._id}

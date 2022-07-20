@@ -27,7 +27,7 @@ const Rangements = ({ desk }) => {
     return (
         <>
             <Head>
-                <title>meubles, rangements | promotiom | prix</title>
+                <title>meubles | accessoires | rangements | promotiom | prix</title>
                 
                 <meta name="description" content="Du mobilier, du rangements des accessoires aux meilleurs prix du marché" />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
@@ -49,7 +49,7 @@ const Rangements = ({ desk }) => {
                         </div>
                         <input type="text"
                             name='searchBar'
-                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs text-justify"
+                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 my-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs text-justify"
                             placeholder="Rechercher par titre ou vendeur..."
                             onChange={handleSubmit}
                         ></input>
