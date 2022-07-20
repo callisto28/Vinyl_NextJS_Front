@@ -57,9 +57,8 @@ export const getStaticProps = async (context) => {
     return {
         props: {
             desk: data.desk,
-
-
-        }
+        },
+        revalidate: 10,
     }
 }
 const DetailMaterial = ({ desk }) => {

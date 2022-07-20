@@ -1,11 +1,12 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import client from '../../apollo-client';
 import Button from '../../components/Button';
 
 
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ()=> {
     const { data } = await client.query({
         query: gql`
         query Article {
@@ -36,11 +37,11 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: true,
+        fallback: false,
     }
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
     const id = context.params.id;
 
     const { data } = await client.query({
@@ -73,6 +74,7 @@ export const getStaticProps = async (context) => {
         props: {
             article: data.article,
         },
+        revalidate: 10,
     }
 }
 
