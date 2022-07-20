@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
     const id = context.params.vinyl;
 
     const { data } = await client.query({
