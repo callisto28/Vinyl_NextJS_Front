@@ -4,16 +4,13 @@ const GRAPHQL_URL = "http://localhost:3001/graphql";
 // const HEROKU_URL = process.env.NEXT_PUBLIC_HEROKU_URL;
 const HEROKU_URL = "https://nestvinyl.herokuapp.com/graphql";
 
-const cache = new InMemoryCache();
-
-
 const client = new ApolloClient({
   uri: HEROKU_URL,
-  cache: cache,
-  queryDeduplication: false,
+  cache: new InMemoryCache(),
   defaultOptions: {
     watchQuery: {
-      fetchPolicy: 'cache-and-network',
+      fetchPolicy: 'network-only',
+        nextFetchPolicy: 'network-only',
     },
   },
 });

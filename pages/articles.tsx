@@ -16,9 +16,7 @@ const articles = ({ articles }) => {
         <>
             <Head>
                 <title>Les Articles | news | actu </title>
-                <meta name="description" content="Tous les articles" />
-
-                {/* <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> */}
+                <meta name="description" content="Tous les articles" />               
             </Head>
 
             <div className="flex lg:flex-shrink-0 sm:flex-wrap justify-center content-between ">
@@ -47,7 +45,7 @@ const articles = ({ articles }) => {
 
 export default articles;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const { data } = await client.query({
         query: gql`
         query Article {

@@ -9,7 +9,7 @@ import "react-multi-carousel/lib/styles.css";
 const WidgetArt = ({ articles1 }: any) => {
 
     //request 2 last articles
-    const lastArticles = articles1.slice(1, 4);
+    const lastArticles = articles1.slice(0, 3);
    
 
 
@@ -68,7 +68,7 @@ const WidgetArt = ({ articles1 }: any) => {
                         <a className=" flex flex-col items-center">
                             <div className=" text-center text-sm text-black text-base">{article.title.split(1, 5)} </div>
                             <Link href={`/article/${article._id}`} key={article.slug} passHref>
-                                <Image src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x300.jpg')} layout="intrinsic" width={100} height={100} alt={article.title} />
+                                <Image src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} layout="intrinsic" width={100} height={90} alt={article.title} />
                             </Link>
                             {/* <div className='text-sm mb-2 py-4'>{article.subtitle}</div> */}
 
