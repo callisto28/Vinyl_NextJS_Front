@@ -89,8 +89,8 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
 
 export default Home
 
-
-export async function getStaticProps() {
+//changement ici getStaticProps in getServerSideProps
+export async function getServerSideProps() {
   const recentArticles = (await client.query({
     query: gql`
       query Article {                

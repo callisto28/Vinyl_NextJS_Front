@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: false,
+        fallback: "blocking",
     }
 }
 
@@ -68,13 +68,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
             articleId: id
         }
     });
-
+    try{
     return {
 
         props: {
             article: data.article,
         },
-        revalidate: 10,
+        revalidate: 1,
+    };
+    }catch(e){
+        console.log(e);
     }
 }
 
