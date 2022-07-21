@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
+        <div className=" text-black  h-64 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
 
             <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Vinyle'}</h3>
             < Carousel
@@ -85,7 +85,7 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white h-64 w-64 shadow-lg rounded-xl  bg-white">
+        <div className="text-white h-64 w-64 shadow-lg rounded-xl  bg-gradient-to-b from-green-start to-green-end">
             <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'hifi & sono'}</h3>
             < Carousel
                 containerClass='carousel-container'
@@ -158,7 +158,7 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="text-white  h-64 w-64 shadow-lg rounded-xl bg-white">
+        <div className="text-white  h-64 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
             <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'mobilier & accessoire'}</h3>
 
             < Carousel

@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import client from '../apollo-client';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
+import { GetServerSideProps } from 'next';
 
 
 const Vinyls = ({ vinyls }) => {
@@ -83,7 +84,7 @@ const Vinyls = ({ vinyls }) => {
 
 export default Vinyls;
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async ()  => {
     const { data } = await client.query({
         query: gql`
         query Query {

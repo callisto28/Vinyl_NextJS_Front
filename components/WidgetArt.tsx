@@ -14,7 +14,7 @@ const WidgetArt = ({ articles1 }: any) => {
 
 
     return (
-        <div className="text-black h-64 w-64 shadow-lg rounded-xl bg-white">
+        <div className="text-black h-64 w-64 shadow-lg rounded-xl bg-gradient-to-l from-green-start to-green-end">
             <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Articles récents'}</h3>
             < Carousel
                 containerClass='carousel-container'

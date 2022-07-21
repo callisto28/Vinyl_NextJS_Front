@@ -45,7 +45,7 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
     return (
 
         <div className="">
-            <div className="flex flex-col m-2">
+            <div className="flex flex-col m-2 bg-gradient-to-b from-green-start to-green-end">
                 <div className="flex flex-row px-3  my-2 p-4  shadow-lg rounded-xl" key={keyCardPl}>
                     <div className='w-1/3 flex justify-center'>
                         <Link href={linkPL} as={linkTitlePL} passHref ><div
@@ -102,7 +102,7 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
     return (
 
         <div className="">
-            <div className="flex flex-col m-2">
+            <div className="flex flex-col m-2 bg-gradient-to-b from-green-start to-green-end">
                 <div className="flex flex-row px-3 shadow-lg rounded-xl my-2 p-4  " key={keyCardPl}>
                     <div className='w-1/3 flex justify-center'>
                         <Link href={linkPL} as={linkTitlePL} passHref ><img src={imgCardPL} alt={titleCardPL} className=" cursor-pointer object-contain h-48 w-96 p-2" /></Link>

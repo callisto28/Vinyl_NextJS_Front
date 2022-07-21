@@ -70,7 +70,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     });
     try{
     return {
-
         props: {
             article: data.article,
         },

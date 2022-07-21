@@ -60,8 +60,8 @@ module.exports = {
           'end': '#004e92',
         },
         'green': {
-          'start': '##D3CCE3',
-          'end': '#E9E4F0',
+          'start': '#F6FAFA',
+          'end': '#F4F8F8',
         },
         'frost': {
           'start': '#000428',
