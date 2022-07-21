@@ -5,6 +5,7 @@ import client from '../apollo-client';
 import Image from 'next/image';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
+import { GetServerSideProps } from 'next';
 
 const Hifi = ({ hifi }) => {
 
@@ -81,7 +82,7 @@ const Hifi = ({ hifi }) => {
 
 export default Hifi;
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async ()  => {
     const { data } = await client.query({
         query: gql`
             query Query {

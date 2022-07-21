@@ -5,6 +5,7 @@ import client from '../apollo-client';
 import Image from 'next/image';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
+import { GetServerSideProps } from 'next';
 
 const Rangements = ({ desk }) => {
 
@@ -87,7 +88,7 @@ const Rangements = ({ desk }) => {
 
 export default Rangements;
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async ()  => {
     const { data } = await client.query({
         query: gql`
         query Query {

@@ -1,8 +1,9 @@
 import { gql } from '@apollo/client';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import client from '../../apollo-client';
 
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
     const { data } = await client.query({
         query: gql`       
         query getPlan {                
@@ -23,11 +24,11 @@ export const getStaticPaths = async () => {
     });
     return {
         paths,
-        fallback: false,
+        fallback: "blocking",
     }
 }
 //  $materialId: String! , $deskId: String!
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
     const id = context.params.desk;
 
     const { data } = await client.query({
@@ -53,13 +54,16 @@ export const getStaticProps = async (context) => {
 
         }
     });
-
+    try{
     return {
         props: {
             desk: data.desk,
         },
-        revalidate: 10,
-    }
+        revalidate: 1,
+    };
+}catch(e){
+    console.log(e);
+}
 }
 const DetailMaterial = ({ desk }) => {
 
