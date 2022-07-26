@@ -44,6 +44,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                     image
                     imageB
                     referral_url
+                    spotify_url
                     priceEur
                     priceUSD
                     label
@@ -60,12 +61,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
         }
     });
     try {
-    return {
-        props: {
-            vinyl: data.vinyl,
-        },
-        revalidate :1,
-    }
+        return {
+            props: {
+                vinyl: data.vinyl,
+            },
+            revalidate: 1,
+        }
     } catch (error) {
         console.log(error);
     }
@@ -81,7 +82,7 @@ const DetailVinyl = ({ vinyl }) => {
                 <title>vinyles</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles" />
 
-                
+
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-24 mx-auto">
@@ -116,7 +117,7 @@ const DetailVinyl = ({ vinyl }) => {
                                 <span className="ml-auto font-semibold text-gray-900"> {(vinyl.priceUSD === 0) ? (vinyl.priceEur + "  €") : (vinyl.priceUSD + " $")}</span>
                             </div>
                             <div className="flex lg:flex-row sm:flex-col lg:items-center sm:justify-center">
-                            
+
                                 <button className="flex justify-center text-white bg-blueCC border-0 lg:py-2 lg:px-6 sm:py-2 sm:px-3 font-philosophe font-medium transition-color duration-100 delay-10 animate-bounce-in-left rounded-lg hover:bg-blue-700 ">
                                     <a href={vinyl.referral_url}
                                         target="_blank" rel="noreferrer"
@@ -127,22 +128,23 @@ const DetailVinyl = ({ vinyl }) => {
                             </div>
                         </div>
                         <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded" src={vinyl.image} />
-                        
+
 
                     </div>
                     <div className="flex lg:flex-row sm:flex-col lg:justify-evenly items-center">
-                    <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto h-36 object-contain rounded" src={vinyl.imageB} />
-                     
-                      {/* eslint-disable-next-line react/no-unknown-property */}
-                     <iframe className="rounded-lg lg:w-2/5 sm:w-auto" src="https://open.spotify.com/embed/album/29sOhjIWpouIXhDRJRweKp?utm_source=generator"
-                        width="48%"
-                        height="300"                        
-                        frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto h-36 object-contain rounded" src={vinyl.imageB} />
 
-                   
+                        {/* eslint-disable-next-line react/no-unknown-property */}
+                        <iframe className="rounded-lg lg:w-2/5 sm:w-auto"
+                            src={(vinyl.spotify_url == null) ? ('/spotify.png') : (vinyl.spotify_url)}
+                            width="48%"
+                            height="300"
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+
                     </div>
-                    
+
                 </div>
             </section></>
     );
