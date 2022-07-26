@@ -64,7 +64,7 @@ export default function Navbar() {
 
                         <Link href='/bonplan'>
                             <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center text-black tracking-wider  hover:border-b-2 hover:border-purple-500'>
-                                <div className='z-50'> Bon plan  </div>
+                                 Bon plan 
                             </a>
                         </Link>
                         <Link href='/frenchTouch'>

@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
-import { AuthProvider } from '../context/authContext'
+// import { AuthProvider } from '../context/authContext'
 
 
 
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
       </Head>
-      <AuthProvider>
+      {/* <AuthProvider> */}
         <Layout>         
           <Navbar />
           <ApolloProvider client={client}>
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <span className='text-base lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2'>"La vie sans musique est tout simplement une erreur, une fatigue, un exil."<span className='text-xxs'>Friedrich Nietzsche</span></span> 
           <Footer />
         </Layout>
-      </AuthProvider>
+      {/* </AuthProvider> */}
     </div>
 
 

@@ -30,9 +30,9 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
         <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-<link rel="manifest" href="/site.webmanifest"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
         <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
         <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
@@ -46,8 +46,8 @@ const Home: NextPage = ({ articleRec, plansRec, materialsRec, desksRec }: any) =
       {/* <Layout pages="Acceuil Vinyl"> */}
       <div className="lg:grid overflow-hidden lg:grid-cols-1 lg:grid-rows-2 sm:grid sm:grid-col-1">
         <div className=" lg:row-start-1 lg:row-span-2 lg:col-start-1 lg:col-span-1 sm:flex sm:flex-col lg:mt-8 lg:mx-20 sm:mt-5 sm:text-center ">
-          <h2 className='lg:mt-2 lg:mx-10 lg:text-justify lg:w-1/2 lg:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC'>
-            En quelques clics, vous pouvez retrouver des extraits d&apos;artciles, les news, des promotions et les futures sorties de vinyles
+          <h2 className='lg:mt-2 lg:mx-10 lg:text-justify lg:w-1/2 lg:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 lg:text-black sm:text-blue-900 first-letter:text-xl first-letter:font-bold first-letter:text-blueCC'>
+            En quelques clics, vous pouvez retrouver des extraits d&apos;artciles, les news, des promotions et les futures sorties de vinyles {'\n'}
             <span >sur les platerformes les plus populaires du moments.</span>
           </h2>
           <h2 className='lg:mt-2 lg:ml-24 lg:text-left lg:text-lg lg:w-1/2 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC'>

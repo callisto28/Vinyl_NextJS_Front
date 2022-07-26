@@ -128,7 +128,7 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
                             {/* </Link> */}
 
                         </div>
-                        <h4 className="text-black flex items-start text-xs font-chelsea"> auteur de l&apos;article : {authorCardPL.toUpperCase()}</h4>
+                        <h4 className="text-gray-500 text-center text-xs font-chelsea"> auteur de l&apos;article : {authorCardPL.toUpperCase()}</h4>
                     </div>
                 </div>
             </div>

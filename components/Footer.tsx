@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
@@ -6,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center border-t-2 lg:z-50 sm:z-50 text-center border-blueCC h-14">
-      <footer className=" flex lg:flex-row sm:flex-wrap justify-evenly items-center w-1/2">
+      <footer className=" flex lg:flex-row sm:flex-wrap justify-evenly items-center w-1/2 mt-2">
       {/* <Link href={"../legal/sitemap.xml"} className="cursor-pointer">
           Plan du site
         </Link> */}
@@ -33,6 +34,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
+             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo_seb.png"
               alt="Logo Seb4Dev"
@@ -45,9 +47,10 @@ const Footer = () => {
 
         
 
-        <Link href={"../legal/mention"} className="cursor-pointer">
+        <Link href={"/legal/mention"} className="cursor-pointer">
           Mention légal
         </Link>
+        <Link href={"/contact"} className="cursor-pointer">Contact</Link>
       </footer>
     </div>
   );

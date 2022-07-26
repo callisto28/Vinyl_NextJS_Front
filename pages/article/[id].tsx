@@ -93,7 +93,7 @@ const DetailArticle = ({ article }) => {
                 <title>vinyles</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles" />
 
-                <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+               
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-1 mx-auto">
