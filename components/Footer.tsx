@@ -48,7 +48,7 @@ const Footer = () => {
         
 
         <Link href={"/legal/mention"} className="cursor-pointer">
-          Mention légal
+          Mentions légales
         </Link>
         <Link href={"/contact"} className="cursor-pointer">Contact</Link>
       </footer>

@@ -51,10 +51,16 @@ const Vinyls = ({ vinyls }) => {
                         </div>
                         <input type="text"
                             name='searchBar'
-                            className="lg:w-96 sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs text-justify"
+                            className="lg:w-auto sm:w-64 px-3 py-2 rounded-lg mx-2 border-2 border-blueCC focus:ring-1 focus:ring-pink-500 focus:outline-none lg:text-base sm:text-xs text-justify"
                             placeholder="Rechercher par titre, vendeur, genre..."
                             onChange={handleSubmit}
                         ></input>
+                        <br/>
+                        <div className='flex flex-col justify-center items-center pt-4'>
+                            <p className='text-xs'>Profitez de la promotion de notre partenaire avec un acces gratuit de 30 jours</p>
+                        <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=12&l=ur1&category=amu&banner=0W6DT14R33AATJW5E682&f=ifr&linkID=b7b3c3b23600e1ac30182bfec7282725&t=vinyltouch-21&tracking_id=vinyltouch-21" width="300" height="250" scrolling="no"  frameBorder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+
+                        </div>
                     </div>
                 </div>
                 <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">

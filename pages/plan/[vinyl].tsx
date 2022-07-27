@@ -127,12 +127,12 @@ const DetailVinyl = ({ vinyl }) => {
 
                             </div>
                         </div>
-                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded" src={vinyl.image} />
+                        <img alt="image vinyle" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded" src={vinyl.image} />
 
 
                     </div>
                     <div className="flex lg:flex-row sm:flex-col lg:justify-evenly items-center">
-                        <img alt="ecommerce" className="lg:w-1/3 w-full lg:h-auto h-36 object-contain rounded" src={vinyl.imageB} />
+                        <img alt="image vinyle" className="lg:w-1/3 w-full lg:h-auto h-36 object-contain rounded lg:hover:scale-125 lg:hover:translate-y-7" src={vinyl.imageB} />
 
                         {/* eslint-disable-next-line react/no-unknown-property */}
                         <iframe className="rounded-lg lg:w-2/5 sm:w-auto"
@@ -144,7 +144,8 @@ const DetailVinyl = ({ vinyl }) => {
 
 
                     </div>
-
+       
+        
                 </div>
             </section></>
     );

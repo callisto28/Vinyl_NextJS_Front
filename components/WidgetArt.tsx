@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -14,8 +15,8 @@ const WidgetArt = ({ articles1 }: any) => {
 
 
     return (
-        <div className="text-black h-64 w-64 shadow-lg rounded-xl bg-gradient-to-l from-green-start to-green-end">
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Articles récents'}</h3>
+        <div className="flex flex-col  text-black  h-72 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
+            <h3 className="text-center text-black py-1  border-b-2 border-blueCC shadow-md">{'Articles récents'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={2}
@@ -64,15 +65,15 @@ const WidgetArt = ({ articles1 }: any) => {
 
             >
                 {lastArticles.map((article, index) => (
-                    <div key={index} className="flex flex-col items-center cursor-pointer pt-6 ">
-                        <a className=" flex flex-col items-center">
-                            <div className=" text-center text-sm text-black text-base">{article.title.split(1, 5)} </div>
-                            <Link href={`/article/${article._id}`} key={article.slug} passHref>
-                                <Image src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} layout="intrinsic" width={100} height={90} alt={article.title} />
+                    <div key={index} className="relative z-50">
+                        <a className=" flex flex-col content-around items-center cursor-pointer pt-4">
+                            <div className=" text-center text-black text-sm py-2">{article.title.split(1, 5)} </div>
+                            <Link href={`/article/${article._id}`}  key={article.slug} passHref>
+                                <img src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} className="w-28 h-28" alt={article.title} />
                             </Link>
                             {/* <div className='text-sm mb-2 py-4'>{article.subtitle}</div> */}
 
-                            <div className="text-xs text-center text-black ">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-center text-black my-2 ">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
 
 

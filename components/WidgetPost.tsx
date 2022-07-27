@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React from 'react';
 import Carousel from "react-multi-carousel";
@@ -7,9 +8,9 @@ import "react-multi-carousel/lib/styles.css";
 export const WidgetPostVinyl = ({ vinyls }: any) => {
 
     return (
-        <div className=" text-black  h-64 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
+        <div className=" flex flex-col  text-black  h-72 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
 
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'Vinyle'}</h3>
+            <h3 className="text-center text-black py-1  border-b-2 border-blueCC shadow-md">{'Vinyle'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -58,14 +59,14 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 
             >
                 {vinyls.map((vinyl, index) => (
-                    <div key={index}>
+                    <div key={index} className="relative z-40">
 
-                        <a className=" flex flex-col items-center cursor-pointer pt-4">
-                            <div className="text-center text-black text-base">{vinyl.title}</div>
+                        <a className=" flex flex-col content-around items-center cursor-pointer pt-4">
+                            <div className="text-center text-black text-base my-2">{vinyl.title}</div>
                             <Link href={`/plan/${vinyl._id}`} key={vinyl.slug} passHref>
                                 <img src={vinyl.image} alt={vinyl.title} className="w-auto h-28" />
                             </Link>
-                            <div className="text-xs text-center text-black">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-center text-black my-2">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
 
                             </div>
 
@@ -85,8 +86,8 @@ export const WidgetPostVinyl = ({ vinyls }: any) => {
 export const WidgetPostMaterial = ({ material1 }: any) => {
 
     return (
-        <div className="text-white h-64 w-64 shadow-lg rounded-xl  bg-gradient-to-b from-green-start to-green-end">
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'hifi & sono'}</h3>
+        <div className="flex flex-col  text-black  h-72 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
+            <h3 className="text-center text-black py-1  border-b-2 border-blueCC shadow-md">{'hifi & sono'}</h3>
             < Carousel
                 containerClass='carousel-container'
                 additionalTransfrom={1}
@@ -135,16 +136,15 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 
             >
                 {material1.map((material, index) => (
-                    <div key={index}>
+                    <div key={index} className="relative z-40">
 
-                        <a className=" flex flex-col items-center cursor-pointer pt-4">
+                        <a className=" flex flex-col content-around items-center cursor-pointer pt-4">
+                            <div className="text-center text-black text-base py-2">{material.title}</div>
+                            <Link href={`/material/${material._id}`} key={material.slug} passHref>
+                                <img src={material.image} alt={material.title} className="w-auto h-28" />
+                                </Link>
 
-
-                            <div className="text-center text-base text-black">{material.title}</div>
-
-                            <Link href={`/material/${material._id}`} key={material.slug} passHref><img src={material.image} alt={material.title} className="w-auto h-28" /></Link>
-
-                            <div className="text-xs text-black">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs text-center text-black my-2">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
 
                         </a>
@@ -158,8 +158,8 @@ export const WidgetPostMaterial = ({ material1 }: any) => {
 export const WidgetPostDesk = ({ desk1 }: any) => {
 
     return (
-        <div className="text-white  h-64 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
-            <h3 className="text-center text-black pb-1  border-b-2 border-blueCC shadow-md">{'mobilier & accessoire'}</h3>
+        <div className="flex flex-col text-black  h-72 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
+            <h3 className="text-center text-black py-1  border-b-2 border-blueCC shadow-md">{'mobilier & accessoire'}</h3>
 
             < Carousel
                 containerClass='carousel-container'
@@ -209,15 +209,15 @@ export const WidgetPostDesk = ({ desk1 }: any) => {
 
             >
                 {desk1.map((desk, index) => (
-                    <div key={index}>
+                    <div key={index} className="relative z-40">
 
-                        <a className="flex flex-col items-center cursor-pointer pt-4">
+                        <a className="flex flex-col content-around items-center cursor-pointer pt-4">
 
-                            <div className="text-center text-black">{desk.title}</div>
+                            <div className="text-center text-black my-2">{desk.title}</div>
 
                             <Link href={`/desk/${desk._id}`} key={desk.slug} passHref><img src={desk.image} alt={desk.title} className="w-auto h-28 rounded-full  my-1" /></Link>
 
-                            <div className="text-xs  text-black">{new Date(parseInt(desk.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            <div className="text-xs  text-black my-2">{new Date(parseInt(desk.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
                             </div>
                             {/* <span className=" mb-2 text-transparent pb-4">{'------------------------------'}</span> */}
                         </a>
