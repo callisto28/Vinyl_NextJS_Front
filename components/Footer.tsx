@@ -7,10 +7,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center border-t-2 lg:z-50 sm:z-50 text-center border-blueCC h-14">
-      <footer className=" flex lg:flex-row sm:flex-wrap justify-evenly items-center w-1/2 mt-2">
-      {/* <Link href={"../legal/sitemap.xml"} className="cursor-pointer">
-          Plan du site
-        </Link> */}
+      <footer className=" flex lg:flex-row sm:flex-row lg:text-base sm:text-xs  lg:justify-evenly sm:justify-evenly  items-center lg:w-1/2 sm:w-4/5 mt-2">
+
         <div className="flex justify-center items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,23 +32,21 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-             {/* eslint-disable-next-line @next/next/no-img-element */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo_seb.png"
               alt="Logo Seb4Dev"
               className="h-8 w-24 cursor-pointer mx-2"
             ></img>
           </Link>
-
-          
         </div>
-
-        
-
         <Link href={"/legal/mention"} className="cursor-pointer">
           Mentions légales
         </Link>
         <Link href={"/contact"} className="cursor-pointer">Contact</Link>
+        <Link href={"../sitemap-0.xml"} className="cursor-pointer">
+          Plan du site
+        </Link>
       </footer>
     </div>
   );

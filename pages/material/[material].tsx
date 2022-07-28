@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { gql } from '@apollo/client';
 import { GetStaticPaths } from 'next';
 import client from '../../apollo-client';
@@ -54,17 +55,17 @@ export const getStaticProps = async (context) => {
 
         }
     });
-    try{
-    return {
-        props: {
-            material: data.material,
-            
-        },
-        revalidate:1
-    };
-}catch(e){
-    console.log(e);
-}
+    try {
+        return {
+            props: {
+                material: data.material,
+
+            },
+            revalidate: 1
+        };
+    } catch (e) {
+        console.log(e);
+    }
 }
 const DetailMaterial = ({ material }) => {
 
@@ -91,17 +92,22 @@ const DetailMaterial = ({ material }) => {
                             <span className="text-gray-500">Publié le :</span>
                             <span className="ml-auto text-gray-900">{new Date(parseInt(material.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                         </div>
+                        <div className="flex border-b mb-6 border-gray-200 py-2">
+                            <span className="text-gray-500">Prix :</span>
+                            <span className="ml-auto font-semibold text-gray-900"> {material.price + " €"}</span>
+                        </div>
+                        <div className="flex lg:flex-row sm:flex-col lg:items-center sm:justify-center">
 
-                        <div className="flex">
-                            <span className="title-font font-medium text-2xl text-gray-900">{material.price + " €"}</span>
-                            <button className="flex ml-auto text-white bg-blueCC border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
+                            <button className="flex justify-center text-white bg-blueCC border-0 lg:py-2 lg:px-6 sm:py-2 sm:px-3 font-philosophe font-medium transition-color duration-100 delay-10 animate-bounce-in-left rounded-lg hover:bg-blue-700 ">
                                 <a href={material.referral_url}
                                     target="_blank" rel="noreferrer"
                                 >
-                                    Consulter</a>
+                                    Acheter </a>
                             </button>
 
                         </div>
+
+
                     </div>
                     <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded" src={material.image} />
                 </div>

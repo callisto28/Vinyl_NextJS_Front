@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unknown-property */
 import { gql } from '@apollo/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -108,6 +109,10 @@ const DetailVinyl = ({ vinyl }) => {
                                 <span className="text-gray-500">Publié le :</span>
                                 <span className="ml-auto text-gray-900">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                             </div>
+                            <div className="flex border-t border-gray-200 py-2">
+                                <span className="text-gray-500">Sortie prévu le :</span>
+                                <span className="ml-auto text-gray-900">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                            </div>
                             <div className="flex border-t border-b  border-gray-200 py-2">
                                 <span className="text-gray-500">Label :</span>
                                 <span className="ml-auto text-gray-900">{vinyl.label}</span>
@@ -122,7 +127,7 @@ const DetailVinyl = ({ vinyl }) => {
                                     <a href={vinyl.referral_url}
                                         target="_blank" rel="noreferrer"
                                     >
-                                        Acheter / pré-commande</a>
+                                        Acheter / pré-commander</a>
                                 </button>
 
                             </div>
@@ -144,8 +149,8 @@ const DetailVinyl = ({ vinyl }) => {
 
 
                     </div>
-       
-        
+
+
                 </div>
             </section></>
     );

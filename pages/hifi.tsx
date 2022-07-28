@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import CardPlan from '../components/CardPlan';
 import { gql } from '@apollo/client';
 import client from '../apollo-client';
-import Image from 'next/image';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
 import { GetServerSideProps } from 'next';
@@ -31,12 +30,12 @@ const Hifi = ({ hifi }) => {
                 <meta name="description" content="Toute la hifi, platine, ampli, aux meillerus prix du marché..." />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
-        <meta property="og:url" content="https://vinyltouch.fr/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="vinylTouch" />
-        <meta property="og:locale" content="fr_FR" />
-        <meta property="og:locale:alternate" content="en_US" />
+                <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
+                <meta property="og:url" content="https://vinyltouch.fr/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="vinylTouch" />
+                <meta property="og:locale" content="fr_FR" />
+                <meta property="og:locale:alternate" content="en_US" />
             </Head>
             <div className='flex lg:flex-row sm:flex-col '>
                 <div className=' lg:w-1/4 flex lg:flex-col sm:flex-col lg:items-center lg:content-between sm:items-center lg:m-4 pb-2 '>
@@ -82,7 +81,7 @@ const Hifi = ({ hifi }) => {
 
 export default Hifi;
 
-export const getServerSideProps: GetServerSideProps = async ()  => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const { data } = await client.query({
         query: gql`
             query Query {

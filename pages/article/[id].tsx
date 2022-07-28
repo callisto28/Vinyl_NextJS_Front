@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -68,14 +69,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
             articleId: id
         }
     });
-    try{
-    return {
-        props: {
-            article: data.article,
-        },
-        revalidate: 1,
-    };
-    }catch(e){
+    try {
+        return {
+            props: {
+                article: data.article,
+            },
+            revalidate: 1,
+        };
+    } catch (e) {
         console.log(e);
     }
 }
@@ -93,7 +94,7 @@ const DetailArticle = ({ article }) => {
                 <title>vinyles</title>
                 <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles" />
 
-               
+
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-1 mx-auto">

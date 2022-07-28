@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
-import { useLazyQuery, gql } from '@apollo/client';
-import Link from 'next/link';
+
 import { CardVinyl } from './CardPlan';
 
 const Filter = ({ dataFilter }) => {
