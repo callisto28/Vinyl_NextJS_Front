@@ -104,8 +104,8 @@ const DetailArticle = ({ article }) => {
                         <div className="lg:w-3/4 mx-auto flex flex-wrap  ">
 
                             <div className=" w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 lg:ml-8 font-philosopher ">
-                                <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">{(article.title)}</h1>
-                                <h2 className="text-sm title-font text-gray-500 tracking-widest">{article.subtitle}</h2>
+                                <h1 className="text-gray-900 text-xxxl title-font font-medium mb-4">{(article.title)}</h1>
+                                <h2 className="text-base title-font text-gray-500 tracking-widest">{article.subtitle}</h2>
                                 <div className="flex mb-4">
                                     <a className="flex-grow text-blueCC border-b-2 border-blueCC py-2 text-lg px-1">Description</a>
                                 </div>

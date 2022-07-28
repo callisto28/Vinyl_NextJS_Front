@@ -37,9 +37,9 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
                     </div>
 
 
-                    <Link href={link} as={linkTitle}><h1 className="text-blueCC text-xl text-center font-philosopher h-9  cursor-pointer">{titleCard} </h1></Link>
+                    <Link href={link} as={linkTitle}><h1 className="text-blueCC lg:text-xl sm:text-base text-center font-philosopher h-9  cursor-pointer">{titleCard} </h1></Link>
                     <div className='text-ellipsis overflow-hidden... text-black text-justify flex items-center text-base font-philosopher h-48'>
-                        <p className="first-letter:text-xl first-letter:font-bold font-philosopher">
+                        <p className="first-letter:text-xl first-letter:font-bold lg:text-base sm:text-xs font-philosopher">
                             {texteCard}
                         </p>
                     </div>
