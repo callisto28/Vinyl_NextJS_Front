@@ -15,7 +15,7 @@ const WidgetArt = ({ articles1 }: any) => {
 
 
     return (
-        <div className="flex flex-col  text-black  h-72 w-64 shadow-lg rounded-xl bg-gradient-to-b from-green-start to-green-end">
+        <div className="flex flex-col  text-black  h-64 lg:w-72 md:w-72 sm:w-64 rounded-lg bg-gradient-to-b from-green-start to-green-end">
             <h3 className="text-center text-black py-1  border-b-2 border-blueCC shadow-md">{'Articles récents'}</h3>
             < Carousel
                 containerClass='carousel-container'
@@ -66,11 +66,13 @@ const WidgetArt = ({ articles1 }: any) => {
             >
                 {lastArticles.map((article, index) => (
                     <div key={index} className="relative z-50">
-                        <a className=" flex flex-col content-around items-center cursor-pointer pt-4">
-                            <div className=" text-center text-black text-sm py-2">{article.title.split(1, 5)} </div>
+                        <a className=" flex flex-col items-center">
+                            <div className=" text-center text-black h-16 text-xs px-2 py-2 pb-5">{article.title.split(1, 5)} </div>
+                            <div className="w-28 h-28 rounded-md my-1 cursor-pointer">
                             <Link href={`/article/${article._id}`}  key={article.slug} passHref>
-                                <img src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} className="w-28 h-28" alt={article.title} />
+                                <img src={(article.image != '') ? (article.image) : ('https://www.abondance.com/wp-content/uploads/2015/08/actualite-logo-300x262.jpg')} className="w-28 h-28 rounded-md" alt={article.title} />
                             </Link>
+                            </div>
                             {/* <div className='text-sm mb-2 py-4'>{article.subtitle}</div> */}
 
                             <div className="text-xs text-center text-black my-2 ">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}

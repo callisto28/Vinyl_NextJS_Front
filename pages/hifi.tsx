@@ -5,6 +5,7 @@ import client from '../apollo-client';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
 import { GetServerSideProps } from 'next';
+import Sponsor from '../components/Sponsor';
 
 const Hifi = ({ hifi }) => {
 
@@ -50,6 +51,7 @@ const Hifi = ({ hifi }) => {
                             placeholder="Rechercher par titre ou vendeur..."
                             onChange={handleSubmit}
                         ></input>
+                        <Sponsor/>
                     </div>
                 </div>
                 <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">
@@ -67,6 +69,7 @@ const Hifi = ({ hifi }) => {
                                 texteCardPL={plan.description}
                                 priceCardPLEUR={plan.price + " €"}
                                 titleCardPL={plan.title}
+                                brandCardPL={plan.brand}
                                 authorCardPL={plan.author}
                                 dateCardPL={plan.createdAt} />
                         </div>
@@ -95,6 +98,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
                 referral_url
                 price
                 seller
+                brand
                 author
                 featured
                     }

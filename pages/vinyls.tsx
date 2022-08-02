@@ -5,6 +5,7 @@ import client from '../apollo-client';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
 import { GetServerSideProps } from 'next';
+import Sponsor from '../components/Sponsor';
 
 
 const Vinyls = ({ vinyls }) => {
@@ -55,6 +56,7 @@ const Vinyls = ({ vinyls }) => {
                             placeholder="Rechercher par titre, vendeur, genre..."
                             onChange={handleSubmit}
                         ></input>
+                        <Sponsor/>
                         <br/>
                         <div className='flex flex-col justify-center items-center pt-4'>
                             <p className='text-xs'>Profitez de la promotion de notre partenaire avec un acces gratuit de 30 jours</p>
@@ -77,6 +79,7 @@ const Vinyls = ({ vinyls }) => {
                                 texteCardPL={val.subtitle}
                                 priceCardPLEUR={(val.priceUSD === 0 || null) ? (`${val.priceEur}  €`) : (val.priceUSD + '  $')}
                                 titleCardPL={val.title}
+                                promoCardPl={val.promo}
                                 authorCardPL={val.author}
                                 dateCardPL={val.createdAt}
                             />
@@ -109,6 +112,7 @@ export const getServerSideProps: GetServerSideProps = async ()  => {
                     priceUSD
                     label
                     genre
+                    promo
                     seller
                     author
                     featured

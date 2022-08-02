@@ -6,7 +6,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center border-t-2 lg:z-50 sm:z-50 text-center border-blueCC h-14">
+    <div className="flex flex-col items-center justify-center border-t-2 lg:z-50 sm:z-50 text-center border-blueCC h-20">
+      <span className='lg:text-sm sm:text-xs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2 pt-2'>&quot;La vie sans musique est tout simplement une erreur, une fatigue, un exil&quot;.<span className='text-xxs'>Friedrich Nietzsche</span></span>
+      
       <footer className=" flex lg:flex-row sm:flex-row lg:text-base sm:text-xs  lg:justify-evenly sm:justify-evenly  items-center lg:w-1/2 sm:w-4/5 mt-2">
 
         <div className="flex justify-center items-center">
@@ -44,9 +46,9 @@ const Footer = () => {
           Mentions légales
         </Link>
         <Link href={"/contact"} className="cursor-pointer">Contact</Link>
-        <Link href={"../sitemap-0.xml"} className="cursor-pointer">
+        <a href={"../sitemap-0.xml"} className="cursor-pointer">
           Plan du site
-        </Link>
+        </a>
       </footer>
     </div>
   );

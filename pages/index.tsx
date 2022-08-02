@@ -32,24 +32,10 @@ const Home: NextPage = ({
           content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
         <meta
           property="og:title"
           content="Accueil articles bons plan vinyles, hifi, rangements"
@@ -70,34 +56,34 @@ const Home: NextPage = ({
       </Head>
 
       {/* <Layout pages="Acceuil Vinyl"> */}
-      <div className="lg:grid overflow-hidden lg:grid-cols-1 lg:grid-rows-2 sm:grid sm:grid-col-1">
+      <div className="lg:grid lg:grid-cols-1 lg:grid-rows-2 sm:grid sm:grid-col-1">
         <div className=" lg:row-start-1 lg:row-span-2 lg:col-start-1 lg:col-span-1 sm:flex sm:flex-col lg:mt-8 lg:mx-20 sm:mt-5 sm:text-center ">
-          <h2 className="lg:mt-2 lg:mx-10 lg:text-justify lg:w-1/2 lg:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 lg:text-black sm:text-black  first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
+          <h2 className="lg:mt-2 lg:mx-10 lg:text-justify lg:w-2/3 lg:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 lg:text-black sm:text-black  first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
             En partant d&apos;un constat concernant la difficulté de trouver des
-            infos rapidement <br /> nous avons décidé de créer un site qui permet en
+            infos rapidement. <br /> Nous avons décidé de créer un site qui permet en
             quelques clics, de regrouper des extraits d&apos;articles,
             des news, des promotions ainsi que des nouveautés en vinyles. {"\n"}
-            <span>Ces offres sont issus de différentes plateformes.</span>
+            <span>Ces offres sont issus de différentes plateformes (Amazon, Fnac, Son-video, Mondo, Waxworkrecords...).</span>
           </h2>
-          <h2 className="lg:mt-2 lg:ml-24 lg:text-left lg:text-lg lg:w-1/2 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
+          <h2 className="lg:mt-2 lg:ml-24 lg:text-left lg:text-lg lg:w-2/3 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
             Avec en bonus une petite section spècialement dédiée aux Youtubeurs
             Français (les unboxing, coup de coeur...) partageant leurs passions pour
             le 33T.
           </h2>
         </div>
 
-        <div className="boxb lg:row-start-2 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-50 mb-48 lg:h-20 sm:h-auto ">
+        <div className="boxb  lg:row-start-2 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-50 mb-48 lg:h-20 sm:h-auto ">
           <div className="lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col sm:items-center sm:justify-around">
-            <div className="w-auto sm:my-1">
+            <div className="w-auto  sm:my-1 shadow-lg shadow-gray-400 rounded-lg">
               <WidgetArt articles1={lastArticles} className="z-10" />
             </div>
-            <div className="w-auto sm:my-1" >
+            <div className="w-auto sm:my-1  shadow-lg shadow-gray-400 rounded-lg" >
               <WidgetPostVinyl vinyls={lastPlan} className="z-10"  />
             </div>
-            <div className="w-auto sm:my-1">
+            <div className="w-auto sm:my-1 shadow-lg shadow-gray-400 rounded-lg">
               <WidgetPostMaterial material1={lastMaterial} className="z-10"  />
             </div>
-            <div className="w-auto sm:my-1">
+            <div className="w-auto sm:my-1 shadow-lg shadow-gray-400 rounded-lg">
               <WidgetPostDesk desk1={lastDesk} className="z-10"  />
             </div>
           </div>
@@ -113,6 +99,7 @@ const Home: NextPage = ({
           />
         </div>
       </div>
+      
     </div>
   );
 };
@@ -151,6 +138,7 @@ export async function getServerSideProps() {
             referral_url
             priceEur
             seller
+            promo
             featured
           }
         }

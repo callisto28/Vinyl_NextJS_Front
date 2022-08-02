@@ -24,7 +24,7 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
     return (
         <div className="">
             <div className="my-3 ">
-                <div className=" lg:mx-1 shadow-lg rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-b from-green-start to-green-end" key={keyCard}>
+                <div className=" lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end" key={keyCard}>
                     <p className="text-black text-center ">Publié le : <span className='text-rougeCC'>{new Date(parseInt(dateCard)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
                     </p>

@@ -45,6 +45,7 @@ export const getStaticProps = async (context) => {
                     referral_url
                     price
                     seller
+                    brand
                     author
                     featured
                 }
@@ -86,6 +87,10 @@ const DetailMaterial = ({ material }) => {
                         <div className="flex border-t border-gray-200 py-2">
                             <span className="text-gray-500">Vendu par :</span>
                             <span className="ml-auto text-gray-900">{material.seller}</span>
+                        </div>
+                        <div className="flex border-t border-gray-200 py-2">
+                            <span className="text-gray-500">Marque :</span>
+                            <span className="ml-auto text-gray-900">{material.brand}</span>
                         </div>
 
                         <div className="flex border-t border-gray-200 py-2">

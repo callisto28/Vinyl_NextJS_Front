@@ -6,7 +6,7 @@ import Card, { CardVinyl } from "../components/CardPlan";
 import Checkbox from "../components/Checkbox";
 
 import Image from "next/image";
-import { title } from "process";
+
 
 const Bonplans = ({ vinyls, materials, desks, all }) => {
   const [filter, setFilter] = useState([]);
@@ -89,20 +89,32 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
               placeholder="Rechercher..."
               onChange={handleSubmit}
             ></input>
-            <p className="text-justify text-sm  px-2">
+            <p className="text-justify text-sm  px-2 border-b-2 pb-4 ">
              <strong>Retrouvez ici une séléction :</strong> d&apos;amplis, de platines, d&apos;accessoires sur l&apos;univers du vinyles. <br/> Mais aussi une liste de nouveautés vinyles (disponible ou en pré-commandes)
             </p>
-            <br/>
-            <p className="text-gray-600 text-xs">
-              <strong>Liens sponsorisés :</strong> Certains liens que vous retrouvez ici sont
-              des liens sponsorisés. Si vous passez par ces liens, vinyltouch perçoit à chaques ventes une petite contribution pour faire vivre le site et contribue à régler les frais d&apos;herbergement.
-                            
-            </p>
+         
             
+            
+              
+              <span className="font-semibold text-xs">Pour 49 EUR par an, les membres du Programme Amazon Prime bénéficient de :
+                <ul className=" text-left text-xxs border-b-2 ">
+                  <ul>- La livraison en 1 jour ouvré gratuite sur des millions d’articles</ul>
+                  <li>- L’accès au stockage sécurisé et illimité de leurs photos</li>
+                  <li>- La possibilité d&apos;emprunter gratuitement des livres grâce à la vaste Bibliothèque de prêt Kindl</li>
+                </ul>
+              </span>
+              <button className=" my-2">
+                <a href="https://amzn.to/3OPqy3m" className="p-1 rounded-md  hover:bg-black bg-sable text-black hover:text-sable text-xs">Découvrez Amazon Prime</a>
+              </button>            
           </div>
         </div>
 
         <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">
+          <div className="flex items-center lg:justify-center sm:content-center mt-2">
+          <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=26&l=ur1&category=music&banner=1AR0MF9AEMKGSXZ01902&f=ifr&linkID=e32212738c22d55bd8dbe511a271318f&t=vinyltouch-21&tracking_id=vinyltouch-21" width="468" height="60" scrolling="no"  frameBorder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+
+          </div>
+
           {vinyls
             .filter((plan) => {
               return (
@@ -136,6 +148,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                   keyCardPl={plan._id}
                   linkPL={`/plan/${plan._id}`}
                   linkTitlePL={`/plan/${plan._id}`}
+                  promoCardPl={(plan.promo != '') ? ((plan.promo)) : ('')}
                   artistCardPL={plan.artiste}
                   imgCardPL={
                     plan.image != ""
@@ -197,6 +210,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                   texteCardPL={material.description}
                   priceCardPLEUR={`${material.price} €`}
                   titleCardPL={material.title}
+                  brandCardPL={material.brand}
                   authorCardPL={material.author}
                   dateCardPL={material.createdAt}
                 />
@@ -237,6 +251,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                   priceCardPLEUR={`${desk.price} €`}
                   titleCardPL={desk.title}
                   authorCardPL={desk.author}
+                  brandCardPL={""}
                   dateCardPL={desk.createdAt}
                 />
               </div>
@@ -269,6 +284,7 @@ export async function getServerSideProps() {
           priceUSD
           label
           genre
+          promo
           seller
           author
           featured
@@ -283,6 +299,7 @@ export async function getServerSideProps() {
           image
           referral_url
           price
+          brand
           seller
           featured
         }

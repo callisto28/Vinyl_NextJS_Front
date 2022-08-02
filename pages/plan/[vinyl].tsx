@@ -51,6 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
                     label
                     release
                     genre
+                    promo
                     seller
                     author
                     featured
@@ -120,7 +121,7 @@ const DetailVinyl = ({ vinyl }) => {
                             </div>
                             <div className="flex border-b mb-6 border-gray-200 py-2">
                                 <span className="text-gray-500">Prix :</span>
-                                <span className="ml-auto font-semibold text-gray-900"> {(vinyl.priceUSD === 0) ? (vinyl.priceEur + "  €") : (vinyl.priceUSD + " $")}</span>
+                                <span className="ml-auto font-semibold text-gray-900"> {(vinyl.priceUSD === 0) ? (vinyl.priceEur + "  €") : (vinyl.priceUSD + " $")} <span className='text-xs text-red-500'>{vinyl.promo}</span></span>
                             </div>
                             <div className="flex lg:flex-row sm:flex-col lg:items-center sm:justify-center">
 

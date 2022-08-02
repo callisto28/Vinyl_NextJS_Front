@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Checkbox from '../components/Checkbox';
 import { GetServerSideProps } from 'next';
+import Sponsor from '../components/Sponsor';
 
 const Rangements = ({ desk }) => {
 
@@ -54,6 +55,7 @@ const Rangements = ({ desk }) => {
                             placeholder="Rechercher par titre ou vendeur..."
                             onChange={handleSubmit}
                         ></input>
+                        <Sponsor/>
                     </div>
                 </div>
                 <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">
@@ -74,6 +76,7 @@ const Rangements = ({ desk }) => {
                                     texteCardPL={plan.description}
                                     priceCardPLEUR={plan.price + " €"}
                                     titleCardPL={plan.title}
+                                    brandCardPL={""}
                                     authorCardPL={plan.author}
                                     dateCardPL={plan.createdAt} />
                             </div>

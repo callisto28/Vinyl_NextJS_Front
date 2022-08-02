@@ -16,6 +16,7 @@ type PropsVinyl = {
     dateCardPL: string;
     imgCardPL: string;
     img2CardPL: string;
+    promoCardPl:string;
     priceCardPLEUR: number | string;
 }
 
@@ -26,13 +27,14 @@ type Props = {
     texteCardPL: string;
     titleCardPL: string;
     authorCardPL: string;
+    brandCardPL: string;
     dateCardPL: string;
     imgCardPL: string;
     priceCardPLEUR: number | string;
 }
 
 
-const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, img2CardPL, imgCardPL, priceCardPLEUR }: PropsVinyl) => {
+const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, img2CardPL, imgCardPL, priceCardPLEUR, promoCardPl }: PropsVinyl) => {
 
     const date = new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' });
 
@@ -46,9 +48,9 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
     return (
 
         <div className="">
-            <div className="flex flex-col m-2 bg-gradient-to-b from-green-start to-green-end">
-                <div className="flex flex-row px-3  my-2 p-4  shadow-lg rounded-xl" key={keyCardPl}>
-                    <div className='w-1/3 flex justify-center'>
+            <div className="flex flex-col m-2 ">
+                <div className="flex flex-row px-3  my-2 p-4  shadow-lg shadow-gray-400 rounded-xl bg-gradient-to-b from-green-start to-green-end" key={keyCardPl}>
+                    <div className='w-1/3 flex justify-center '>
                         <Link href={linkPL} as={linkTitlePL} passHref ><div
 
                             onMouseEnter={onMouseEnter}
@@ -62,6 +64,7 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
                     </div>
                     <div className='w-2/3 flex flex-col justify-between'>
                         <p className="text-black flex items-start text-xs ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
+                        <p className='text-rougeCC text-lg'>{""}</p>
                         <Link href={linkPL} as={linkTitlePL} passHref >
                             <h1 className="cursor-pointer 
                             text-blueCC 
@@ -75,6 +78,9 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
                         <div className='flex items-center flex-col my-2'>
                             <p className="text-blue-600 text-justify border-y-2 border-red-500 font-philosopher lg:text-base sm:text-sm mb-2">
                                 Prix de vente : <span className='text-xl text-black'> {priceCardPLEUR}</span>
+                            </p>
+                            <p className="text-blue-600 text-justify border-y-2 border-b-red-500 font-philosopher lg:text-base sm:text-sm mb-2">
+                                <span className='text-base text-rougeCC italic'>  {promoCardPl}  </span>
                             </p>
                             {/* <Link href={linkPL} as={linkTitlePL} passHref > */}
                             <Button textButton=" &rarr; Détail" link={linkPL} linkPl={linkTitlePL} />
@@ -92,7 +98,7 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
     );
 };
 
-const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, imgCardPL, priceCardPLEUR }: Props) => {
+const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, imgCardPL, priceCardPLEUR, brandCardPL }: Props) => {
 
     const date = new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' });
 
@@ -103,12 +109,12 @@ const Card = ({ keyCardPl, linkTitlePL, linkPL, texteCardPL, titleCardPL, author
     return (
 
         <div className="">
-            <div className="flex flex-col m-2 bg-gradient-to-b from-green-start to-green-end">
-                <div className="flex flex-row px-3 shadow-lg rounded-xl my-2 p-4  " key={keyCardPl}>
+            <div className="flex flex-col m-2 ">
+                <div className="flex flex-row px-3  my-2 p-4  shadow-lg shadow-gray-400 rounded-xl bg-gradient-to-b from-green-start to-green-end" key={keyCardPl}>
                     <div className='w-1/3 flex justify-center'>
                         <Link href={linkPL} as={linkTitlePL} passHref ><img src={imgCardPL} alt={titleCardPL} className=" cursor-pointer object-contain h-48 w-96 p-2" /></Link>
                     </div>
-                    <div className='w-2/3 flex flex-col justify-around'>
+                    <div className='w-2/3 flex flex-col justify-between'>
                         <p className="text-black flex items-start text-xs ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
                         <Link href={linkPL} as={linkTitlePL} passHref >
                             <h1 className="cursor-pointer 

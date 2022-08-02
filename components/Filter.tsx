@@ -52,6 +52,7 @@ const Filter = ({ dataFilter }) => {
                             texteCardPL={plan.subtitle}
                             priceCardPLEUR={(plan.priceUSD === 0) ? (`${plan.priceEur}  €`) : (plan.priceUSD + '  $')}
                             titleCardPL={plan.title}
+                            promoCardPl={plan.promo}
                             authorCardPL={plan.author}
                             dateCardPL={plan.createdAt}
                         />
@@ -73,6 +74,7 @@ const Filter = ({ dataFilter }) => {
                                 texteCardPL={plan.subtitle}
                                 priceCardPLEUR={(plan.priceUSD === 0) ? (`${plan.priceEur}  €`) : (plan.priceUSD + '  $')}
                                 titleCardPL={plan.title}
+                                promoCardPl={plan.promo}
                                 authorCardPL={plan.author}
                                 dateCardPL={plan.createdAt}
                             />

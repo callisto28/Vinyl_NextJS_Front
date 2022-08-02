@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
-// import { AuthProvider } from '../context/authContext'
+
 
 
 
@@ -16,10 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>VinylTouch</title>
-        
-        <meta name="description" content="Toute l'actualité du vinyle" />
-        <html lang="fr"></html>
+        <title>VinylTouch</title>        
+        <meta name="description" content="Toute l'actualité du vinyle" />       
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
@@ -32,17 +30,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
       </Head>
-      {/* <AuthProvider> */}
+     
         <Layout>         
           <Navbar />
           <ApolloProvider client={client}>
             <Component {...pageProps} />
           </ApolloProvider>
            {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <span className='text-base lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2'>"La vie sans musique est tout simplement une erreur, une fatigue, un exil."<span className='text-xxs'>Friedrich Nietzsche</span></span> 
+          
+          
           <Footer />
         </Layout>
-      {/* </AuthProvider> */}
+     
     </div>
 
 
