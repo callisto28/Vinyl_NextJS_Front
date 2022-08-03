@@ -15,8 +15,45 @@ const articles = ({ articles }) => {
     return (       
         <>
             <Head>
-                <title>Les Articles | news | actu </title>
-                <meta name="description" content="Tous les articles" />              
+                <title> Articles | News | Actu </title>
+                <meta name="description" content="Actualité, scoop, nouvel album, retrouver ici des extraits d'articles de news sur l'univers de la musique et du vinyle" />              
+                <meta property="og:title" content="Articles | News | Actu" />
+
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/favicon-16x16.png"
+/>
+<link rel="manifest" href="/site.webmanifest" />
+<meta
+  property="og:description"
+  content="Actualité, scoop, nouvel album, retrouver ici des extraits d'articles de news sur l'univers de la musique et du vinyle"
+/>
+<meta
+  property="og:description"
+  content="Actualité, scoop, nouvel album, retrouver ici des extraits d'articles de news sur l'univers de la musique et du vinyle"
+/>
+<meta
+  property="og:image"
+  content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
+/>
+<meta property="og:url" content="https://vinyltouch.fr/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="vinylTouch" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
             </Head>
 
 

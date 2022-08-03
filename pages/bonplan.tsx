@@ -30,12 +30,12 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
   return (
     <>
       <Head>
-        <title>promotiom | news | sortie</title>
+        <title>Promotion | News | Sortie</title>
         <meta
           name="description"
           content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound"
         />
-        <meta property="og:title" content="promotiom | news | sortie" />
+        <meta property="og:title" content="promotion | news | sortie" />
 
         <link
           rel="apple-touch-icon"
@@ -90,7 +90,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
               onChange={handleSubmit}
             ></input>
             <p className="text-justify text-sm  px-2 border-b-2 pb-4 ">
-             <strong>Retrouvez ici une séléction :</strong> d&apos;amplis, de platines, d&apos;accessoires sur l&apos;univers du vinyles. <br/> Mais aussi une liste de nouveautés vinyles (disponible ou en pré-commandes)
+             <strong>Retrouvez ici une sélection :</strong> d&apos;amplis, de platines, d&apos;accessoires sur l&apos;univers du vinyles. <br/> Mais aussi une liste de nouveautés vinyles (disponible ou en pré-commandes)
             </p>
          
             

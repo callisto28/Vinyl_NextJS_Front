@@ -30,9 +30,9 @@ const Vinyls = ({ vinyls }) => {
     return (
         <>
             <Head>
-                <title>Les Vinyles | promotiom | prix</title>
+                <title> Vinyles | Promotion | Prix</title>
                 
-                <meta name="description" content="Liste des derniers vinyles mise en vente sur diffèrentes plateformes, les promotions, petit prix" />
+                <meta name="description" content="Liste des derniers vinyles mise en vente sur diffèrentes plateformes, les promotions, petit prix, les pré-commandes, les exclus" />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
                 <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />

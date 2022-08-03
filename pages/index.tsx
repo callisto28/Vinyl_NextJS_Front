@@ -29,7 +29,7 @@ const Home: NextPage = ({
         <title>VinylTouch</title>
         <meta
           name="description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -42,7 +42,7 @@ const Home: NextPage = ({
         />
         <meta
           property="og:description"
-          content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus"
         />
         <meta
           property="og:image"

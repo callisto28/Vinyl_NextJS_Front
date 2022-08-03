@@ -74,7 +74,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-            <h2 className='lg:text-sm sm:text-xxs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold  border-t-2 border-blueCC'>Ayez une touche d&apos;actualité dans votre journée!!</h2>
+            <h2 className='lg:text-sm sm:text-xxs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold  border-t-2 border-blueCC'>Ayez une touche d&apos;actualité dans votre journée !!</h2>
 
         </div>
     );
