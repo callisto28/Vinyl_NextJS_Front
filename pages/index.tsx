@@ -66,8 +66,8 @@ const Home: NextPage = ({
             <span>Ces offres sont issus de différentes plateformes (Amazon, Fnac, Son-video, Mondo, Waxworkrecords...).</span>
           </h2>
           <h2 className="lg:mt-2 lg:ml-24 lg:text-left lg:text-lg lg:w-2/3 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
-            Avec en bonus une petite section spècialement dédiée aux Youtubeurs
-            Français (les unboxing, coup de coeur...) partageant leurs passions pour
+            Avec en bonus une petite section spécialement dédiée aux Youtubeurs
+            Français (les unboxing, coup de coeur...) partageant leur passion pour
             le 33T.
           </h2>
         </div>

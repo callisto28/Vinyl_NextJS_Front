@@ -31,11 +31,11 @@ export const Mention = () => {
       </h2>
       <br />
       <p>
-        L&apos;édition du Site est assurée par SEB4DEV Entrepreneur individuel,
-        immatriculée sous le numéro 915007546 dont le siège social est situé à
-        Jouy, Adresse e-mail : contact.seb4dev@gmail.com. N° de TVA
-        intracommunautaire : FR56915007546 Le Directeur de la publication est Mr
-        FOURNY Sébastien ci-après l&apos;
+        L&apos;édition du Site est assurée par Sébastien FOURNY Entrepreneur
+        individuel, sous la dénomination Seb4Dev, immatriculée sous le numéro
+        915007546 dont le siège social est situé à Jouy, Adresse e-mail :
+        contact.seb4dev@gmail.com. N° de TVA intracommunautaire : FR56915007546
+        Le Directeur de la publication est Mr FOURNY Sébastien ci-après l&apos;
         <span className="font-bold">&quot;Editeur&quot;</span>.
       </p>
       <br />
@@ -61,20 +61,30 @@ export const Mention = () => {
       </p>
       <br />
       <p>
-         En accédant au site, l’utilisateur accepte
-         les présentes conditions d’utilisation. VINYLTOUCH ne saurait être
-         tenu responsable des dommages subis par l’utilisateur du site
-         vinyltouch.fr et de ses contenus. Cette limitation de responsabilité
-         s’étend à tous les préjudices matériels, financiers, informatiques,
-         immatériels, consécutifs à l’accès ou à l’usage de notre site internet
-         et des sites internet liés. VINYLTOUCH décline également toute
-         responsabilité pour tous dommages directs ou indirects résultant d’une
-         intrusion frauduleuse d’un tiers ayant entraîné une modification des
-         informations mises à disposition sur le site et pour tous dommages
-         provoqués en raison de l’accès de quiconque au site ou de
-         l’impossibilité d’y accéder.
+        En accédant au site, l’utilisateur accepte les présentes conditions
+        d’utilisation. VINYLTOUCH ne saurait être tenu responsable des dommages
+        subis par l’utilisateur du site vinyltouch.fr et de ses contenus. Cette
+        limitation de responsabilité s’étend à tous les préjudices matériels,
+        financiers, informatiques, immatériels, consécutifs à l’accès ou à
+        l’usage de notre site internet et des sites internet liés. VINYLTOUCH
+        décline également toute responsabilité pour tous dommages directs ou
+        indirects résultant d’une intrusion frauduleuse d’un tiers ayant
+        entraîné une modification des informations mises à disposition sur le
+        site et pour tous dommages provoqués en raison de l’accès de quiconque
+        au site ou de l’impossibilité d’y accéder.
       </p>
       <br />
+      <p>
+        VinylTouch ne peut être tenu responsable des délais de livraison ainsi
+        que des détériorations des produits achetés, sur nos sites partenaires
+      </p>
+      <br />
+      <p>
+        Le Site est susceptible de contenir des liens vers d’autres sites
+        internet qui demeurent hors du contrôle de VinylTouch. VinylTouch
+        décline toute responsabilité en cas de non-respect des règles concernant
+        la protection des données ou le contenu de ces sites internet.
+      </p>
       <h2 className=" text-base font-semibold border-b-2 border-gray-400">
         ARTICLE 4 - COLLECTE DES DONNEES
       </h2>
@@ -82,7 +92,7 @@ export const Mention = () => {
       <p>
         Le site est exempté de déclaration à la Commission Nationale
         Informatique et Libertés (CNIL) dans la mesure où il ne collecte aucune
-        donnée concernant les utilisateurs. 1 Toute utilisation, reproduction,
+        donnée concernant les utilisateurs. Toute utilisation, reproduction,
         diffusion, commercialisation, modification de toute ou partie du Site,
         sans autorisation de l’Editeur est prohibée et pourra entraînée des
         actions et poursuites judiciaires telles que notamment prévues par le

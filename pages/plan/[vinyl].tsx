@@ -89,16 +89,24 @@ const DetailVinyl = ({ vinyl }) => {
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-24 mx-auto">
+                
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-                            <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">{vinyl.title}</h1>
-                            <h3>{vinyl.artiste}</h3>
+                        
+                            <h1 className="text-gray-900 text-xxxl title-font font-medium mb-2">{vinyl.title}</h1>
+                            <button className=" text-white bg-blueCC border-0 lg:py-2 lg:px-6 sm:py-2 sm:px-3 font-philosophe font-medium transition-color duration-100 delay-10 animate-bounce-in-left rounded-lg hover:bg-blue-700 ">
+                                    <a href={vinyl.referral_url}
+                                        target="_blank" rel="noreferrer"
+                                    >
+                                        {(vinyl.release === 'Disponible') ? 'Acheter' : 'Pré-commander'}</a>
+                                </button>
+                            <h3 className='text-xl mt-2'>{vinyl.artiste}</h3>
                             <h2 className="text-sm title-font text-gray-500 tracking-widest">{vinyl.subtitle}</h2>
                             <div className="flex mb-4">
                                 <a className="flex-grow text-blueCC border-b-2 border-blueCC py-2 text-lg px-1">Description</a>
 
                             </div>
-                            <p className="leading-relaxed mb-4 first-letter:text-black first-letter:text-lg">{vinyl.description}.</p>
+                            <p className="leading-relaxed mb-4 first-letter:text-black first-letter:text-sm">{vinyl.description}.</p>
                             <div className="flex border-t border-gray-200 py-2">
                                 <span className="text-gray-500">Vendu par :</span>
                                 <span className="ml-auto text-gray-900">{vinyl.seller}</span>
@@ -129,7 +137,7 @@ const DetailVinyl = ({ vinyl }) => {
                                     <a href={vinyl.referral_url}
                                         target="_blank" rel="noreferrer"
                                     >
-                                        Acheter / pré-commander</a>
+                                        {(vinyl.release === 'Disponible') ? 'Acheter' : 'Pré-commander'}</a>
                                 </button>
 
                             </div>

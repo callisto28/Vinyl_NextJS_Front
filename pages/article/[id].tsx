@@ -133,7 +133,7 @@ const DetailArticle = ({ article }) => {
                                     <span className="ml-auto text-gray-900">{new Date(parseInt(article.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                                 </div>
                                 <div className="flex">
-                                    <span className="text-gray-500">auteur de l&apos;article :</span>
+                                    <span className="text-gray-500">Auteur de l&apos;article :</span>
                                     <span className="ml-auto text-gray-900">{article.author}</span>
                                 </div>
                                 <Button textButton=" &rarr; Source" link={article.url} linkPl={undefined} />

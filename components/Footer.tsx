@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center border-t-2 lg:z-50 sm:z-50 text-center border-blueCC h-20">
-      <span className='lg:text-sm sm:text-xs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2 pt-2'>&quot;La vie sans musique est tout simplement une erreur, une fatigue, un exil&quot;.<span className='text-xxs'>Friedrich Nietzsche</span></span>
+      <span className='lg:text-sm sm:text-xs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold px-2 pt-2'>&quot;La vie sans musique est tout simplement une erreur, une fatigue, un exil.&quot;&nbsp;<span className='text-xxs first-letter:uppercase'>Friedrich Nietzsche</span></span>
       
       <footer className=" flex lg:flex-row sm:flex-row lg:text-base sm:text-xs  lg:justify-evenly sm:justify-evenly  items-center lg:w-1/2 sm:w-4/5 mt-2">
 
