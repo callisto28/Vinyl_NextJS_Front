@@ -119,11 +119,10 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
             .filter((plan) => {
               return (
                 plan.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
-                plan.genre
-                  .toLowerCase()
+                plan.genre.toLowerCase()
                   .includes(
                     searchFilter.toLowerCase() ||
-                      plan.artist
+                    plan.artiste
                         .toLowerCase()
                         .includes(searchFilter.toLowerCase())
                   )

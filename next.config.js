@@ -6,6 +6,9 @@ const nextConfig = {
     CLIENT_ID_MAIL:'service_sesk29j',
     TEMPLATE_ID:'template_mrl1rml',
     USER_ID:'user_qleOqLo1lNSDkawXHPaLy',
+    API_YOUTUBE:'AIzaSyCZYANU2Sekwtxa_mPN4QS42H68BJAXVa4',
+    URL_YOUTUBE:'https://youtube.googleapis.com/youtube/v3/',
+
   },
   
   images: {

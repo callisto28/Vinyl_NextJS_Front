@@ -47,7 +47,7 @@ const Card = ({ keyCard, linkTitle, link, texteCard, titleCard, authorCard, date
                         <h4 className="text-gray-500 text-center text-xs font-chelsea h-9"> auteur de l&apos;article : {authorCard.toUpperCase()}</h4>
                     </div>
                     <Link href={link} as={linkTitle} passHref >
-                        <Button textButton=" &rarr; Aller voir" link={link} linkPl={linkTitle} />
+                        <Button textButton=" &rarr; En détail" link={link} linkPl={linkTitle} />
                     </Link>
                 </div>
             </div>

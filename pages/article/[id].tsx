@@ -136,13 +136,13 @@ const DetailArticle = ({ article }) => {
                                     <span className="text-gray-500">Auteur de l&apos;article :</span>
                                     <span className="ml-auto text-gray-900">{article.author}</span>
                                 </div>
-                                <Button textButton=" &rarr; Source" link={article.url} linkPl={undefined} />
-                                {/* <button className="flex ml-40 text-white focus:outline-none rounded-full hover:text-black bg-blueCC text-center px-4 py-1 font-philosophe font-bold transition-color duration-700 delay-200 animate-bounce-in-left mb-5 ">
+                                {/* <Button textButton=" &rarr; Source" link={article.url} linkPl={undefined} /> */}
+                                <button className="rounded-lg hover:bg-blue-700  text-white bg-blueCC text-center px-4 py-1 font-philosophe font-medium transition-color duration-100 delay-10 animate-bounce-in-left mb-5 ">
                                     <a href={article.url}
                                         target="_blank" rel="noreferrer"
                                     >
-                                        Consulter</a>
-                                </button> */}
+                                       &rarr; Lire la Source</a>
+                                </button>
                             </div>
 
                         </div>

@@ -16,8 +16,9 @@ const apiYoutube = process.env.API_YOUTUBE;
 
 const channelId = [
     "UCzRTcpx2XVUtJgMrSmQ3A2A", "UCdbh4LWeoSni9pL9SWSsCeg", "UCh_LABZ_faSEgN4lx6tc4Kg", "UCrZvbhsSDUnfm_TTLg1XxTA",
-
+   
 ]
+// dimitri =  UCh_LABZ_faSEgN4lx6tc4Kg
 
 
 const bonplan = ({ data, data2 }: any) => {
@@ -36,7 +37,7 @@ const bonplan = ({ data, data2 }: any) => {
                 <h2 className='font-bold text-2xl text-blueCC'> News de la French Touch Youtube</h2>
             </div>
             <div className='grid grid-flow-row gap-12 m-14'>
-                <h3 className='font-bold text-l text-blueCC'>Chaque semaine Retrouvez une chaîne mise à l&apos;honneur  avec ses 3 dernières vidéos</h3>
+                <h3 className='font-bold text-l text-blueCC'>Retrouvez une chaîne mise à l&apos;honneur avec ses 3 dernières vidéos</h3>
                 <ul className="grid lg:grid-cols-3 sm:grid-rows-1 lg:gap-x-8 sm:gap-y-2 text-center mx-auto">
                     {data.items.map((item: { id: any; snippet?: {} | undefined | any; }, index: React.Key | null | undefined) => {
                         const { id, snippet = {} } = item;
@@ -46,7 +47,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index} className="bg-white shadow-lg rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid lg:content-evenly sm:content-around">
+                            <div key={index} className="lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{channelTitle}</h5>
                                 </a>
@@ -87,7 +88,7 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
-                            <div key={index2} className="bg-white shadow-lg  rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 grid content-evenly">
+                            <div key={index2} className="lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end">
                                 <a href="#" >
                                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{videoOwnerChannelTitle}</h5>
                                 </a>
@@ -123,7 +124,7 @@ export default bonplan;
 
 export async function getServerSideProps() {
 
-    const response = await fetch(`${urlYoutube}search?part=snippet&channelId=UCzRTcpx2XVUtJgMrSmQ3A2A&maxResults=3&order=date&key=${apiYoutube}`)
+    const response = await fetch(`${urlYoutube}search?part=snippet&channelId=UCh_LABZ_faSEgN4lx6tc4Kg&maxResults=3&order=date&key=${apiYoutube}`)
     const playlist = await fetch(`${urlYoutube}playlistItems?part=contentDetails&part=snippet&maxResults=25&playlistId=PLUCBUMaWPhpKMbhmQcp_mIPA7H5ipOrbi&key=${apiYoutube}`)
     const data = await response.json()
     const data2 = await playlist.json()

@@ -35,10 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Navbar />
           <ApolloProvider client={client}>
             <Component {...pageProps} />
-          </ApolloProvider>
-           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          
-          
+          </ApolloProvider>  
           <Footer />
         </Layout>
      
