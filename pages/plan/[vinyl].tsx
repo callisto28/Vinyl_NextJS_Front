@@ -120,7 +120,7 @@ const DetailVinyl = ({ vinyl }) => {
                                 <span className="ml-auto text-gray-900">{new Date(parseInt(vinyl.createdAt)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                             </div>
                             <div className="flex border-t border-gray-200 py-2">
-                                <span className="text-gray-500">Sortie prévu le :</span>
+                                <span className="text-gray-500">Sortie prévue le :</span>
                                 <span className="ml-auto text-gray-900">{vinyl.release}</span>
                             </div>
                             <div className="flex border-t border-b  border-gray-200 py-2">

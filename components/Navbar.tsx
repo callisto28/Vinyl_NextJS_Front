@@ -13,16 +13,16 @@ export default function Navbar() {
     };
 
     return (
-        <div className='font-chelsea z-50 lg:z-50 sm:z-50 text-center absolue'>
-            <nav className='flex lg:flex-row items-center  sm:flex-wrap p-2 '>
+        <div className='font-chelsea z-50 lg:z-50 sm:z-50 text-center  border-b-2 border-blueCC absolue'>
+            <nav className='flex justify-center lg:flex-row items-center  sm:flex-wrap p-2 '>
                 <Link href='/'>
                     <a className='inline-flex lg:items-center sm:items-center h-14 p-2 lg:ml-20 sm:ml-6 '>
                         <Image src='/Wikitracks_Vinyl.svg' alt='logo' className='w-8 h-8' width={80} height={80} />
                         <div className='flex flex-col'>
                             <h1 className='lg:text-xxxl sm:text-lg text-black  font-bold uppercase tracking-wide px-2'>
                             VinylTouch 
-                            </h1>     
-
+                            </h1> 
+                          
                         </div>
 
                         
@@ -48,9 +48,7 @@ export default function Navbar() {
                     </svg>
                 </button>
 
-                <div
-                    className={`${active ? '' : 'hidden'}   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
-                >
+                <div  className={`${active ? '' : 'hidden'} w-full lg:inline-flex lg:flex-grow lg:w-auto`} >
                     <div className=' lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto mr-20'>
 
                         <Link href='/articles' >
@@ -73,8 +71,7 @@ export default function Navbar() {
                         </Link>
                     </div>
                 </div>
-            </nav>
-            <h2 className='lg:text-sm sm:text-xxs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold  border-t-2 border-blueCC'>Ayez une touche d&apos;actualité dans votre journée !!</h2>
+            </nav> 
 
         </div>
     );

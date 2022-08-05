@@ -67,7 +67,10 @@ const Vinyls = ({ vinyls }) => {
                 </div>
                 <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">
                     {vinyls.filter((val) => {
-                        return val.title.toLowerCase().includes(searchFilter.toLowerCase()) || val.genre.toLowerCase().includes(searchFilter.toLowerCase() || val.artiste.toLowerCase().includes(searchFilter.toLowerCase()))
+                        return val.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
+                            val.genre.toLowerCase().includes(searchFilter.toLowerCase()) ||                        
+                            val.release.toLowerCase().includes(searchFilter.toLowerCase()) ||
+                            val.artiste.toLowerCase().includes(searchFilter.toLowerCase())
                     }).map((val: any) => (
                         <div key={val._id} className="w-full">
                             <CardVinyl keyCardPl={val._id}
@@ -82,6 +85,7 @@ const Vinyls = ({ vinyls }) => {
                                 promoCardPl={val.promo}
                                 authorCardPL={val.author}
                                 dateCardPL={val.createdAt}
+                                releaseCardPL={val.release}
                             />
                         </div>
                     ))}
@@ -117,6 +121,7 @@ export const getServerSideProps: GetServerSideProps = async ()  => {
                     author
                     featured
                     slug
+                    release
                 }
             }
         `

@@ -33,7 +33,8 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
         <title>Promotion | News | Sortie</title>
         <meta
           name="description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound, pochette plastique
+          "
         />
         <meta property="og:title" content="promotion | news | sortie" />
 
@@ -57,11 +58,12 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
         <link rel="manifest" href="/site.webmanifest" />
         <meta
           property="og:description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound"
         />
         <meta
           property="og:description"
-          content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, accessoires, hifi, sound"
+          content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound, pochette plastique
+          "
         />
         <meta
           property="og:image"
@@ -119,13 +121,9 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
             .filter((plan) => {
               return (
                 plan.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
-                plan.genre.toLowerCase()
-                  .includes(
-                    searchFilter.toLowerCase() ||
-                    plan.artiste
-                        .toLowerCase()
-                        .includes(searchFilter.toLowerCase())
-                  )
+                plan.genre.toLowerCase().includes(searchFilter.toLowerCase()) || 
+                plan.artiste.toLowerCase().includes(searchFilter.toLowerCase())
+                  
               );
             })
 
@@ -168,6 +166,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                   titleCardPL={plan.title}
                   authorCardPL={plan.author}
                   dateCardPL={plan.createdAt}
+                  releaseCardPL={plan.release}
                 />
               </div>
             ))}
@@ -288,6 +287,7 @@ export async function getServerSideProps() {
           author
           featured
           slug
+          release
         }
         getMaterialFeatured {
           _id

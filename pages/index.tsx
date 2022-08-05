@@ -2,6 +2,7 @@ import { gql } from "@apollo/client";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import client from "../apollo-client";
 import WidgetArt from "../components/WidgetArt";
 import {
@@ -29,7 +30,7 @@ const Home: NextPage = ({
         <title>VinylTouch</title>
         <meta
           name="description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus, des accessoires, figurines Pop, collection vinyle, actualité"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -38,17 +39,17 @@ const Home: NextPage = ({
         <link rel="manifest" href="/site.webmanifest"/>
         <meta
           property="og:title"
-          content="Accueil articles bons plan vinyles, hifi, rangements"
+          content="Accueil articles bons plan vinyles, hifi, rangements, accessoires, figurines Pop, collection vinyle, actualité"
         />
         <meta
           property="og:description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus"
+          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus, des accessoires, figurines Pop, collection vinyle, actualité"
         />
         <meta
           property="og:image"
           content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
         />
-        <meta property="og:url" content="https://vinyltouch.fr/" />
+        <meta property="og:url" content="https://www.vinyltouch.fr/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="vinylTouch" />
         <meta property="og:locale" content="fr_FR" />
@@ -57,23 +58,26 @@ const Home: NextPage = ({
 
       {/* <Layout pages="Acceuil Vinyl"> */}
       <div className="lg:grid lg:grid-cols-1 lg:grid-rows-2 sm:grid sm:grid-col-1">
+      <h2 className='lg:row-start-1 lg:row-span-1 lg:col-start-1 lg:col-span-1 lg:text-sm sm:text-xxs lowercase font-medium first-letter:uppercase first-letter:text-base first-letter:font-bold'>Ayez une touche d&apos;actualité dans votre journée !!</h2>
         <div className=" lg:row-start-1 lg:row-span-2 lg:col-start-1 lg:col-span-1 sm:flex sm:flex-col lg:mt-8 lg:mx-20 sm:mt-5 sm:text-center ">
-          <h2 className="lg:mt-2 lg:mx-10 lg:text-justify lg:w-2/3 lg:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 lg:text-black sm:text-black  first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
+          <h2 className="lg:mt-2 lg:mx-10 lg:text-justify lg:w-2/3 lg:text-base sm:mt-1 sm:mx-16 sm:text-sm sm:text-center font-normal font-philosopher z-10 lg:text-black sm:text-black  first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
             En partant d&apos;un constat concernant la difficulté de trouver des
             infos rapidement. <br /> Nous avons décidé de créer un site qui permet en
-            quelques clics, de regrouper des extraits d&apos;articles,
-            des news, des promotions ainsi que des nouveautés en vinyles. {"\n"}
-            <span>Ces offres sont issus de différentes plateformes (Amazon, Fnac, Son-video, Mondo, Waxworkrecords...).</span>
+            quelques clics, de regrouper <Link href={"/articles"} ><span className="font-bold hover:text-blueCC cursor-pointer">des extraits d&apos;articles </span></Link>,
+            des news, des promotions ainsi que <Link href={"/vinyls"} ><span className="font-bold hover:text-blueCC cursor-pointer">des nouveautés en vinyles </span></Link>. {"\n"}
+            <span>Ces offres sont issus de différentes plateformes (Amazon, Fnac, Zavvi, Son-video, Mondo, Waxworkrecords...).</span>
           </h2>
-          <h2 className="lg:mt-2 lg:ml-24 lg:text-left lg:text-lg lg:w-2/3 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-base sm:text-center font-bold font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
-            Avec en bonus une petite section spécialement dédiée aux Youtubeurs
-            Français (les unboxing, coup de coeur...) partageant leur passion pour
-            le 33T.
+          <h2 className="lg:mt-2 lg:ml-24 lg:text-left lg:text-base lg:w-2/3 md:mt-1 md:mx-12 md:text-lg sm:mt-1 sm:mx-16 sm:text-sm sm:text-center font-medium font-philosopher z-10 text-black first-letter:text-xl first-letter:font-bold first-letter:text-blueCC">
+            Avec en bonus une petite section dédiée aux <Link href={"/frenchTouch"} ><span className="font-bold hover:text-blueCC cursor-pointer">Youtubeurs Français </span></Link>
+             (les unboxing, coup de coeur...) partageant leur passion pour
+            le 33T ainsi qu&apos;une sélection de <Link href={"/rangements"} className="text-blue-800"><span className="font-bold hover:text-blueCC cursor-pointer">POP </span></Link>  (Chanteur, film...).
           </h2>
         </div>
 
         <div className="boxb  lg:row-start-2 lg:row-span-3 lg:col-start-1 lg:col-span-2 sm:flex sm:flex-col sm:items:center z-50 mb-48 lg:h-20 sm:h-auto ">
+          
           <div className="lg:flex lg:flex-row lg:justify-evenly sm:flex sm:flex-col sm:items-center sm:justify-around">
+          
             <div className="w-auto  sm:my-1 shadow-lg shadow-gray-400 rounded-lg">
               <WidgetArt articles1={lastArticles} className="z-10" />
             </div>

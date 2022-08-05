@@ -17,6 +17,7 @@ type PropsVinyl = {
     imgCardPL: string;
     img2CardPL: string;
     promoCardPl:string;
+    releaseCardPL:string;
     priceCardPLEUR: number | string;
 }
 
@@ -34,7 +35,7 @@ type Props = {
 }
 
 
-const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, img2CardPL, imgCardPL, priceCardPLEUR, promoCardPl }: PropsVinyl) => {
+const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, titleCardPL, authorCardPL, dateCardPL, img2CardPL, imgCardPL, priceCardPLEUR, promoCardPl, releaseCardPL }: PropsVinyl) => {
 
     const date = new Date(parseInt(dateCardPL)).toLocaleString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' });
 
@@ -63,8 +64,12 @@ const CardVinyl = ({ keyCardPl, linkTitlePL, linkPL, artistCardPL, texteCardPL, 
                             )}</div></Link>
                     </div>
                     <div className='w-2/3 flex flex-col justify-between'>
-                        <p className="text-black flex items-start text-xs ">Publié le : <span className='text-rougeCC font-philosopher font-bold'>{newDate}</span></p>
-                        <p className='text-rougeCC text-lg'>{""}</p>
+                        <div className='flex lg:flex-row sm:flex-col justify-between'>
+                         <p className="text-black lg:text-xs sm:text-xxs ">Publié le : <span className='text-rougeCC font-philosopher font-bold lg:text-sm sm:text-xs'>{newDate}</span></p>   
+                        <p className='text-black  lg:text-xs sm:text-xxs'>Date de sortie : <span className='text-rougeCC font-philosopher font-bold lg:text-sm sm:text-xs'>{releaseCardPL}</span> </p>
+                        </div>
+                        
+                        
                         <Link href={linkPL} as={linkTitlePL} passHref >
                             <h1 className="cursor-pointer 
                             text-blueCC 
