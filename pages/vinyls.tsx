@@ -60,7 +60,7 @@ const Vinyls = ({ vinyls }) => {
                         <br/>
                         <div className='flex flex-col justify-center items-center pt-4'>
                             <p className='text-xs'>Profitez de la promotion de notre partenaire avec un acces gratuit de 30 jours</p>
-                        <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=12&l=ur1&category=amu&banner=0W6DT14R33AATJW5E682&f=ifr&linkID=b7b3c3b23600e1ac30182bfec7282725&t=vinyltouch-21&tracking_id=vinyltouch-21" width="300" height="250" scrolling="no"  frameBorder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+                            <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=20&l=ur1&category=amu&banner=1CNK2D27JAZX8ZEGZG02&f=ifr&linkID=8ee296d9ec14702d0242fa125675c070&t=vinyltouch-21&tracking_id=vinyltouch-21" width="120" height="90" scrolling="no" frameBorder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
 
                         </div>
                     </div>

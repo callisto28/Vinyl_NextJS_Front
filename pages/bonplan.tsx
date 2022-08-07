@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
@@ -6,7 +7,6 @@ import Card, { CardVinyl } from "../components/CardPlan";
 import Checkbox from "../components/Checkbox";
 
 import Image from "next/image";
-
 
 const Bonplans = ({ vinyls, materials, desks, all }) => {
   const [filter, setFilter] = useState([]);
@@ -92,38 +92,76 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
               onChange={handleSubmit}
             ></input>
             <p className="text-justify text-sm  px-2 border-b-2 pb-4 ">
-             <strong>Retrouvez ici une sélection :</strong> d&apos;amplis, de platines, d&apos;accessoires sur l&apos;univers du vinyles. <br/> Mais aussi une liste de nouveautés vinyles (disponible ou en pré-commandes)
+              <strong>Retrouvez ici une sélection :</strong> d&apos;amplis, de
+              platines, d&apos;accessoires sur l&apos;univers du vinyles. <br />{" "}
+              Mais aussi une liste de nouveautés vinyles (disponible ou en
+              pré-commandes)
             </p>
-         
-            
-            
-              
-              <span className="font-semibold text-xs">Pour 49 EUR par an, les membres du Programme Amazon Prime bénéficient de :
-                <ul className=" text-left text-xxs border-b-2 ">
-                  <ul>- La livraison en 1 jour ouvré gratuite sur des millions d’articles</ul>
-                  <li>- L’accès au stockage sécurisé et illimité de leurs photos</li>
-                  <li>- La possibilité d&apos;emprunter gratuitement des livres grâce à la vaste Bibliothèque de prêt Kindl</li>
+
+            <span className="font-semibold text-xs">
+              Pour 49 EUR par an, les membres du Programme Amazon Prime
+              bénéficient de :
+              <ul className=" text-left text-xxs border-b-2 ">
+                <ul>
+                  - La livraison en 1 jour ouvré gratuite sur des millions
+                  d’articles
                 </ul>
-              </span>
-              <button className=" my-2">
-                <a href="https://amzn.to/3OPqy3m" className="p-1 rounded-md  hover:bg-black bg-sable text-black hover:text-sable text-xs">Découvrez Amazon Prime</a>
-              </button>            
+                <li>
+                  - L’accès au stockage sécurisé et illimité de leurs photos
+                </li>
+                <li>
+                  - La possibilité d&apos;emprunter gratuitement des livres
+                  grâce à la vaste Bibliothèque de prêt Kindl
+                </li>
+              </ul>
+            </span>
+            <button className=" my-2">
+              <a
+                href="https://amzn.to/3OPqy3m"
+                className="p-1 rounded-md  hover:bg-black bg-sable text-black hover:text-sable text-xs"
+              >
+                Découvrez Amazon Prime
+              </a>
+            </button>
           </div>
         </div>
 
-        <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2">
-          <div className="flex items-center lg:justify-center sm:content-center mt-2">
-          <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=26&l=ur1&category=music&banner=1AR0MF9AEMKGSXZ01902&f=ifr&linkID=e32212738c22d55bd8dbe511a271318f&t=vinyltouch-21&tracking_id=vinyltouch-21" width="468" height="60" scrolling="no"  frameBorder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+        <div className="flex lg:flex-col sm:flex-wrap lg:w-2/3 lg:border-l-2 sm:border-t-2 sm:justify-center">
+          <div className="flex lg:flex-row sm:flex-col lg:items-center lg:justify-evenly  mt-2">
+            <a className="sm:pb-2"
+              rel="sponsored noreferrer"
+              target="_blank"
+              href="https://www.awin1.com/cread.php?s=2178196&v=12665&q=339078&r=1120943"
+            >
+              {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              <img src="https://www.awin1.com/cshow.php?s=2178196&v=12665&q=339078&r=1120943"  width={120} height={120} />
+            </a>
 
+            <iframe
+              src="https://rcm-eu.amazon-adsystem.com/e/cm?o=8&p=20&l=ur1&category=music&banner=09PMJB75SARGF8TWNXR2&f=ifr&linkID=871b01ec80f61c65c3d883f31269a256&t=vinyltouch-21&tracking_id=vinyltouch-21"
+              width="120"
+              height="90"
+              scrolling="no"             
+              frameBorder="0"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+            ></iframe>
+
+            <a
+              rel="sponsored noreferrer"
+              href="https://www.awin1.com/cread.php?s=2322330&v=7335&q=312814&r=1120943"
+              target="_blank"
+            >
+               {/* eslint-disable-next-line jsx-a11y/alt-text */}
+              <img src="https://www.awin1.com/cshow.php?s=2322330&v=7335&q=312814&r=1120943" width={120} height={100}/>
+            </a>
           </div>
 
           {vinyls
             .filter((plan) => {
               return (
                 plan.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
-                plan.genre.toLowerCase().includes(searchFilter.toLowerCase()) || 
+                plan.genre.toLowerCase().includes(searchFilter.toLowerCase()) ||
                 plan.artiste.toLowerCase().includes(searchFilter.toLowerCase())
-                  
               );
             })
 
@@ -145,7 +183,7 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
                   keyCardPl={plan._id}
                   linkPL={`/plan/${plan._id}`}
                   linkTitlePL={`/plan/${plan._id}`}
-                  promoCardPl={(plan.promo != '') ? ((plan.promo)) : ('')}
+                  promoCardPl={plan.promo != "" ? plan.promo : ""}
                   artistCardPL={plan.artiste}
                   imgCardPL={
                     plan.image != ""

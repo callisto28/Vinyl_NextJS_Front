@@ -18,7 +18,7 @@ const Filter = ({ dataFilter }) => {
 
     const handleSubmit = (e) => {
         let value = e.target.value;
-        value.length > 2 && setSearchFilter(value);
+        value.length >= 2 && setSearchFilter(value);
     }
 
     return (

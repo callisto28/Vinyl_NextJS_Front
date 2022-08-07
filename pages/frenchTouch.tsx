@@ -49,16 +49,16 @@ const bonplan = ({ data, data2 }: any) => {
                         return (
                             <div key={index} className="lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end">
                                 <a href="#" >
-                                    <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{channelTitle}</h5>
+                                    <h5 className="text-blueCC font-bold text-2xl tracking-tight mb-2 dark:text-blueCC">{channelTitle}</h5>
                                 </a>
                                 <a href="#" >
                                     <Image src={medium.url} alt={title} width={medium.width} height={medium.height} className="rounded-t-lg" />
                                 </a>
                                 <div className="p-5">
                                     <a href="#" >
-                                        <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{title}</h5>
+                                        <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-black">{title}</h5>
                                     </a>
-                                    <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">{moment(publishedAt).format('MMM DD, YYYY')}</p>
+                                    <p className="font-normal text-gray-700 mb-3 dark:text-gray-600">{moment(publishedAt).format('MMM DD, YYYY')}</p>
                                     <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank" rel="noreferrer" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
                                         Regarder
                                         <svg className="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -90,16 +90,16 @@ const bonplan = ({ data, data2 }: any) => {
                         return (
                             <div key={index2} className="lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end">
                                 <a href="#" >
-                                    <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{videoOwnerChannelTitle}</h5>
+                                    <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-black">{videoOwnerChannelTitle}</h5>
                                 </a>
                                 <a href="#" >
                                     <Image src={medium.url} alt={title} width={medium.width} height={medium.height} className="rounded-t-lg" />
                                 </a>
                                 <div className="p-5">
                                     <a href="#" >
-                                        <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{title}</h5>
+                                        <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-black">{title}</h5>
                                     </a>
-                                    <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">{moment(item2.contentDetails.videoPublishedAt).format('MMM DD, YYYY')}</p>
+                                    <p className="font-normal text-gray-700 mb-3 dark:text-gray-600">{moment(item2.contentDetails.videoPublishedAt).format('MMM DD, YYYY')}</p>
                                     <a href={`https://www.youtube.com/watch?v=${item2.contentDetails.videoId}`} target="_blank" rel="noreferrer" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
                                         Regarder
                                         <svg className="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
