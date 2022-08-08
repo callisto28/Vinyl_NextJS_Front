@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>VinylTouch</title>        
-        <meta name="description" content="Toute l'actualité du vinyle, collection vinyle, vinyle" />       
+        <title>Bienvenu sur VinylTouch</title>        
+        <meta name="description" content="Toute l'actualité sur l'univers du vinyle en passant pas le mobilier, les accessoires, les bons plans, des vinyles aux meilleurs prix " />       
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>

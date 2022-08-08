@@ -91,8 +91,8 @@ const DetailArticle = ({ article }) => {
     return (
         <>
             <Head>
-                <title>vinyles</title>
-                <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles" />
+                <title>{article.title}</title>
+                <meta name="description" content="Les news, des extraits d'articles, venez découvrir et connaitre les dernières" />
 
 
             </Head>

@@ -27,9 +27,16 @@ const bonplan = ({ data, data2 }: any) => {
     return (
         <div className="flex flex-col items-center py-2 ">
             <Head>
-                <title>FrenchTouch</title>
-                <meta name="description" content="Youtubeur français" />
-                <link rel="icon" href="/favicon.ico" />
+            <title>Liste des Youtubeurs Français, Unboxings</title>
+                <meta name="description" content="Retrouver une séléction de Youtubeurs français présentant leur passion du vinyle, les unboxings, coup de coeur." />
+                <meta property="og:title" content="Vidéo quotidienne des youtubeurs français" />
+                <meta property="og:description" content="Retrouver une séléction de Youtubeurs français présentant leur passion du vinyle, les unboxings, coup de coeur. Les bons plan à l'étranger (Japon, USA" />
+                <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
+                <meta property="og:url" content="https://vinyltouch.fr/frenchTouch" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="vinylTouch" />
+                <meta property="og:locale" content="fr_FR" />
+                <meta property="og:locale:alternate" content="en_US" />
             </Head>
 
             {/* Chaine Youtube mis à l'honneur */}
@@ -47,6 +54,8 @@ const bonplan = ({ data, data2 }: any) => {
 
 
                         return (
+
+                            
                             <div key={index} className="lg:mx-1 shadow-lg shadow-gray-400 rounded-xl lg:max-w-sm sm:max-w-xs  h-full flex flex-col justify-around items-center px-3 bg-gradient-to-r from-green-start to-green-end">
                                 <a href="#" >
                                     <h5 className="text-blueCC font-bold text-2xl tracking-tight mb-2 dark:text-blueCC">{channelTitle}</h5>

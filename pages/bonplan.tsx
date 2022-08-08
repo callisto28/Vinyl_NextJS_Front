@@ -30,13 +30,13 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
   return (
     <>
       <Head>
-        <title>Promotion | News | Sortie</title>
+        <title>Pages des bons plans, les vinyles, les rangements, les accessoires, platines vinyle, figurines Pops</title>
         <meta
           name="description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound, pochette plastique
-          "
+          content="Les bons plans, les précommandes, les meilleurs prix du marché, des accessoires comme les pochettes plastiques, brosse de nettoyage, les meubles,"
+          
         />
-        <meta property="og:title" content="promotion | news | sortie" />
+        <meta property="og:title" content="Pages des bons plans, les vinyles, les rangements, les accessoires, platines vinyle, figurines Pops" />
 
         <link
           rel="apple-touch-icon"
@@ -59,17 +59,12 @@ const Bonplans = ({ vinyls, materials, desks, all }) => {
         <meta
           property="og:description"
           content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound"
-        />
-        <meta
-          property="og:description"
-          content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, collection vinyle, meubles, rangements, accessoires, hifi, sound, pochette plastique
-          "
-        />
+        />       
         <meta
           property="og:image"
-          content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
+          content="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         />
-        <meta property="og:url" content="https://vinyltouch.fr/" />
+        <meta property="og:url" content="https://vinyltouch.fr/bonplan" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="vinylTouch" />
         <meta property="og:locale" content="fr_FR" />

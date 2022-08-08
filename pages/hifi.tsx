@@ -27,12 +27,12 @@ const Hifi = ({ hifi }) => {
     return (
         <>
             <Head>
-                <title>Hifi | platine | sound</title>
+                <title>Hifi | platine | amplis | promotiom | prix | nouveautés |  | sound</title>
                 <meta name="description" content="Toute la hifi, platine, ampli, aux meillerus prix du marché..." />
                 <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
                 <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
-                <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
-                <meta property="og:url" content="https://vinyltouch.fr/" />
+                <meta property="og:image" content="https://images.unsplash.com/photo-1433788273174-662fea56182b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" />
+                <meta property="og:url" content="https://vinyltouch.fr/hifi" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="vinylTouch" />
                 <meta property="og:locale" content="fr_FR" />

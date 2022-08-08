@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { gql } from '@apollo/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import client from '../../apollo-client';
 
 
@@ -70,6 +71,23 @@ const DetailMaterial = ({ desk }) => {
 
 
     return (
+        <>
+        <Head>
+        <title>{desk.title}</title>
+        <meta name="description" content="Présentation de votre acticle, la marque le prix, sa date de disponibilité" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
+        <meta property="og:url" content="https://www.vinyltouch.fr/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="vinylTouch" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:locale:alternate" content="en_US" />
+
+    </Head>
 
         <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
@@ -112,6 +130,7 @@ const DetailMaterial = ({ desk }) => {
                 </div>
             </div>
         </section>
+        </>
     );
 }
 export default DetailMaterial;

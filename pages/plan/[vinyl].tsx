@@ -82,9 +82,19 @@ const DetailVinyl = ({ vinyl }) => {
     return (
         <>
             <Head>
-                <title>vinyles</title>
-                <meta name="description" content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles" />
-
+                <title>{vinyl.title}</title>
+                <meta name="description" content="Présentation de votre vinyle, son titre, l'artiste, le prix, sa date de disponibilité" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+                <link rel="manifest" href="/site.webmanifest"/>
+                <meta property="og:image" content="https://unsplash.com/photos/zKT64MtVKQ0" />
+                <meta property="og:url" content="https://www.vinyltouch.fr/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="vinylTouch" />
+                <meta property="og:locale" content="fr_FR" />
+                <meta property="og:locale:alternate" content="en_US" />
 
             </Head>
             <section className="text-gray-600 body-font overflow-hidden">

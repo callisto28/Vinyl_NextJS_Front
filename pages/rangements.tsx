@@ -29,13 +29,12 @@ const Rangements = ({ desk }) => {
     return (
         <>
             <Head>
-                <title>meubles | accessoires | rangements | promotiom | prix</title>
-                
-                <meta name="description" content="Du mobilier, du rangements des accessoires aux meilleurs prix du marché" />
-                <meta property="og:title" content="Accueil articles bons plan vinyles, hifi, rangements" />
-                <meta property="og:description" content="Tous les bons plan, promotions, meilleurs prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" />
-        <meta property="og:url" content="https://vinyltouch.fr/" />
+                <title>meubles | accessoires | rangements | promotiom | prix | nouveautés | Figurines Pop&apos;s</title>                
+                <meta name="description" content="Du mobilier, du rangements des accessoires aux meilleurs prix du marché, mais aussi les figurines Pops dans l'univers du cinéma et de la musique" />
+                <meta property="og:title" content="meubles | accessoires | rangements | promotiom | prix | nouveautés | Figurines Pop&apos;s" />
+                <meta property="og:description" content="Du mobilier, du rangements des accessoires aux meilleurs prix du marché, mais aussi les figurines Pops dans l'univers du cinéma et de la musique" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1489838720009-3286c4293fda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+        <meta property="og:url" content="https://vinyltouch.fr/rangements" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="vinylTouch" />
         <meta property="og:locale" content="fr_FR" />

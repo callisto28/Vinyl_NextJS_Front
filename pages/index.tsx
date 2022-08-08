@@ -27,10 +27,13 @@ const Home: NextPage = ({
   return (
     <div className="">
       <Head>
-        <title>VinylTouch</title>
+        <title>Accueil VinylTouch actualité, news, promotion</title>
         <meta
           name="description"
-          content="Tous les bons plan, promotions, petit prix, réductions, dernieres sorties, vinyles, meubles, rangements, hifi, sound, pré-commandes, les exclus, des accessoires, figurines Pop, collection vinyle, actualité"
+          content="Tous les bons plan, promotions, petit prix, 
+          réductions, dernieres sorties, vinyles, meubles, rangements, 
+          hifi, sound, pré-commandes, les exclus, des accessoires, 
+          figurines Pop, collection vinyle, actualité"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
